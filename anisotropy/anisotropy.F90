@@ -61,37 +61,34 @@ program anisopsblas
     integer(psb_ipk_)  :: outer_sweeps ! number of outer sweeps: sweeps for 1-level,
     ! AMG cycles for ML
     ! general AMG data
-    character(len=16)  :: mlcycle      ! AMG cycle type
+    character(len=32)  :: mlcycle      ! AMG cycle type
     integer(psb_ipk_)  :: maxlevs     ! maximum number of levels in AMG preconditioner
 
     ! AMG aggregation
-    character(len=16)  :: aggr_prol    ! aggregation type: SMOOTHED, NONSMOOTHED
-    character(len=16)  :: par_aggr_alg ! parallel aggregation algorithm: DEC, SYMDEC
-    character(len=16)  :: aggr_type   ! Type of aggregation SOC1, SOC2, MATCHBOXP
+    character(len=32)  :: aggr_prol    ! aggregation type: SMOOTHED, NONSMOOTHED
+    character(len=32)  :: par_aggr_alg ! parallel aggregation algorithm: DEC, SYMDEC
+    character(len=32)  :: aggr_type   ! Type of aggregation SOC1, SOC2, MATCHBOXP
     integer(psb_ipk_)  :: aggr_size   ! Requested size of the aggregates for MATCHBOXP
-    character(len=16)  :: aggr_ord    ! ordering for aggregation: NATURAL, DEGREE
-    character(len=16)  :: aggr_filter ! filtering: FILTER, NO_FILTER
+    character(len=32)  :: aggr_ord    ! ordering for aggregation: NATURAL, DEGREE
+    character(len=32)  :: aggr_filter ! filtering: FILTER, NO_FILTER
     real(psb_dpk_)     :: mncrratio  ! minimum aggregation ratio
-    integer(psb_ipk_)  :: matching_alg ! For NEW matching 1 2 3 variant
-    real(psb_dpk_)     :: lambda       ! matching LAMBDA
-
     real(psb_dpk_), allocatable :: athresv(:) ! smoothed aggregation threshold vector
     integer(psb_ipk_)  :: thrvsz      ! size of threshold vector
     real(psb_dpk_)     :: athres      ! smoothed aggregation threshold
     integer(psb_ipk_)  :: csizepp     ! minimum size of coarsest matrix per process
 
     ! AMG smoother or pre-smoother; also 1-lev preconditioner
-    character(len=16)  :: smther      ! (pre-)smoother type: BJAC, AS
+    character(len=32)  :: smther      ! (pre-)smoother type: BJAC, AS
     integer(psb_ipk_)  :: jsweeps     ! (pre-)smoother / 1-lev prec. sweeps
     integer(psb_ipk_)  :: degree       ! degree for polynomial smoother
     character(len=32)  :: pvariant     ! polynomial  variant
     integer(psb_ipk_)  :: novr        ! number of overlap layers
-    character(len=16)  :: restr       ! restriction over application of AS
-    character(len=16)  :: prol        ! prolongation over application of AS
-    character(len=16)  :: solve       ! local subsolver type: ILU, MILU, ILUT,
+    character(len=32)  :: restr       ! restriction over application of AS
+    character(len=32)  :: prol        ! prolongation over application of AS
+    character(len=32)  :: solve       ! local subsolver type: ILU, MILU, ILUT,
                                       ! UMF, MUMPS, SLU, FWGS, BWGS, JAC
     integer(psb_ipk_)  :: ssweeps      ! inner solver sweeps
-    character(len=16)  :: variant     ! AINV variant: LLK, etc
+    character(len=32)  :: variant     ! AINV variant: LLK, etc
     integer(psb_ipk_)  :: fill        ! fill-in for incomplete LU factorization
     integer(psb_ipk_)  :: invfill     ! Inverse fill-in for INVK
     real(psb_dpk_)     :: thr         ! threshold for ILUT factorization
@@ -113,13 +110,13 @@ program anisopsblas
     real(psb_dpk_)      :: thr2         ! threshold for ILUT factorization
 
     ! coarsest-level solver
-    character(len=16)  :: cmat        ! coarsest matrix layout: REPL, DIST
-    character(len=16)  :: csolve      ! coarsest-lev solver: BJAC, SLUDIST (distr.
+    character(len=32)  :: cmat        ! coarsest matrix layout: REPL, DIST
+    character(len=32)  :: csolve      ! coarsest-lev solver: BJAC, SLUDIST (distr.
                                       ! mat.); UMF, MUMPS, SLU, ILU, ILUT, MILU
                                       ! (repl. mat.)
-    character(len=16)  :: csbsolve    ! coarsest-lev local subsolver: ILU, ILUT,
+    character(len=32)  :: csbsolve    ! coarsest-lev local subsolver: ILU, ILUT,
                                       ! MILU, UMF, MUMPS, SLU
-    character(len=16)  :: krmeth      ! Krylov method for subsolve
+    character(len=32)  :: krmeth      ! Krylov method for subsolve
     integer(psb_ipk_)  :: cfill       ! fill-in for incomplete LU factorization
     real(psb_dpk_)     :: cthres      ! threshold for ILUT factorization
     integer(psb_ipk_)  :: cjswp       ! sweeps for GS or JAC coarsest-lev subsolver
@@ -689,7 +686,7 @@ contains
       call read_data(afmt,inp_unit)            ! matrix storage format
       call read_data(idim,inp_unit)            ! Discretization grid size
       call read_data(theta,inp_unit)           ! Theta Coefficient
-      call read_data(eps,inp_unit)             ! Theta Coefficient
+      call read_data(eps,inp_unit)             ! Eps Coefficient
       ! Krylov solver data
       call read_data(solve%kmethd,inp_unit)    ! Krylov solver
       call read_data(solve%istopc,inp_unit)    ! stopping criterion
@@ -700,7 +697,6 @@ contains
       ! preconditioner type
       call read_data(prec%descr,inp_unit)      ! verbose description of the prec
       call read_data(prec%ptype,inp_unit)      ! preconditioner type
-
       ! First smoother / 1-lev preconditioner
       call read_data(prec%smther,inp_unit)     ! smoother type
       call read_data(prec%jsweeps,inp_unit)    ! (pre-)smoother / 1-lev prec sweeps
@@ -740,8 +736,9 @@ contains
       call read_data(prec%aggr_type,inp_unit)   ! type of aggregation
       call read_data(prec%aggr_size,inp_unit) ! Requested size of the aggregates for MATCHBOXP
       call read_data(prec%aggr_ord,inp_unit)    ! ordering for aggregation
+      call read_data(prec%mncrratio,inp_unit)   ! minimum aggregation ratio
       call read_data(prec%aggr_filter,inp_unit) ! filtering
-      call read_data(prec%mncrratio,inp_unit)  ! minimum aggregation ratio
+      call read_data(prec%athres,inp_unit)      ! smoothed aggr thresh
       call read_data(prec%thrvsz,inp_unit)      ! size of aggr thresh vector
       if (prec%thrvsz > 0) then
         call psb_realloc(prec%thrvsz,prec%athresv,info)
@@ -749,7 +746,6 @@ contains
       else
         read(inp_unit,*)                        ! dummy read to skip a record
       end if
-      call read_data(prec%athres,inp_unit)      ! smoothed aggr thresh
       ! coasest-level solver
       call read_data(prec%csolve,inp_unit)      ! coarsest-lev solver
       call read_data(prec%csbsolve,inp_unit)    ! coarsest-lev subsolver
@@ -768,7 +764,6 @@ contains
       call read_data(prec%dump_smoother,inp_unit)
       call read_data(prec%dump_solver,inp_unit)
       call read_data(prec%dump_global_num,inp_unit)
-
 
       if (inp_unit /= psb_inp_unit) then
         close(inp_unit)
