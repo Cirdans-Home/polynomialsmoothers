@@ -13,7 +13,7 @@ FCG                     ! Krylov Solver
 ML-VCYCLE-POLY-L1JAC    ! verbose description of the prec
 ML                      ! Preconditioner type
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
-L1-JACOBI               ! smoother type
+POLY                    ! smoother type
 1                       ! (pre-)smoother / 1-lev prec sweeps
 4                       ! degree for polynomial smoother
 POLY_LOTTES_BETA        ! polynomial variant
