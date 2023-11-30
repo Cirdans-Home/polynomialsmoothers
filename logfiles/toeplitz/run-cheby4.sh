@@ -9,14 +9,14 @@ module load gcc/12.2.0 openmpi/4.1.4-gcc-12.2.0 openblas/0.3.20-gcc-12.2.0 metis
 	libunwind/1.6.2-gcc-12.2.0 papi/6.0.0.1-gcc-12.2.0 binutils/2.33.1-gcc-12.2.0 libxml2/2.10.1-gcc-12.2.0 mumps/5.4.1-gcc-12.2.0
 module list
 
-export OMP_NUM_THREADS=@NTHREAD@
+# export OMP_NUM_THREADS=@NTHREAD@
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/software/spack/opt/spack/linux-ubuntu22.04-x86_64/gcc-12.2.0/metis-5.1.0-kuao2tv62i5uiifpbtfnx2nqa4zuaaci/lib:/data/software/spack/opt/spack/linux-ubuntu22.04-x86_64/gcc-12.2.0/openblas-0.3.20-4ipfq4m2x4ku6edyd6o6sq4zxprh4kmo/lib/:/data/software/spack/opt/spack/linux-ubuntu22.04-x86_64/gcc-12.2.0/suite-sparse-5.10.1-klxivyhmvz5ckb3zv4fzjtwk6itursni/lib:/data/software/spack/opt/spack/linux-ubuntu22.04-x86_64/gcc-12.2.0/netlib-scalapack-2.2.0-b4njionfcuwwa3heilv7dhvetprj2wmo/lib
 
 idim=@SIZE@
 theta=@THETA@
 epsilon=@EPS@
 
-srun ./anisopsblas >> cheby4/log_cheby4_${idim}_task_@NTASK@_thr_@NTHREAD@.txt 2>&1  <<EOF
+srun ./anisopsblas >> cheby4/log_vsvbm_cheby4_l1jac_${idim}_task_@NTASK@_thr_@NTHREAD@.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 CSR                     ! matrix storage format
 ${idim}                 ! Discretization grid size
@@ -29,7 +29,7 @@ FCG                     ! Krylov Solver
 500                     ! Restart (RGMRES e BICGSTAB)
 1.d-7                   ! Tolerance
 %%%%%%%%%%%  Main preconditioner choices %%%%%%%%%%%%%%%%
-ML-VCYCLE-POLY-L1JAC    ! verbose description of the prec
+ML-VSVBM-4CHEB4-30L1JAC ! verbose description of the prec
 ML                      ! Preconditioner type
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
 POLY                    ! smoother type
@@ -93,4 +93,3 @@ T                       ! Dump smoothers
 T                       ! Dump coarse solver
 T                       ! Dump using global numbering?
 EOF
-done
