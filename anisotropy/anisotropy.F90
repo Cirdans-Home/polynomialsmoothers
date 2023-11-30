@@ -190,7 +190,7 @@ program anisopsblas
 
   if (iam == psb_root_) then
     write(psb_out_unit,'(" ")')
-    write(psb_out_unit,'("Solving ",I3," x ",I3," grid with θ = ",F16.10," ϵ = ",F16.10)') &
+    write(psb_out_unit,'("Solving ",I7," x ",I7," grid with θ = ",F16.4," ϵ = ",F16.4)') &
       & ne,ne,theta,eps
   end if
 
