@@ -16,7 +16,7 @@ idim=@SIZE@
 theta=@THETA@
 epsilon=@EPS@
 
-srun ./anisopsblas >> soc1/log_vsvbm_optcheby4_l1jac_${idim}_task_@NTASK@_thr_@NTHREAD@.txt 2>&1  <<EOF
+srun ./anisopsblas >> soc1/log_vsvbm_optcheby1_l1jac_${idim}_task_@NTASK@_thr_@NTHREAD@.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 CSR                     ! matrix storage format
 ${idim}                 ! Discretization grid size
@@ -35,7 +35,7 @@ ML                      ! Preconditioner type
 POLY                    ! smoother type
 1                       ! (pre-)smoother / 1-lev prec sweeps
 4                       ! degree for polynomial smoother
-POLY_LOTTES_BETA        ! polynomial variant
+POLY_NEW                ! polynomial variant
 0                       ! number of overlap layers
 HALO                    ! restriction  over application of AS
 NONE                    ! prolongation over application of AS

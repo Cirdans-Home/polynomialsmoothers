@@ -16,7 +16,7 @@ idim=@SIZE@
 theta=@THETA@
 epsilon=@EPS@
 
-srun ./anisopsblas >> soc1/log_vsvbm_optcheby4_l1jac_${idim}_task_@NTASK@_thr_@NTHREAD@.txt 2>&1  <<EOF
+srun ./anisopsblas >> match/log_vsvbm_optcheby1_l1jac_${idim}_task_@NTASK@_thr_@NTHREAD@.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 CSR                     ! matrix storage format
 ${idim}                 ! Discretization grid size
@@ -29,13 +29,13 @@ FCG                     ! Krylov Solver
 500                     ! Restart (RGMRES e BICGSTAB)
 1.d-7                   ! Tolerance
 %%%%%%%%%%%  Main preconditioner choices %%%%%%%%%%%%%%%%
-ML-VSVBM-4OCHEB4-30L1JAC ! verbose description of the prec
+ML-VMATCH4-4OCHEB4-30L1JAC ! verbose description of the prec
 ML                      ! Preconditioner type
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
 POLY                    ! smoother type
 1                       ! (pre-)smoother / 1-lev prec sweeps
 4                       ! degree for polynomial smoother
-POLY_LOTTES_BETA        ! polynomial variant
+POLY_NEW                ! polynomial variant
 0                       ! number of overlap layers
 HALO                    ! restriction  over application of AS
 NONE                    ! prolongation over application of AS
@@ -65,9 +65,9 @@ VCYCLE                  ! AMG cycle type
 -3                      ! Max Number of levels in a multilevel preconditioner; if <0, lib default
 -3                      ! Target coarse matrix size per process; if <0, lib default
 SMOOTHED                ! Type of aggregation: SMOOTHED UNSMOOTHED
-DEC                     ! Parallel aggregation: DEC, SYMDEC, COUPLED
-SOC1                    ! aggregation measure SOC1, MATCHBOXPcall read_data(prec%aggr_size,inp_unit) ! Requested size of the aggregates for MATCHBOXP
-8                       ! Requested size of the aggregates for MATCHBOXP
+COUPLED                 ! Parallel aggregation: DEC, SYMDEC, COUPLED
+MATCHBOXP               ! aggregation measure SOC1, MATCHBOXPcall read_data(prec%aggr_size,inp_unit) ! Requested size of the aggregates for MATCHBOXP
+4                       ! Requested size of the aggregates for MATCHBOXP
 NATURAL                 ! Ordering of aggregation NATURAL DEGREE
 -1.5                    ! Coarsening ratio, if < 0 use library default
 FILTER                  ! Filtering of matrix:  FILTER NOFILTER
