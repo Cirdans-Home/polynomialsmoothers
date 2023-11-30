@@ -7,5 +7,5 @@
 	--with-ccopt="-O3 -g -ggdb -fPIC -march=native -mtune=native" \
 	--with-fcopt="-O3 -g -ggdb -frecursive -fPIC -march=native -mtune=native" \
 	--with-cxxopt="-O3 -g -ggdb -fPIC -march=native -mtune=native" \
-        --with-lpk=4 --enable-openmp	
+        --with-lpk=4	
 
