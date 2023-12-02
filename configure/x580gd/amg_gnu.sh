@@ -1,0 +1,9 @@
+./configure --prefix=/home/cirdan/Documenti/Paper/ParallelSmoothers/polynomialsmoothers/install \
+	--with-psblas=/home/cirdan/Documenti/Paper/ParallelSmoothers/polynomialsmoothers/install \
+	--with-umfpackdir=/usr/include/suitesparse/ \
+	--with-mumpslibdir=/usr/lib/x86_64-linux-gnu/ \
+	--with-mumpsincdir=/usr/include \
+	--with-superluincdir=/usr/include/superlu/ \
+	--with-superlulibdir=/usr/lib/x86_64-linux-gnu/ \
+	--with-superludistincdir=/usr/include/superlu-dist/ \
+	--with-superludistlibdir=/usr/lib/x86_64-linux-gnu/ 
