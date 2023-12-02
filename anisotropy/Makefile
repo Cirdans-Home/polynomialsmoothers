@@ -26,8 +26,13 @@ anisotropy_gpu.o: data_input.o
 anisotropy_gpu.o: anisotropy_gpu.F90
 	$(FC) $(FCOPT) $(FINCLUDES) $(FDEFINES) -DCUDA_MODE -c $< -o $@
 
-check:
-	(cd runs && ./anisopsblascuda testinput.inp) 
+check: psctoolkit psctoolkitgpu
+	echo "TEST OF ANISOPSBLAS"
+	(cd runs && ./anisopsblas testinput.inp)
+	echo "TEST OF ANISOPSBLAS with GPU support"
+	(cd runs && ./anisopsblascuda testinputgpu.inp) 
+	
+all: psctoolkit psctoolkitgpu
 
 clean:
 	rm -rf *.o
