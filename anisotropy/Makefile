@@ -26,6 +26,9 @@ anisotropy_gpu.o: data_input.o
 anisotropy_gpu.o: anisotropy_gpu.F90
 	$(FC) $(FCOPT) $(FINCLUDES) $(FDEFINES) -DCUDA_MODE -c $< -o $@
 
+check:
+	(cd runs && ./anisopsblascuda testinput.inp) 
+
 clean:
 	rm -rf *.o
 	rm -rf *.mod

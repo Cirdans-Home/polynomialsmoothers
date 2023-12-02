@@ -149,7 +149,7 @@ program anisopsblas
 
 
   ! other variables
-  integer(psb_ipk_)  :: info, i, k, nth
+  integer(psb_ipk_)  :: info, i, k, nth, ngpus, tngpus
   character(len=20)  :: name,ch_err
   character(len=40)  :: matrixname
 
@@ -176,32 +176,38 @@ program anisopsblas
   type(psb_i_vect_cuda), target         :: ivgpu
 #endif
 
-  ! openmp stuff
-#if defined(OPENMP)
-    !$OMP parallel shared(nth)
-    !$OMP master
-    nth = omp_get_num_threads()
-    !$OMP end master
-    !$OMP end parallel
-#else
-    nth = 1
-#endif
-
-
   info=psb_success_
 
-
   call psb_init(ctxt)
-#ifdef CUDA_MODE
-  call psb_cuda_init(ctxt)
-#endif
   call psb_info(ctxt,iam,np)
+#ifdef CUDA_MODE
+  call psb_cuda_init(ctxt,iam)
+#endif
+
+! openmp stuff
+#if defined(OPENMP)
+  !$OMP parallel shared(nth)
+  !$OMP master
+  nth = omp_get_num_threads()
+  !$OMP end master
+  !$OMP end parallel
+#else
+  nth = 1
+#endif
 
   if (iam < 0) then
     ! This should not happen, but just in case
     call psb_exit(ctxt)
     stop
   endif
+
+#ifdef CUDA_MODE
+  ngpus = psb_cuda_getDevice()
+  tngpus = psb_cuda_getDeviceCount()
+#else
+  ngpus = -1
+#endif
+
   if(psb_get_errstatus() /= 0) goto 9999
   name='Rotated Anisotropy'
   call psb_set_errverbosity(itwo)
@@ -450,6 +456,13 @@ program anisopsblas
 
   if (iam == psb_root_) &
        & write(psb_out_unit,'("Overall matrix creation time : ",es12.5)')t2
+  if ( (iam == psb_root_).and.(a%is_dev()) ) then
+    write(psb_out_unit,'("Matrix is on device memory")')
+  elseif ( (iam == psb_root_).and.(a%is_host()) ) then
+    write(psb_out_unit,'("Matrix is on host memory")')
+  end if
+  if ( (iam == psb_root_).and.(a%is_sync()) ) &
+      & write(psb_out_unit,'("Matrix is in sync state")')
   if (iam == psb_root_) &
        & write(psb_out_unit,'(" ")')
 
@@ -672,6 +685,10 @@ program anisopsblas
   call psb_sum(ctxt,descsize)
   call psb_sum(ctxt,precsize)
   call prec%descr(info,iout=psb_out_unit)
+#ifdef CUDA_MODE
+  call psb_sum(ctxt,ngpus)
+  call psb_sum(ctxt,tngpus)
+#endif
 !$OMP PARALLEL
 !$OMP SINGLE
   if ((iam == psb_root_)) then
@@ -680,6 +697,7 @@ program anisopsblas
     write(psb_out_unit,'("Theta                              : ",F16.5)') theta
     write(psb_out_unit,'("Anisotropy eps                     : ",F16.5)') eps
     write(psb_out_unit,'("Number of threads                  : ",i12)') nth
+    write(psb_out_unit,'("Number of gpus                     : ",i12,"/",i12)') ngpus,tngpus
     write(psb_out_unit,'("Krylov method                      : ",a)') trim(s_choice%kmethd)
     write(psb_out_unit,'("Preconditioner                     : ",a)') trim(p_choice%descr)
     write(psb_out_unit,'("Iterations to convergence          : ",i12)')    iter
