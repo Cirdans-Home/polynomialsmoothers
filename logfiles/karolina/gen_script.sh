@@ -13,6 +13,6 @@ do
  cat $1 | sed "s/@NNODES@/${allNodes[$i]}/g
  s/@NGPUS@/${allGPUS[$i]}/g
  s/@SIZE@/${idim[$i]}/g
- s/@NTASKS@/$theta/g" > ${outscript}-$batchnp.sh
+ s/@NTASKS@/${allTasks[$i]}/g" > ${outscript}-$batchnp.sh
  let i=$i+1
 done

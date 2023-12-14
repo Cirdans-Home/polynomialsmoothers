@@ -15,9 +15,9 @@ psize=@NTASKS@
 theta=30
 epsilon=100
 
-mpirun -np ${psize} ./anisopsblasuda >> soc1/log_cheby4_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
+srun -n ${psize} ./anisopsblascuda >> soc1/log_cheby4_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
-CSR                     ! matrix storage format
+HLG                     ! matrix storage format
 ${idim}                 ! Discretization grid size
 ${theta}                ! Theta Coefficient (Degree)
 ${epsilon}              ! Epsilon of the anisotropy
@@ -93,9 +93,9 @@ T                       ! Dump coarse solver
 T                       ! Dump using global numbering?
 EOF
 
-mpirun -np ${psize} ./anisopsblasuda >> soc1/log_optcheby4_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
+srun -n ${psize} ./anisopsblascuda >> soc1/log_optcheby4_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
-CSR                     ! matrix storage format
+HLG                     ! matrix storage format
 ${idim}                 ! Discretization grid size
 ${theta}                ! Theta Coefficient (Degree)
 ${epsilon}              ! Epsilon of the anisotropy
@@ -171,9 +171,9 @@ T                       ! Dump coarse solver
 T                       ! Dump using global numbering?
 EOF
 
-mpirun -np ${psize} ./anisopsblasuda >> soc1/log_optcheby1_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
+srun -n ${psize} ./anisopsblascuda >> soc1/log_optcheby1_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
-CSR                     ! matrix storage format
+HLG                     ! matrix storage format
 ${idim}                 ! Discretization grid size
 ${theta}                ! Theta Coefficient (Degree)
 ${epsilon}              ! Epsilon of the anisotropy
