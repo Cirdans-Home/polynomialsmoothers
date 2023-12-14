@@ -7,6 +7,9 @@ genmatch:
 
 gensoc:
 	./gen_script.sh run-soc1-gpu.sh
+	
+gensocmpi:
+	./gen_script_mpi.sh run-soc1-mpi.sh
 
 cleanscript:
 	rm run-match-gpu-*
