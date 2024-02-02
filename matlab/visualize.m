@@ -7,7 +7,9 @@ aopt = gen_aopt(k);
 
 figure(1)
 subplot(1,2,1);
-plot(kval,aopt,'rx',kval,(log(kval)./kval).^2,'k--',"LineWidth",2)
+semilogy(kval,aopt,'rx',...
+    kval,(log(kval)./kval).^2,'k--', ...
+    kval,(log(kval)./(3*kval)).^2,'k--',"LineWidth",2)
 vline(3,'k--');
 legend('a_k^*','log(k)^2/k^2')
 xticks([0,3,5,10,15])
@@ -21,7 +23,7 @@ end
 figure(1)
 subplot(1,2,2)
 semilogy(kval,lambdak,'rx',kval,1.03*log(kval)./(2*kval.^2),'k--', ...
-    "LineWidth",2)
+    kval,log(kval)./(6*kval.^2),'k--',"LineWidth",2)
 vline(3,'k--');
 legend('\Lambda_k','1.03 \cdot log(k)/{2k^2}')
 xticks([0,3,5,10,15])
