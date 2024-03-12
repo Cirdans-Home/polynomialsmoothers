@@ -1,0 +1,229 @@
+Created cusparses_handle
+Created cusparses_handle
+ Welcome to AMG4PSBLAS version: 1.1.0
+ This is the Rotated Anisotropy test program
+Created cusparses_handle
+Created cusparses_handle
+ 
+Solving    3464 x    3464 grid with θ =          30.0000 ϵ =         100.0000
+Overall matrix creation time :  6.06499E+00
+Matrix is on device memory
+ 
+ 
+Preconditioner: ML-VSVBM-4OPTCHEB4-30L1JAC
+Preconditioner time:  6.84696E+00
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-07
+FCG:                  1  3.364376973E+01  1.000000000E-07
+FCG:                  2  1.051538241E+02  1.000000000E-07
+FCG:                  3  1.104943900E+02  1.000000000E-07
+FCG:                  4  3.472802011E+01  1.000000000E-07
+FCG:                  5  1.651429301E+01  1.000000000E-07
+FCG:                  6  2.439923520E+01  1.000000000E-07
+FCG:                  7  2.653131769E+01  1.000000000E-07
+FCG:                  8  1.728275050E+01  1.000000000E-07
+FCG:                  9  1.398949812E+01  1.000000000E-07
+FCG:                 10  1.365026427E+01  1.000000000E-07
+FCG:                 11  8.845418763E+00  1.000000000E-07
+FCG:                 12  5.350682775E+00  1.000000000E-07
+FCG:                 13  4.277266028E+00  1.000000000E-07
+FCG:                 14  3.961147156E+00  1.000000000E-07
+FCG:                 15  3.008744911E+00  1.000000000E-07
+FCG:                 16  1.962962130E+00  1.000000000E-07
+FCG:                 17  1.641104057E+00  1.000000000E-07
+FCG:                 18  2.140941148E+00  1.000000000E-07
+FCG:                 19  2.008803302E+00  1.000000000E-07
+FCG:                 20  1.182825963E+00  1.000000000E-07
+FCG:                 21  1.099950215E+00  1.000000000E-07
+FCG:                 22  1.402257470E+00  1.000000000E-07
+FCG:                 23  1.209452274E+00  1.000000000E-07
+FCG:                 24  1.049062063E+00  1.000000000E-07
+FCG:                 25  1.119024181E+00  1.000000000E-07
+FCG:                 26  1.066019480E+00  1.000000000E-07
+FCG:                 27  1.002096807E+00  1.000000000E-07
+FCG:                 28  9.361837216E-01  1.000000000E-07
+FCG:                 29  7.618706062E-01  1.000000000E-07
+FCG:                 30  6.843544833E-01  1.000000000E-07
+FCG:                 31  6.624711640E-01  1.000000000E-07
+FCG:                 32  5.470626543E-01  1.000000000E-07
+FCG:                 33  4.770074450E-01  1.000000000E-07
+FCG:                 34  4.323820142E-01  1.000000000E-07
+FCG:                 35  3.214633851E-01  1.000000000E-07
+FCG:                 36  2.394915842E-01  1.000000000E-07
+FCG:                 37  1.917850117E-01  1.000000000E-07
+FCG:                 38  1.573403910E-01  1.000000000E-07
+FCG:                 39  1.530184910E-01  1.000000000E-07
+FCG:                 40  1.537091133E-01  1.000000000E-07
+FCG:                 41  1.210380115E-01  1.000000000E-07
+FCG:                 42  8.751410238E-02  1.000000000E-07
+FCG:                 43  6.549668616E-02  1.000000000E-07
+FCG:                 44  5.011622665E-02  1.000000000E-07
+FCG:                 45  4.321472113E-02  1.000000000E-07
+FCG:                 46  3.731406732E-02  1.000000000E-07
+FCG:                 47  3.038799259E-02  1.000000000E-07
+FCG:                 48  2.705673042E-02  1.000000000E-07
+FCG:                 49  2.429551938E-02  1.000000000E-07
+FCG:                 50  1.906522844E-02  1.000000000E-07
+FCG:                 51  1.584858939E-02  1.000000000E-07
+FCG:                 52  1.467324690E-02  1.000000000E-07
+FCG:                 53  1.307633983E-02  1.000000000E-07
+FCG:                 54  1.150578591E-02  1.000000000E-07
+FCG:                 55  9.462059125E-03  1.000000000E-07
+FCG:                 56  7.223900107E-03  1.000000000E-07
+FCG:                 57  5.940000851E-03  1.000000000E-07
+FCG:                 58  5.243306595E-03  1.000000000E-07
+FCG:                 59  4.435449747E-03  1.000000000E-07
+FCG:                 60  3.645482846E-03  1.000000000E-07
+FCG:                 61  2.925924778E-03  1.000000000E-07
+FCG:                 62  2.252727143E-03  1.000000000E-07
+FCG:                 63  1.692481252E-03  1.000000000E-07
+FCG:                 64  1.247920845E-03  1.000000000E-07
+FCG:                 65  9.511768012E-04  1.000000000E-07
+FCG:                 66  7.762023230E-04  1.000000000E-07
+FCG:                 67  6.476010733E-04  1.000000000E-07
+FCG:                 68  5.334536882E-04  1.000000000E-07
+FCG:                 69  4.281659446E-04  1.000000000E-07
+FCG:                 70  3.384773577E-04  1.000000000E-07
+FCG:                 71  2.691205213E-04  1.000000000E-07
+FCG:                 72  2.126921246E-04  1.000000000E-07
+FCG:                 73  1.665482184E-04  1.000000000E-07
+FCG:                 74  1.344957829E-04  1.000000000E-07
+FCG:                 75  1.101348726E-04  1.000000000E-07
+FCG:                 76  8.665289945E-05  1.000000000E-07
+FCG:                 77  6.589628508E-05  1.000000000E-07
+FCG:                 78  4.997418719E-05  1.000000000E-07
+FCG:                 79  3.929249619E-05  1.000000000E-07
+FCG:                 80  3.191423461E-05  1.000000000E-07
+FCG:                 81  2.578293773E-05  1.000000000E-07
+FCG:                 82  2.050306433E-05  1.000000000E-07
+FCG:                 83  1.625605859E-05  1.000000000E-07
+FCG:                 84  1.295470473E-05  1.000000000E-07
+FCG:                 85  1.032252627E-05  1.000000000E-07
+FCG:                 86  8.194577595E-06  1.000000000E-07
+FCG:                 87  6.491460521E-06  1.000000000E-07
+FCG:                 88  5.327039204E-06  1.000000000E-07
+FCG:                 89  4.440407824E-06  1.000000000E-07
+FCG:                 90  3.553193360E-06  1.000000000E-07
+FCG:                 91  2.812414587E-06  1.000000000E-07
+FCG:                 92  2.223382069E-06  1.000000000E-07
+FCG:                 93  1.781423604E-06  1.000000000E-07
+FCG:                 94  1.479583252E-06  1.000000000E-07
+FCG:                 95  1.224585458E-06  1.000000000E-07
+FCG:                 96  9.906858493E-07  1.000000000E-07
+FCG:                 97  8.055373782E-07  1.000000000E-07
+FCG:                 98  6.490042689E-07  1.000000000E-07
+FCG:                 99  5.125125652E-07  1.000000000E-07
+FCG:                100  4.018841786E-07  1.000000000E-07
+FCG:                101  3.185643346E-07  1.000000000E-07
+FCG:                102  2.590215991E-07  1.000000000E-07
+FCG:                103  2.147370218E-07  1.000000000E-07
+FCG:                104  1.751467948E-07  1.000000000E-07
+FCG:                105  1.389261262E-07  1.000000000E-07
+FCG:                106  1.098710949E-07  1.000000000E-07
+FCG:                107  8.838324494E-08  1.000000000E-07
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES_BETA
+          Degree:                   6
+          rho_ba:          0.99989526709773169     
+    Coefficients:           1.0012851725594023        1.0130429303523338        1.0467821512411335        1.1161648941967548        1.2382902021844453        1.4352429710674484     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            6
+   Operator complexity:    1.1264092547470199     
+   Average coarsening :    6.1032886203712717     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.39222566808440740     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               1338068
+                     Nonzeros:              12040284
+      Local  matrix sizes: min:       667590         max:       670478
+                           avg:       669034.0
+           Aggregation   ratio:            8.97
+ 
+  Level            3
+   Damping omega value  :  0.64563446528383039     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                152075
+                     Nonzeros:               1366709
+      Local  matrix sizes: min:        74305         max:        77770
+                           avg:        76037.5
+           Aggregation   ratio:            8.80
+ 
+  Level            4
+   Damping omega value  :  0.66392314541057806     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20235
+                     Nonzeros:                177477
+      Local  matrix sizes: min:         8385         max:        11850
+                           avg:        10117.5
+           Aggregation   ratio:            7.52
+ 
+  Level            5
+   Damping omega value  :  0.66302228899918092     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                  5357
+                     Nonzeros:                 42817
+      Local  matrix sizes: min:          946         max:         4411
+                           avg:         2678.5
+           Aggregation   ratio:            3.78
+ 
+  Level            6  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.66412220747689477     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                  3689
+                     Nonzeros:                 26739
+      Local  matrix sizes: min:          104         max:         3585
+                           avg:         1844.5
+           Aggregation   ratio:            1.45
+   L1 Diagonal solver 
+ 
+Computed solution on        2 processors
+Linear system size                 :     12006225
+Theta                              :          0.52360
+Anisotropy eps                     :        100.00000
+Number of threads                  :            1
+Number of gpus                     :            1/           4
+Krylov method                      : FCG
+Preconditioner                     : ML-VSVBM-4OPTCHEB4-30L1JAC
+Iterations to convergence          :          107
+Relative error estimate on exit    :  8.83832E-08
+Number of levels in hierarchy      :            6
+Time to build hierarchy            :  4.51615E+00
+Time to build smoothers            :  2.33081E+00
+Total time for preconditioner      :  6.84696E+00
+Time to solve system               :  2.81772E+00
+Time per iteration                 :  2.63338E-02
+Total time                         :  9.66468E+00
+Residual 2-norm                    :  6.39612E-12
+Residual inf-norm                  :  7.26853E-14
+Total memory occupation for A      :   1393978000
+Total memory occupation for DESC_A :       305328
+Total memory occupation for PREC   :   1834771640
+Storage format for A               : HLG  
+Storage format for DESC_A          : BLOCK
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
