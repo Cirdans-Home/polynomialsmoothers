@@ -2,7 +2,7 @@
 
 allTasks=(1 2 4 8 16 32 64)
 allGPUS=(1 2 4 8 16 32 64)
-allNodes=(1 1 1 1 2 2 4 8)
+allNodes=(1 1 1 1 2 4 8)
 idim=(2449 3464 4899 6928 9798 13856 19596)
 script=$1
 outscript=${script%.sh}
