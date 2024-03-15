@@ -149,7 +149,7 @@ program anisopsblas
 
 
   ! other variables
-  integer(psb_ipk_)  :: info, i, k, nth, ngpus, tngpus
+  integer(psb_ipk_)  :: info, i, k, nth, idxgpu, tngpus, xgpu
   character(len=20)  :: name,ch_err
   character(len=40)  :: matrixname
 
@@ -200,13 +200,6 @@ program anisopsblas
     call psb_exit(ctxt)
     stop
   endif
-
-#ifdef CUDA_MODE
-  ngpus = psb_cuda_getDevice()
-  tngpus = psb_cuda_getDeviceCount()
-#else
-  ngpus = -1
-#endif
 
   if(psb_get_errstatus() /= 0) goto 9999
   name='Rotated Anisotropy'
@@ -685,19 +678,27 @@ program anisopsblas
   call psb_sum(ctxt,descsize)
   call psb_sum(ctxt,precsize)
   call prec%descr(info,iout=psb_out_unit)
+  call prec%memory_use(info,iout=psb_out_unit)
 #ifdef CUDA_MODE
-  call psb_sum(ctxt,ngpus)
-  call psb_sum(ctxt,tngpus)
+!idxgpu = psb_cuda_getdevice()
+!tngpus = psb_cuda_getdevicecount()
+!if (idxgpu==0) then 
+!  call psb_sum(ctxt,tngpus)
+!else
+!  xgpu = 0
+!  call psb_sum(ctxt,xgpu)
+!tngpus = xgpu
+!end if
 #endif
 !$OMP PARALLEL
 !$OMP SINGLE
-  if ((iam == psb_root_)) then
+ if ((iam == psb_root_)) then
     write(psb_out_unit,'("Computed solution on ",i8," processors")')  np
     write(psb_out_unit,'("Linear system size                 : ",i12)') system_size
     write(psb_out_unit,'("Theta                              : ",F16.5)') theta
     write(psb_out_unit,'("Anisotropy eps                     : ",F16.5)') eps
     write(psb_out_unit,'("Number of threads                  : ",i12)') nth
-    write(psb_out_unit,'("Number of gpus                     : ",i12,"/",i12)') ngpus,tngpus
+!   write(psb_out_unit,'("Number of gpus                     : ",i12)') tngpus
     write(psb_out_unit,'("Krylov method                      : ",a)') trim(s_choice%kmethd)
     write(psb_out_unit,'("Preconditioner                     : ",a)') trim(p_choice%descr)
     write(psb_out_unit,'("Iterations to convergence          : ",i12)')    iter
