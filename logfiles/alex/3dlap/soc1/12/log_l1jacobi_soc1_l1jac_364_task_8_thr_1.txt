@@ -1,0 +1,156 @@
+Created cusparses_handle
+Created cusparses_handle
+ Welcome to AMG4PSBLAS version: 1.1.0
+ This is the amg_d_pde3d sample program
+ - Compiled with CUDA support -
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Generating Matrix (size=48228544)...
+The matrix has been generated and assembled in HLG format.
+-allocation  time :  9.95238E-01
+-coeff. gen. time :  1.56959E+00
+-desc asbly  time :  2.18249E-01
+- mat asbly  time :  4.65214E-01
+-total       time :  3.24844E+00
+PDE Coefficients             : CONST
+Overall matrix creation time :  3.24883E+00
+ 
+ 
+Preconditioner: ML-VSVBM-12L1JAC-30L1JAC
+Preconditioner time:  6.76054E+00
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-07
+FCG:                  1  5.031544232E-02  1.000000000E-07
+FCG:                  2  1.506944792E-02  1.000000000E-07
+FCG:                  3  5.124747037E-03  1.000000000E-07
+FCG:                  4  1.838885183E-03  1.000000000E-07
+FCG:                  5  6.934238916E-04  1.000000000E-07
+FCG:                  6  2.399663800E-04  1.000000000E-07
+FCG:                  7  7.662171255E-05  1.000000000E-07
+FCG:                  8  2.310923977E-05  1.000000000E-07
+FCG:                  9  6.480908298E-06  1.000000000E-07
+FCG:                 10  1.743970979E-06  1.000000000E-07
+FCG:                 11  4.784580159E-07  1.000000000E-07
+FCG:                 12  1.437744791E-07  1.000000000E-07
+FCG:                 13  4.861325993E-08  1.000000000E-07
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Point Jacobi  
+        Local diagonal:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5830108221250223     
+   Average coarsening :    22.530877117248657     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:           12   post:           12
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               6051136
+                     Nonzeros:             186190120
+      Local  matrix sizes: min:       756392         max:       756392
+                           avg:       756392.0
+           Aggregation   ratio:            7.97
+ 
+  Level            3
+   Damping omega value  :  0.63541666666666685     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                146452
+                     Nonzeros:               9670222
+      Local  matrix sizes: min:        18076         max:        18435
+                           avg:        18306.5
+           Aggregation   ratio:           41.32
+ 
+  Level            4
+   Damping omega value  :  0.63999425107107666     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                  6163
+                     Nonzeros:                475953
+      Local  matrix sizes: min:          749         max:          799
+                           avg:          770.4
+           Aggregation   ratio:           23.76
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64274694948152500     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                   361
+                     Nonzeros:                 24567
+      Local  matrix sizes: min:           43         max:           49
+                           avg:           45.1
+           Aggregation   ratio:           17.07
+   L1 Diagonal solver 
+ 
+Computed solution on        8 process(es)
+Number of threads                  :            1
+Number of gpus                     :           28/          64
+Total number of tasks              :            8
+Linear system size                 :     48228544
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VSVBM-12L1JAC-30L1JAC
+Iterations to convergence          :           13
+Relative error estimate on exit    :  4.86133E-08
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  6.37858E+00
+Time to build smoothers            :  3.81969E-01
+Total time for preconditioner      :  6.76054E+00
+Time to solve system               :  1.48846E+00
+Time per iteration                 :  1.14497E-01
+Total time                         :  8.24901E+00
+Residual 2-norm                    :  4.22474E-02
+Residual inf-norm                  :  1.16931E-04
+Total memory occupation for A      :   4437221760
+Total memory occupation for DESC_A :   1513220128
+Total memory occupation for PREC   :  11198995576
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ICDASB: total:                       Sum:       0.27 Avg:       0.03 Max:       0.22 Min:       0.00
+ICDASB: phase1:                      Sum:       0.05 Avg:       0.01 Max:       0.05 Min:       0.00
+ICDASB: phase2:                      Sum:       0.07 Avg:       0.01 Max:       0.03 Min:       0.00
+ICDASB: phase3:                      Sum:       0.14 Avg:       0.02 Max:       0.14 Min:       0.00
+I_DSC_IDX: phase1:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase2:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase3:                   Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
+I_DSC_IDX: phase4:                   Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
+SOC1_MAP: phase0:                    Sum:       0.47 Avg:       0.12 Max:       0.44 Min:       0.00
+SOC1_MAP: phase1:                    Sum:       0.16 Avg:       0.04 Max:       0.10 Min:       0.00
+SOC1_MAP: phase2:                    Sum:       0.09 Avg:       0.02 Max:       0.06 Min:       0.00
+SOC1_MAP: phase3:                    Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
+SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: noand exch:                    Sum:       1.26 Avg:       0.00 Max:       0.03 Min:       0.00
+SPMM: noand cmp:                     Sum:       0.07 Avg:       0.00 Max:       0.06 Min:       0.00

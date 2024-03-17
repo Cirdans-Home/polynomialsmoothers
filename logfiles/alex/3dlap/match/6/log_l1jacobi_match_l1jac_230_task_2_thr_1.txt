@@ -1,0 +1,221 @@
+Created cusparses_handle
+Created cusparses_handle
+ Welcome to AMG4PSBLAS version: 1.1.0
+ This is the amg_d_pde3d sample program
+ - Compiled with CUDA support -
+Created cusparses_handle
+Created cusparses_handle
+Generating Matrix (size=12167000)...
+The matrix has been generated and assembled in HLG format.
+-allocation  time :  1.36737E+00
+-coeff. gen. time :  2.50391E+00
+-desc asbly  time :  1.78910E-01
+- mat asbly  time :  5.57438E-01
+-total       time :  4.61225E+00
+PDE Coefficients             : CONST
+Overall matrix creation time :  4.61254E+00
+ 
+Elaboration time: 1.629737 for 6083500 nodes
+Elaboration time: 1.633544 for 6083500 nodes
+           0 Matching statistics: Unmatched nodes                     0  Singletons:                    0  Pairs:              6083500
+Elaboration time: 0.512671 for 3041750 nodes
+Elaboration time: 0.515111 for 3041750 nodes
+           0 Matching statistics: Unmatched nodes                     0  Singletons:                    0  Pairs:              3041750
+Elaboration time: 0.081538 for 1520875 nodes
+Elaboration time: 0.108295 for 1520875 nodes
+           0 Matching statistics: Unmatched nodes                     0  Singletons:                    0  Pairs:              1520875
+Elaboration time: 0.263058 for 760438 nodes
+Elaboration time: 0.261548 for 760437 nodes
+           0 Matching statistics: Unmatched nodes                     1  Singletons:                    1  Pairs:               760437
+Elaboration time: 0.099443 for 380219 nodes
+Elaboration time: 0.099993 for 380219 nodes
+           0 Matching statistics: Unmatched nodes                     2  Singletons:                    2  Pairs:               380218
+Elaboration time: 0.020022 for 190081 nodes
+Elaboration time: 0.020197 for 190139 nodes
+           0 Matching statistics: Unmatched nodes                   144  Singletons:                  144  Pairs:               190038
+Elaboration time: 0.023806 for 95142 nodes
+Elaboration time: 0.023544 for 95040 nodes
+           0 Matching statistics: Unmatched nodes                    46  Singletons:                   46  Pairs:                95068
+Elaboration time: 0.010469 for 47538 nodes
+Elaboration time: 0.010427 for 47576 nodes
+           0 Matching statistics: Unmatched nodes                    40  Singletons:                   40  Pairs:                47537
+Elaboration time: 0.009097 for 23759 nodes
+Elaboration time: 0.009090 for 23818 nodes
+           0 Matching statistics: Unmatched nodes                   109  Singletons:                  109  Pairs:                23734
+Elaboration time: 0.014441 for 11896 nodes
+Elaboration time: 0.014477 for 11947 nodes
+           0 Matching statistics: Unmatched nodes                    77  Singletons:                   77  Pairs:                11883
+Elaboration time: 0.003562 for 6032 nodes
+Elaboration time: 0.003577 for 5928 nodes
+           0 Matching statistics: Unmatched nodes                    98  Singletons:                   98  Pairs:                 5931
+Elaboration time: 0.002490 for 2988 nodes
+Elaboration time: 0.002496 for 3041 nodes
+           0 Matching statistics: Unmatched nodes                    95  Singletons:                   95  Pairs:                 2967
+Elaboration time: 0.000673 for 1555 nodes
+           0 Matching statistics: Unmatched nodes                    74  Singletons:                   74  Pairs:                 1494
+Elaboration time: 0.000654 for 1507 nodes
+Elaboration time: 0.000400 for 767 nodes
+Elaboration time: 0.000421 for 801 nodes
+           0 Matching statistics: Unmatched nodes                    36  Singletons:                   36  Pairs:                  766
+Elaboration time: 0.000271 for 388 nodes
+Elaboration time: 0.000279 for 414 nodes
+           0 Matching statistics: Unmatched nodes                    34  Singletons:                   34  Pairs:                  384
+Elaboration time: 0.000179 for 198 nodes
+Elaboration time: 0.000177 for 220 nodes
+           0 Matching statistics: Unmatched nodes                    24  Singletons:                   24  Pairs:                  197
+ 
+Preconditioner: ML-VSMATCH-6L1JAC-30L1JAC
+Preconditioner time:  1.86415E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-07
+FCG:                  1  9.078519860E-02  1.000000000E-07
+FCG:                  2  7.021619607E-03  1.000000000E-07
+FCG:                  3  7.715037228E-04  1.000000000E-07
+FCG:                  4  1.652300348E-04  1.000000000E-07
+FCG:                  5  2.082315367E-05  1.000000000E-07
+FCG:                  6  1.601877117E-06  1.000000000E-07
+FCG:                  7  1.812675710E-07  1.000000000E-07
+FCG:                  8  3.268764247E-08  1.000000000E-07
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Point Jacobi  
+        Local diagonal:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            7
+   Operator complexity:    1.9024163245006576     
+   Average coarsening :    6.8294794051990486     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            6   post:            6
+  Parallel Matching Aggregator
+     Number of matching  sweeps:            3
+     Matching algorithm         : MatchBoxP (PREIS)
+  Aggregator object type: Parallel Matching aggregation   
+   Parallel aggregation algorithm: coupled aggr.     
+   Aggregation type: Parallel Matching 
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666663     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               1520875
+                     Nonzeros:              49320157
+      Local  matrix sizes: min:       760437         max:       760438
+                           avg:       760437.5
+           Aggregation   ratio:            8.00
+ 
+  Level            3
+   Damping omega value  :  0.66666666666666741     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                190182
+                     Nonzeros:              20958446
+      Local  matrix sizes: min:        95040         max:        95142
+                           avg:        95091.0
+           Aggregation   ratio:            8.00
+ 
+  Level            4
+   Damping omega value  :  0.53701582988853358     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 23843
+                     Nonzeros:               5320229
+      Local  matrix sizes: min:        11896         max:        11947
+                           avg:        11921.5
+           Aggregation   ratio:            7.98
+ 
+  Level            5
+   Damping omega value  :  0.54734643867263622     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                  3062
+                     Nonzeros:                825416
+      Local  matrix sizes: min:         1507         max:         1555
+                           avg:         1531.0
+           Aggregation   ratio:            7.79
+ 
+  Level            6
+   Damping omega value  :  0.39400937209567116     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                   418
+                     Nonzeros:                 99458
+      Local  matrix sizes: min:          198         max:          220
+                           avg:          209.0
+           Aggregation   ratio:            7.33
+ 
+  Level            7  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.55550329345451077     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                   221
+                     Nonzeros:                 47763
+      Local  matrix sizes: min:          102         max:          119
+                           avg:          110.5
+           Aggregation   ratio:            1.89
+   L1 Diagonal solver 
+ 
+Computed solution on        2 process(es)
+Number of threads                  :            1
+Number of gpus                     :            1/           4
+Total number of tasks              :            2
+Linear system size                 :     12167000
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VSMATCH-6L1JAC-30L1JAC
+Iterations to convergence          :            8
+Relative error estimate on exit    :  3.26876E-08
+Number of levels in hierarchy      :            7
+Time to build hierarchy            :  1.81256E+01
+Time to build smoothers            :  5.15895E-01
+Total time for preconditioner      :  1.86415E+01
+Time to solve system               :  3.66822E-01
+Time per iteration                 :  4.58528E-02
+Total time                         :  1.90083E+01
+Residual 2-norm                    :  7.24637E-03
+Residual inf-norm                  :  5.82689E-05
+Total memory occupation for A      :   1118436808
+Total memory occupation for DESC_A :    378039504
+Total memory occupation for PREC   :   3770740877
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ICDASB: total:                       Sum:       0.30 Avg:       0.01 Max:       0.18 Min:       0.00
+ICDASB: phase1:                      Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
+ICDASB: phase2:                      Sum:       0.11 Avg:       0.00 Max:       0.02 Min:       0.00
+ICDASB: phase3:                      Sum:       0.17 Avg:       0.00 Max:       0.17 Min:       0.00
+I_DSC_IDX: phase1:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase2:                   Sum:       0.01 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase3:                   Sum:       0.01 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase4:                   Sum:       0.02 Avg:       0.00 Max:       0.01 Min:       0.00
+PMC_TPROL: MatchBoxP:                Sum:       7.55 Avg:       0.47 Max:       4.10 Min:       0.00
+PMC_TPROL: spmm_bld:                 Sum:       2.20 Avg:       0.14 Max:       1.02 Min:       0.00
+PMC_TPROL: sweeps_mult:              Sum:       0.51 Avg:       0.08 Max:       0.45 Min:       0.00
+MBP_BLDP: phase1:                    Sum:       0.09 Avg:       0.01 Max:       0.05 Min:       0.00
+MBP_BLDP: buil_matching:             Sum:       7.16 Avg:       0.45 Max:       3.89 Min:       0.00
+MBP_BLDP: phase2:                    Sum:       0.13 Avg:       0.01 Max:       0.05 Min:       0.00
+MBP_BLDP: phase3:                    Sum:       0.20 Avg:       0.01 Max:       0.11 Min:       0.00
+BLD_MTCH: bld_ahat:                  Sum:       3.10 Avg:       0.19 Max:       1.58 Min:       0.00
+BLD_MTCH: PMatchBox:                 Sum:       2.83 Avg:       0.18 Max:       1.70 Min:       0.00
+BLD_MTCH: phase2:                    Sum:       1.21 Avg:       0.08 Max:       0.60 Min:       0.00
+BLD_MTCH: phase3:                    Sum:       0.02 Avg:       0.00 Max:       0.01 Min:       0.00
+BLD_AHAT: phase1:                    Sum:       0.64 Avg:       0.04 Max:       0.34 Min:       0.00
+BLD_AHAT: glob_transp:               Sum:       1.06 Avg:       0.07 Max:       0.53 Min:       0.00
+BLD_AHAT: phase2:                    Sum:       1.44 Avg:       0.09 Max:       0.73 Min:       0.00
+SPMM_BLD: spspmm:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM_BLD: prolcnv:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM_BLD: proltrans:                 Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM_BLD: asb:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: noand exch:                    Sum:       0.25 Avg:       0.00 Max:       0.01 Min:       0.00
+SPMM: noand cmp:                     Sum:       0.07 Avg:       0.00 Max:       0.07 Min:       0.00
