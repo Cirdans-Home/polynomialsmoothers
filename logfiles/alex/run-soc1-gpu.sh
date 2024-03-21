@@ -44,6 +44,8 @@ POLY                    ! smoother type
 1                       ! (pre-)smoother / 1-lev prec sweeps
 ${degiter}              ! degree for polynomial smoother
 POLY_LOTTES             ! polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! number of overlap layers
 HALO                    ! restriction  over application of AS
 NONE                    ! prolongation over application of AS
@@ -58,6 +60,8 @@ NONE                    ! Second (post) smoother, ignored if NONE
 1                       ! Number of sweeps for (post) smoother
 8                       ! degree for polynomial smoother
 POLY_LOTTES_BETA        ! Polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! Number of overlap layers for AS preconditioner
 HALO                    ! AS restriction operator: NONE HALO
 NONE                    ! AS prolongation operator: NONE SUM AVG
@@ -122,6 +126,8 @@ POLY                    ! smoother type
 1                       ! (pre-)smoother / 1-lev prec sweeps
 ${degiter}              ! degree for polynomial smoother
 POLY_LOTTES_BETA        ! polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! number of overlap layers
 HALO                    ! restriction  over application of AS
 NONE                    ! prolongation over application of AS
@@ -136,6 +142,8 @@ NONE                    ! Second (post) smoother, ignored if NONE
 1                       ! Number of sweeps for (post) smoother
 8                       ! degree for polynomial smoother
 POLY_LOTTES_BETA        ! Polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! Number of overlap layers for AS preconditioner
 HALO                    ! AS restriction operator: NONE HALO
 NONE                    ! AS prolongation operator: NONE SUM AVG
@@ -199,7 +207,9 @@ ML                      ! Preconditioner type
 POLY                    ! smoother type
 1                       ! (pre-)smoother / 1-lev prec sweeps
 ${degiter}              ! degree for polynomial smoother
-POLY_LOTTES_NEW         ! polynomial variant
+POLY_NEW                ! polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! number of overlap layers
 HALO                    ! restriction  over application of AS
 NONE                    ! prolongation over application of AS
@@ -214,6 +224,8 @@ NONE                    ! Second (post) smoother, ignored if NONE
 1                       ! Number of sweeps for (post) smoother
 4                       ! degree for polynomial smoother
 POLY_LOTTES_BETA        ! Polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! Number of overlap layers for AS preconditioner
 HALO                    ! AS restriction operator: NONE HALO
 NONE                    ! AS prolongation operator: NONE SUM AVG
@@ -278,6 +290,8 @@ L1-JACOBI               ! smoother type
 ${degiter}              ! (pre-)smoother / 1-lev prec sweeps
 1                       ! degree for polynomial smoother
 POLY_NEW                ! polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! number of overlap layers
 HALO                    ! restriction  over application of AS
 NONE                    ! prolongation over application of AS
@@ -292,6 +306,8 @@ NONE                    ! Second (post) smoother, ignored if NONE
 1                       ! Number of sweeps for (post) smoother
 4                       ! degree for polynomial smoother
 POLY_LOTTES_BETA        ! Polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! Number of overlap layers for AS preconditioner
 HALO                    ! AS restriction operator: NONE HALO
 NONE                    ! AS prolongation operator: NONE SUM AVG
