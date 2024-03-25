@@ -10,12 +10,12 @@ Created cusparses_handle
 Created cusparses_handle
  
 Solving    4899 x    4899 grid with θ =          30.0000 ϵ =         100.0000
-Overall matrix creation time :  5.37523E+00
+Overall matrix creation time :  6.47281E+00
 Matrix is on device memory
  
  
 Preconditioner: ML-VSVBM-12L1JAC-30L1JAC
-Preconditioner time:  4.62117E+00
+Preconditioner time:  5.06204E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -220,23 +220,65 @@ FCG:                117  8.842352293E-08  1.000000000E-07
            Aggregation   ratio:            1.09
    L1 Diagonal solver 
  
+
+ Preconditioner memory usage
+ 
+  Level            1
+            Matrix:            696867096
+        Descriptor:               215776
+          Smoother:             48020008
+ 
+  Level            2
+            Matrix:             77951128
+        Descriptor:               124360
+        Linear map:            542374676
+          Smoother:              5372584
+ 
+  Level            3
+            Matrix:              9133444
+        Descriptor:                41596
+        Linear map:             60574464
+          Smoother:               632168
+ 
+  Level            4
+            Matrix:              1508296
+        Descriptor:                16192
+        Linear map:              7004128
+          Smoother:               106184
+ 
+  Level            5
+            Matrix:               647180
+        Descriptor:                 5544
+        Linear map:              1022360
+          Smoother:                47016
+ 
+  Level            6
+            Matrix:               549652
+        Descriptor:                 2024
+        Linear map:               347060
+          Smoother:                40216
+ 
+  Level            7  (coarse)
+            Matrix:               893188
+        Descriptor:                  708
+        Linear map:               260764
+          Smoother:                39320
 Computed solution on        4 processors
 Linear system size                 :     24010000
 Theta                              :          0.52360
 Anisotropy eps                     :        100.00000
 Number of threads                  :            1
-Number of gpus                     :            6/          16
 Krylov method                      : FCG
 Preconditioner                     : ML-VSVBM-12L1JAC-30L1JAC
 Iterations to convergence          :          117
 Relative error estimate on exit    :  8.84235E-08
 Number of levels in hierarchy      :            7
-Time to build hierarchy            :  4.37607E+00
-Time to build smoothers            :  2.45105E-01
-Total time for preconditioner      :  4.62117E+00
-Time to solve system               :  5.61190E+00
-Time per iteration                 :  4.79649E-02
-Total time                         :  1.02331E+01
+Time to build hierarchy            :  4.78825E+00
+Time to build smoothers            :  2.73789E-01
+Total time for preconditioner      :  5.06204E+00
+Time to solve system               :  5.77479E+00
+Time per iteration                 :  4.93572E-02
+Total time                         :  1.08368E+01
 Residual 2-norm                    :  4.52566E-12
 Residual inf-norm                  :  7.16332E-14
 Total memory occupation for A      :   2787819744

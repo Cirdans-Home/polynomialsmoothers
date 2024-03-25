@@ -19,32 +19,32 @@ Created cusparses_handle
 Created cusparses_handle
 Generating Matrix (size=48228544)...
 The matrix has been generated and assembled in HLG format.
--allocation  time :  9.79185E-01
--coeff. gen. time :  1.60372E+00
--desc asbly  time :  2.13213E-01
-- mat asbly  time :  4.63115E-01
--total       time :  3.26604E+00
+-allocation  time :  1.02801E+00
+-coeff. gen. time :  1.58141E+00
+-desc asbly  time :  2.13574E-01
+- mat asbly  time :  4.66026E-01
+-total       time :  3.29781E+00
 PDE Coefficients             : CONST
-Overall matrix creation time :  3.26722E+00
+Overall matrix creation time :  3.29861E+00
  
  
 Preconditioner: ML-VSVBM-6CHEBY4-30L1JAC
-Preconditioner time:  8.98189E+00
+Preconditioner time:  6.80887E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
-FCG:                  1  4.986294445E-02  1.000000000E-07
-FCG:                  2  1.364126387E-02  1.000000000E-07
-FCG:                  3  4.207752878E-03  1.000000000E-07
-FCG:                  4  1.578006232E-03  1.000000000E-07
-FCG:                  5  5.506895360E-04  1.000000000E-07
-FCG:                  6  1.559960590E-04  1.000000000E-07
-FCG:                  7  4.104923566E-05  1.000000000E-07
-FCG:                  8  9.716654131E-06  1.000000000E-07
-FCG:                  9  2.051685735E-06  1.000000000E-07
-FCG:                 10  4.437379452E-07  1.000000000E-07
-FCG:                 11  1.101107137E-07  1.000000000E-07
-FCG:                 12  3.728473765E-08  1.000000000E-07
+FCG:                  1  5.086474215E-02  1.000000000E-07
+FCG:                  2  1.404955974E-02  1.000000000E-07
+FCG:                  3  4.313773124E-03  1.000000000E-07
+FCG:                  4  1.583643410E-03  1.000000000E-07
+FCG:                  5  5.807282504E-04  1.000000000E-07
+FCG:                  6  1.706438859E-04  1.000000000E-07
+FCG:                  7  4.522174031E-05  1.000000000E-07
+FCG:                  8  1.130119416E-05  1.000000000E-07
+FCG:                  9  2.530853660E-06  1.000000000E-07
+FCG:                 10  5.662623977E-07  1.000000000E-07
+FCG:                 11  1.381067414E-07  1.000000000E-07
+FCG:                 12  4.442042596E-08  1.000000000E-07
 
  Preconditioner description
   Multilevel Preconditioner
@@ -54,7 +54,7 @@ FCG:                 12  3.728473765E-08  1.000000000E-07
    Polynomial smoother   
          variant:        POLY_LOTTES
           Degree:                   6
-          rho_ba:          0.96115031267900608     
+          rho_ba:           1.0000000000000000     
         Local solver details:
    L1 Diagonal solver 
  
@@ -116,23 +116,22 @@ FCG:                 12  3.728473765E-08  1.000000000E-07
  
 Computed solution on        8 process(es)
 Number of threads                  :            1
-Number of gpus                     :           28/          64
 Total number of tasks              :            8
 Linear system size                 :     48228544
 PDE Coefficients                   : CONST
 Krylov method                      : FCG
 Preconditioner                     : ML-VSVBM-6CHEBY4-30L1JAC
 Iterations to convergence          :           12
-Relative error estimate on exit    :  3.72847E-08
+Relative error estimate on exit    :  4.44204E-08
 Number of levels in hierarchy      :            5
-Time to build hierarchy            :  6.44845E+00
-Time to build smoothers            :  2.53344E+00
-Total time for preconditioner      :  8.98189E+00
-Time to solve system               :  1.02883E+00
-Time per iteration                 :  8.57361E-02
-Total time                         :  1.00107E+01
-Residual 2-norm                    :  3.24023E-02
-Residual inf-norm                  :  8.41229E-05
+Time to build hierarchy            :  6.43285E+00
+Time to build smoothers            :  3.76020E-01
+Total time for preconditioner      :  6.80887E+00
+Time to solve system               :  9.91514E-01
+Time per iteration                 :  8.26261E-02
+Total time                         :  7.80038E+00
+Residual 2-norm                    :  3.86036E-02
+Residual inf-norm                  :  9.44503E-05
 Total memory occupation for A      :   4437221760
 Total memory occupation for DESC_A :   1513220128
 Total memory occupation for PREC   :  11198995576
@@ -147,20 +146,12 @@ I_DSC_IDX: phase2:                   Sum:       0.00 Avg:       0.00 Max:       
 I_DSC_IDX: phase3:                   Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
 I_DSC_IDX: phase4:                   Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
 SOC1_MAP: phase0:                    Sum:       0.47 Avg:       0.12 Max:       0.44 Min:       0.00
-SOC1_MAP: phase1:                    Sum:       0.17 Avg:       0.04 Max:       0.10 Min:       0.00
-SOC1_MAP: phase2:                    Sum:       0.10 Avg:       0.02 Max:       0.06 Min:       0.00
+SOC1_MAP: phase1:                    Sum:       0.16 Avg:       0.04 Max:       0.10 Min:       0.00
+SOC1_MAP: phase2:                    Sum:       0.09 Avg:       0.02 Max:       0.06 Min:       0.00
 SOC1_MAP: phase3:                    Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
 SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
-SPMM: noand exch:                    Sum:       0.86 Avg:       0.00 Max:       0.03 Min:       0.00
-SPMM: noand cmp:                     Sum:       1.61 Avg:       0.00 Max:       0.06 Min:       0.00
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+SPMM: noand exch:                    Sum:       0.78 Avg:       0.00 Max:       0.03 Min:       0.00
+SPMM: noand cmp:                     Sum:       0.07 Avg:       0.00 Max:       0.06 Min:       0.00

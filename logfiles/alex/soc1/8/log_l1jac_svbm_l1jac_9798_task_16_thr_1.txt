@@ -34,12 +34,12 @@ Created cusparses_handle
 Created cusparses_handle
  
 Solving    9798 x    9798 grid with θ =          30.0000 ϵ =         100.0000
-Overall matrix creation time :  6.22963E+00
+Overall matrix creation time :  6.92875E+00
 Matrix is on device memory
  
  
 Preconditioner: ML-VSVBM-8L1JAC-30L1JAC
-Preconditioner time:  5.86821E+00
+Preconditioner time:  5.49924E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -276,23 +276,65 @@ FCG:                149  8.683151833E-08  1.000000000E-07
            Aggregation   ratio:            1.17
    L1 Diagonal solver 
  
+
+ Preconditioner memory usage
+ 
+  Level            1
+            Matrix:            696546108
+        Descriptor:               431472
+          Smoother:             48010216
+ 
+  Level            2
+            Matrix:             78480796
+        Descriptor:               248532
+        Linear map:            541876348
+          Smoother:              5410144
+ 
+  Level            3
+            Matrix:              9659608
+        Descriptor:                83036
+        Linear map:             60734840
+          Smoother:               670816
+ 
+  Level            4
+            Matrix:              2054796
+        Descriptor:                27872
+        Linear map:              7235664
+          Smoother:               145192
+ 
+  Level            5
+            Matrix:              1121224
+        Descriptor:                 9480
+        Linear map:              1257384
+          Smoother:                86144
+ 
+  Level            6
+            Matrix:              1109368
+        Descriptor:                 3380
+        Linear map:               580428
+          Smoother:                79384
+ 
+  Level            7  (coarse)
+            Matrix:              1234048
+        Descriptor:                 2356
+        Linear map:               490516
+          Smoother:                78512
 Computed solution on       16 processors
 Linear system size                 :     96020401
 Theta                              :          0.52360
 Anisotropy eps                     :        100.00000
 Number of threads                  :            1
-Number of gpus                     :           28/         128
 Krylov method                      : FCG
 Preconditioner                     : ML-VSVBM-8L1JAC-30L1JAC
 Iterations to convergence          :          149
 Relative error estimate on exit    :  8.68315E-08
 Number of levels in hierarchy      :            7
-Time to build hierarchy            :  4.67949E+00
-Time to build smoothers            :  1.18872E+00
-Total time for preconditioner      :  5.86821E+00
-Time to solve system               :  8.09892E+01
-Time per iteration                 :  5.43552E-01
-Total time                         :  8.68574E+01
+Time to build hierarchy            :  4.71803E+00
+Time to build smoothers            :  7.81213E-01
+Total time for preconditioner      :  5.49924E+00
+Time to solve system               :  7.78224E+01
+Time per iteration                 :  5.22298E-01
+Total time                         :  8.33216E+01
 Residual 2-norm                    :  2.23505E-12
 Residual inf-norm                  :  3.23990E-14
 Total memory occupation for A      :  11149672776

@@ -6,60 +6,60 @@ Created cusparses_handle
 Created cusparses_handle
  
 Solving    3464 x    3464 grid with θ =          30.0000 ϵ =         100.0000
-Overall matrix creation time :  6.14508E+00
+Overall matrix creation time :  6.96105E+00
 Matrix is on device memory
  
-Elaboration time: 0.396712 for 6003113 nodes
-Elaboration time: 0.396057 for 6003112 nodes
+Elaboration time: 0.481530 for 6003113 nodes
+Elaboration time: 0.482520 for 6003112 nodes
            0 Matching statistics: Unmatched nodes                     3  Singletons:                    3  Pairs:              6003111
-Elaboration time: 0.204275 for 3001556 nodes
-Elaboration time: 0.203892 for 3001558 nodes
+Elaboration time: 0.248454 for 3001556 nodes
+Elaboration time: 0.246528 for 3001558 nodes
            0 Matching statistics: Unmatched nodes                     2  Singletons:                    2  Pairs:              3001556
-Elaboration time: 0.247164 for 1500779 nodes
-Elaboration time: 0.248278 for 1500779 nodes
+Elaboration time: 0.276528 for 1500779 nodes
+Elaboration time: 0.275997 for 1500779 nodes
            0 Matching statistics: Unmatched nodes                     4  Singletons:                    4  Pairs:              1500777
-Elaboration time: 0.055909 for 750392 nodes
-Elaboration time: 0.055809 for 750389 nodes
+Elaboration time: 0.067222 for 750389 nodes
+Elaboration time: 0.067237 for 750392 nodes
            0 Matching statistics: Unmatched nodes                   433  Singletons:                  433  Pairs:               750174
-Elaboration time: 0.041427 for 375196 nodes
-Elaboration time: 0.040471 for 375411 nodes
+Elaboration time: 0.044924 for 375196 nodes
+Elaboration time: 0.044807 for 375411 nodes
            0 Matching statistics: Unmatched nodes                     3  Singletons:                    3  Pairs:               375302
-Elaboration time: 0.013221 for 187599 nodes
-Elaboration time: 0.013310 for 187706 nodes
+Elaboration time: 0.015162 for 187599 nodes
+Elaboration time: 0.014949 for 187706 nodes
            0 Matching statistics: Unmatched nodes                   219  Singletons:                  219  Pairs:               187543
-Elaboration time: 0.010099 for 93748 nodes
-Elaboration time: 0.010137 for 94014 nodes
+Elaboration time: 0.011629 for 93748 nodes
+Elaboration time: 0.011547 for 94014 nodes
            0 Matching statistics: Unmatched nodes                     4  Singletons:                    4  Pairs:                93879
-Elaboration time: 0.005849 for 46876 nodes
-Elaboration time: 0.005913 for 47007 nodes
+Elaboration time: 0.006159 for 46876 nodes
+Elaboration time: 0.006219 for 47007 nodes
            0 Matching statistics: Unmatched nodes                   221  Singletons:                  221  Pairs:                46831
-Elaboration time: 0.005065 for 23518 nodes
-Elaboration time: 0.005067 for 23534 nodes
+Elaboration time: 0.007045 for 23518 nodes
+Elaboration time: 0.007110 for 23534 nodes
            0 Matching statistics: Unmatched nodes                    58  Singletons:                   58  Pairs:                23497
-Elaboration time: 0.004833 for 11746 nodes
-Elaboration time: 0.004867 for 11809 nodes
+Elaboration time: 0.003383 for 11809 nodes
+Elaboration time: 0.003362 for 11746 nodes
            0 Matching statistics: Unmatched nodes                   107  Singletons:                  107  Pairs:                11724
-Elaboration time: 0.002709 for 5937 nodes
-Elaboration time: 0.002735 for 5894 nodes
+Elaboration time: 0.002619 for 5937 nodes
+Elaboration time: 0.002620 for 5894 nodes
            0 Matching statistics: Unmatched nodes                    69  Singletons:                   69  Pairs:                 5881
-Elaboration time: 0.000284 for 2982 nodes
-Elaboration time: 0.000297 for 2968 nodes
+Elaboration time: 0.000341 for 2982 nodes
+Elaboration time: 0.000356 for 2968 nodes
            0 Matching statistics: Unmatched nodes                    30  Singletons:                   30  Pairs:                 2960
-Elaboration time: 0.000247 for 1498 nodes
+Elaboration time: 0.000297 for 1492 nodes
+Elaboration time: 0.000300 for 1498 nodes
            0 Matching statistics: Unmatched nodes                    38  Singletons:                   38  Pairs:                 1476
-Elaboration time: 0.000243 for 1492 nodes
-Elaboration time: 0.000114 for 752 nodes
+Elaboration time: 0.000136 for 752 nodes
+Elaboration time: 0.000133 for 762 nodes
            0 Matching statistics: Unmatched nodes                    66  Singletons:                   66  Pairs:                  724
-Elaboration time: 0.000108 for 762 nodes
-Elaboration time: 0.000074 for 394 nodes
+Elaboration time: 0.000090 for 394 nodes
+Elaboration time: 0.000093 for 396 nodes
            0 Matching statistics: Unmatched nodes                    34  Singletons:                   34  Pairs:                  378
-Elaboration time: 0.000078 for 396 nodes
-Elaboration time: 0.000062 for 212 nodes
-Elaboration time: 0.000060 for 200 nodes
+Elaboration time: 0.000075 for 212 nodes
+Elaboration time: 0.000075 for 200 nodes
            0 Matching statistics: Unmatched nodes                     8  Singletons:                    8  Pairs:                  202
  
 Preconditioner: ML-VSMATCH-4L1JAC-30L1JAC
-Preconditioner time:  1.33858E+01
+Preconditioner time:  1.48066E+01
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -268,23 +268,65 @@ FCG:                119  8.606741542E-08  1.000000000E-07
            Aggregation   ratio:            1.96
    L1 Diagonal solver 
  
+
+ Preconditioner memory usage
+ 
+  Level            1
+            Matrix:            696989580
+        Descriptor:               152664
+          Smoother:             48024912
+ 
+  Level            2
+            Matrix:            141108660
+        Descriptor:                91144
+        Linear map:            536479580
+          Smoother:              6003144
+ 
+  Level            3
+            Matrix:             17890276
+        Descriptor:                62252
+        Linear map:             67529608
+          Smoother:               752120
+ 
+  Level            4
+            Matrix:              3367260
+        Descriptor:                21204
+        Linear map:             10617092
+          Smoother:                94480
+ 
+  Level            5
+            Matrix:               474520
+        Descriptor:                10940
+        Linear map:              1327696
+          Smoother:                11992
+ 
+  Level            6
+            Matrix:                89576
+        Descriptor:                 3980
+        Linear map:               218920
+          Smoother:                 1608
+ 
+  Level            7  (coarse)
+            Matrix:               113348
+        Descriptor:                 4860
+        Linear map:                63624
+          Smoother:                  816
 Computed solution on        2 processors
 Linear system size                 :     12006225
 Theta                              :          0.52360
 Anisotropy eps                     :        100.00000
 Number of threads                  :            1
-Number of gpus                     :            1/           4
 Krylov method                      : FCG
 Preconditioner                     : ML-VSMATCH-4L1JAC-30L1JAC
 Iterations to convergence          :          119
 Relative error estimate on exit    :  8.60674E-08
 Number of levels in hierarchy      :            7
-Time to build hierarchy            :  1.28876E+01
-Time to build smoothers            :  4.98160E-01
-Total time for preconditioner      :  1.33858E+01
-Time to solve system               :  2.21629E+00
-Time per iteration                 :  1.86243E-02
-Total time                         :  1.56021E+01
+Time to build hierarchy            :  1.44262E+01
+Time to build smoothers            :  3.80338E-01
+Total time for preconditioner      :  1.48066E+01
+Time to solve system               :  2.02136E+00
+Time per iteration                 :  1.69862E-02
+Total time                         :  1.68279E+01
 Residual 2-norm                    :  6.22858E-12
 Residual inf-norm                  :  1.48420E-13
 Total memory occupation for A      :   1393978000

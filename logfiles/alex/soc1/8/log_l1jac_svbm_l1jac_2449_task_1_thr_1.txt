@@ -4,12 +4,12 @@ Created cusparses_handle
  This is the Rotated Anisotropy test program
  
 Solving    2449 x    2449 grid with θ =          30.0000 ϵ =         100.0000
-Overall matrix creation time :  5.38239E+00
+Overall matrix creation time :  5.16940E+00
 Matrix is on device memory
  
  
 Preconditioner: ML-VSVBM-8L1JAC-30L1JAC
-Preconditioner time:  4.40293E+00
+Preconditioner time:  4.36688E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -195,23 +195,59 @@ FCG:                107  9.833620835E-08  1.000000000E-07
            Aggregation   ratio:            1.33
    L1 Diagonal solver 
  
+
+ Preconditioner memory usage
+ 
+  Level            1
+            Matrix:            696867096
+        Descriptor:                  128
+          Smoother:             48020008
+ 
+  Level            2
+            Matrix:             77723204
+        Descriptor:                   64
+        Linear map:            542864392
+          Smoother:              5359520
+ 
+  Level            3
+            Matrix:              8905276
+        Descriptor:                   64
+        Linear map:             60666276
+          Smoother:               615840
+ 
+  Level            4
+            Matrix:              1249956
+        Descriptor:                   64
+        Linear map:              6968324
+          Smoother:                85856
+ 
+  Level            5
+            Matrix:               423632
+        Descriptor:                   64
+        Linear map:               900824
+          Smoother:                27296
+ 
+  Level            6  (coarse)
+            Matrix:               381096
+        Descriptor:                   64
+        Linear map:               223772
+          Smoother:                20576
 Computed solution on        1 processors
 Linear system size                 :      6002500
 Theta                              :          0.52360
 Anisotropy eps                     :        100.00000
 Number of threads                  :            1
-Number of gpus                     :            0/           1
 Krylov method                      : FCG
 Preconditioner                     : ML-VSVBM-8L1JAC-30L1JAC
 Iterations to convergence          :          107
 Relative error estimate on exit    :  9.83362E-08
 Number of levels in hierarchy      :            6
-Time to build hierarchy            :  4.16943E+00
-Time to build smoothers            :  2.33506E-01
-Total time for preconditioner      :  4.40293E+00
-Time to solve system               :  2.58289E+00
-Time per iteration                 :  2.41392E-02
-Total time                         :  6.98583E+00
+Time to build hierarchy            :  4.13349E+00
+Time to build smoothers            :  2.33381E-01
+Total time for preconditioner      :  4.36688E+00
+Time to solve system               :  2.57075E+00
+Time per iteration                 :  2.40257E-02
+Total time                         :  6.93763E+00
 Residual 2-norm                    :  1.00652E-11
 Residual inf-norm                  :  3.17027E-13
 Total memory occupation for A      :    696867096

@@ -130,165 +130,165 @@ Created cusparses_handle
 Created cusparses_handle
  
 Solving   19596 x   19596 grid with θ =          30.0000 ϵ =         100.0000
-Overall matrix creation time :  7.61509E+00
+Overall matrix creation time :  8.28438E+00
 Matrix is on device memory
  
  
 Preconditioner: ML-VSVBM-4OPTCHEB4-30L1JAC
-Preconditioner time:  2.55000E+01
+Preconditioner time:  7.91248E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
-FCG:                  1  1.782151814E+02  1.000000000E-07
-FCG:                  2  6.346408769E+02  1.000000000E-07
-FCG:                  3  4.408324287E+02  1.000000000E-07
-FCG:                  4  1.617050792E+02  1.000000000E-07
-FCG:                  5  2.200118578E+02  1.000000000E-07
-FCG:                  6  2.975795542E+02  1.000000000E-07
-FCG:                  7  3.313068637E+02  1.000000000E-07
-FCG:                  8  1.962665359E+02  1.000000000E-07
-FCG:                  9  8.627288651E+01  1.000000000E-07
-FCG:                 10  7.102853456E+01  1.000000000E-07
-FCG:                 11  4.341834550E+01  1.000000000E-07
-FCG:                 12  3.053537374E+01  1.000000000E-07
-FCG:                 13  1.769715143E+01  1.000000000E-07
-FCG:                 14  1.333878520E+01  1.000000000E-07
-FCG:                 15  1.703794769E+01  1.000000000E-07
-FCG:                 16  1.597451105E+01  1.000000000E-07
-FCG:                 17  1.448585203E+01  1.000000000E-07
-FCG:                 18  9.909103268E+00  1.000000000E-07
-FCG:                 19  8.814067809E+00  1.000000000E-07
-FCG:                 20  1.030591933E+01  1.000000000E-07
-FCG:                 21  1.100631731E+01  1.000000000E-07
-FCG:                 22  1.300805831E+01  1.000000000E-07
-FCG:                 23  1.479013222E+01  1.000000000E-07
-FCG:                 24  1.329718903E+01  1.000000000E-07
-FCG:                 25  1.172531226E+01  1.000000000E-07
-FCG:                 26  1.165771421E+01  1.000000000E-07
-FCG:                 27  1.061208532E+01  1.000000000E-07
-FCG:                 28  8.235703308E+00  1.000000000E-07
-FCG:                 29  6.949078761E+00  1.000000000E-07
-FCG:                 30  6.148917814E+00  1.000000000E-07
-FCG:                 31  5.419933371E+00  1.000000000E-07
-FCG:                 32  5.972666429E+00  1.000000000E-07
-FCG:                 33  7.001693799E+00  1.000000000E-07
-FCG:                 34  6.811915650E+00  1.000000000E-07
-FCG:                 35  7.008356166E+00  1.000000000E-07
-FCG:                 36  7.404098126E+00  1.000000000E-07
-FCG:                 37  7.773795951E+00  1.000000000E-07
-FCG:                 38  7.653767282E+00  1.000000000E-07
-FCG:                 39  6.485730501E+00  1.000000000E-07
-FCG:                 40  5.541553307E+00  1.000000000E-07
-FCG:                 41  5.517698972E+00  1.000000000E-07
-FCG:                 42  5.377297781E+00  1.000000000E-07
-FCG:                 43  5.726162352E+00  1.000000000E-07
-FCG:                 44  5.601814221E+00  1.000000000E-07
-FCG:                 45  4.679558938E+00  1.000000000E-07
-FCG:                 46  3.952276245E+00  1.000000000E-07
-FCG:                 47  3.433911941E+00  1.000000000E-07
-FCG:                 48  3.008455989E+00  1.000000000E-07
-FCG:                 49  2.838539579E+00  1.000000000E-07
-FCG:                 50  2.787867789E+00  1.000000000E-07
-FCG:                 51  2.919935647E+00  1.000000000E-07
-FCG:                 52  2.907063202E+00  1.000000000E-07
-FCG:                 53  2.521259537E+00  1.000000000E-07
-FCG:                 54  2.035458839E+00  1.000000000E-07
-FCG:                 55  1.792822708E+00  1.000000000E-07
-FCG:                 56  1.550273028E+00  1.000000000E-07
-FCG:                 57  1.308623154E+00  1.000000000E-07
-FCG:                 58  1.055461124E+00  1.000000000E-07
-FCG:                 59  8.420136910E-01  1.000000000E-07
-FCG:                 60  7.261268288E-01  1.000000000E-07
-FCG:                 61  6.697647437E-01  1.000000000E-07
-FCG:                 62  5.815904096E-01  1.000000000E-07
-FCG:                 63  5.471452529E-01  1.000000000E-07
-FCG:                 64  5.179970981E-01  1.000000000E-07
-FCG:                 65  4.653020530E-01  1.000000000E-07
-FCG:                 66  4.267347956E-01  1.000000000E-07
-FCG:                 67  3.424622157E-01  1.000000000E-07
-FCG:                 68  2.561545659E-01  1.000000000E-07
-FCG:                 69  2.189449574E-01  1.000000000E-07
-FCG:                 70  1.931437862E-01  1.000000000E-07
-FCG:                 71  1.644533303E-01  1.000000000E-07
-FCG:                 72  1.440581102E-01  1.000000000E-07
-FCG:                 73  1.169233850E-01  1.000000000E-07
-FCG:                 74  9.163811238E-02  1.000000000E-07
-FCG:                 75  7.796551461E-02  1.000000000E-07
-FCG:                 76  6.279247865E-02  1.000000000E-07
-FCG:                 77  5.093716088E-02  1.000000000E-07
-FCG:                 78  4.457847628E-02  1.000000000E-07
-FCG:                 79  3.778419976E-02  1.000000000E-07
-FCG:                 80  3.274835961E-02  1.000000000E-07
-FCG:                 81  2.895463888E-02  1.000000000E-07
-FCG:                 82  2.477266764E-02  1.000000000E-07
-FCG:                 83  2.221264327E-02  1.000000000E-07
-FCG:                 84  1.962860206E-02  1.000000000E-07
-FCG:                 85  1.584430441E-02  1.000000000E-07
-FCG:                 86  1.267150647E-02  1.000000000E-07
-FCG:                 87  1.079706255E-02  1.000000000E-07
-FCG:                 88  9.148061810E-03  1.000000000E-07
-FCG:                 89  7.166788388E-03  1.000000000E-07
-FCG:                 90  6.121345792E-03  1.000000000E-07
-FCG:                 91  5.499467024E-03  1.000000000E-07
-FCG:                 92  4.464650395E-03  1.000000000E-07
-FCG:                 93  3.987664479E-03  1.000000000E-07
-FCG:                 94  3.570025017E-03  1.000000000E-07
-FCG:                 95  2.777818928E-03  1.000000000E-07
-FCG:                 96  2.339558537E-03  1.000000000E-07
-FCG:                 97  1.893590205E-03  1.000000000E-07
-FCG:                 98  1.437321952E-03  1.000000000E-07
-FCG:                 99  1.244509503E-03  1.000000000E-07
-FCG:                100  1.026327163E-03  1.000000000E-07
-FCG:                101  8.205887082E-04  1.000000000E-07
-FCG:                102  7.383740825E-04  1.000000000E-07
-FCG:                103  6.384840757E-04  1.000000000E-07
-FCG:                104  5.357460950E-04  1.000000000E-07
-FCG:                105  4.650801543E-04  1.000000000E-07
-FCG:                106  3.761811102E-04  1.000000000E-07
-FCG:                107  2.908372699E-04  1.000000000E-07
-FCG:                108  2.381111667E-04  1.000000000E-07
-FCG:                109  1.975612103E-04  1.000000000E-07
-FCG:                110  1.665608574E-04  1.000000000E-07
-FCG:                111  1.395474225E-04  1.000000000E-07
-FCG:                112  1.153722071E-04  1.000000000E-07
-FCG:                113  9.909913113E-05  1.000000000E-07
-FCG:                114  8.175006282E-05  1.000000000E-07
-FCG:                115  6.678463369E-05  1.000000000E-07
-FCG:                116  6.027897632E-05  1.000000000E-07
-FCG:                117  5.191930537E-05  1.000000000E-07
-FCG:                118  4.228318074E-05  1.000000000E-07
-FCG:                119  3.479399100E-05  1.000000000E-07
-FCG:                120  2.940724724E-05  1.000000000E-07
-FCG:                121  2.462883828E-05  1.000000000E-07
-FCG:                122  2.001345051E-05  1.000000000E-07
-FCG:                123  1.713260377E-05  1.000000000E-07
-FCG:                124  1.478293125E-05  1.000000000E-07
-FCG:                125  1.210520962E-05  1.000000000E-07
-FCG:                126  9.967180820E-06  1.000000000E-07
-FCG:                127  7.904592067E-06  1.000000000E-07
-FCG:                128  6.350974698E-06  1.000000000E-07
-FCG:                129  5.372004107E-06  1.000000000E-07
-FCG:                130  4.400077780E-06  1.000000000E-07
-FCG:                131  3.635178916E-06  1.000000000E-07
-FCG:                132  3.061165193E-06  1.000000000E-07
-FCG:                133  2.447287768E-06  1.000000000E-07
-FCG:                134  1.984025457E-06  1.000000000E-07
-FCG:                135  1.725841477E-06  1.000000000E-07
-FCG:                136  1.456762678E-06  1.000000000E-07
-FCG:                137  1.196295424E-06  1.000000000E-07
-FCG:                138  9.981921572E-07  1.000000000E-07
-FCG:                139  8.099365091E-07  1.000000000E-07
-FCG:                140  6.959655992E-07  1.000000000E-07
-FCG:                141  6.198562650E-07  1.000000000E-07
-FCG:                142  4.946529423E-07  1.000000000E-07
-FCG:                143  3.954481594E-07  1.000000000E-07
-FCG:                144  3.312235843E-07  1.000000000E-07
-FCG:                145  2.766530399E-07  1.000000000E-07
-FCG:                146  2.403779657E-07  1.000000000E-07
-FCG:                147  1.968518406E-07  1.000000000E-07
-FCG:                148  1.506483068E-07  1.000000000E-07
-FCG:                149  1.216158121E-07  1.000000000E-07
-FCG:                150  9.937725705E-08  1.000000000E-07
+FCG:                  1  1.782713898E+02  1.000000000E-07
+FCG:                  2  6.348527137E+02  1.000000000E-07
+FCG:                  3  4.408912432E+02  1.000000000E-07
+FCG:                  4  1.617379911E+02  1.000000000E-07
+FCG:                  5  2.200468004E+02  1.000000000E-07
+FCG:                  6  2.975834995E+02  1.000000000E-07
+FCG:                  7  3.312721334E+02  1.000000000E-07
+FCG:                  8  1.962312162E+02  1.000000000E-07
+FCG:                  9  8.625766285E+01  1.000000000E-07
+FCG:                 10  7.101871654E+01  1.000000000E-07
+FCG:                 11  4.341373501E+01  1.000000000E-07
+FCG:                 12  3.053506249E+01  1.000000000E-07
+FCG:                 13  1.769871227E+01  1.000000000E-07
+FCG:                 14  1.334055753E+01  1.000000000E-07
+FCG:                 15  1.704116576E+01  1.000000000E-07
+FCG:                 16  1.598043831E+01  1.000000000E-07
+FCG:                 17  1.449618552E+01  1.000000000E-07
+FCG:                 18  9.918653732E+00  1.000000000E-07
+FCG:                 19  8.823485461E+00  1.000000000E-07
+FCG:                 20  1.031407855E+01  1.000000000E-07
+FCG:                 21  1.101189170E+01  1.000000000E-07
+FCG:                 22  1.301198890E+01  1.000000000E-07
+FCG:                 23  1.478936112E+01  1.000000000E-07
+FCG:                 24  1.329184286E+01  1.000000000E-07
+FCG:                 25  1.171947508E+01  1.000000000E-07
+FCG:                 26  1.165054540E+01  1.000000000E-07
+FCG:                 27  1.060346127E+01  1.000000000E-07
+FCG:                 28  8.229502353E+00  1.000000000E-07
+FCG:                 29  6.945448512E+00  1.000000000E-07
+FCG:                 30  6.146363271E+00  1.000000000E-07
+FCG:                 31  5.418680782E+00  1.000000000E-07
+FCG:                 32  5.972954358E+00  1.000000000E-07
+FCG:                 33  7.002830319E+00  1.000000000E-07
+FCG:                 34  6.813951698E+00  1.000000000E-07
+FCG:                 35  7.011843499E+00  1.000000000E-07
+FCG:                 36  7.407841380E+00  1.000000000E-07
+FCG:                 37  7.776881611E+00  1.000000000E-07
+FCG:                 38  7.655173508E+00  1.000000000E-07
+FCG:                 39  6.485403966E+00  1.000000000E-07
+FCG:                 40  5.540123975E+00  1.000000000E-07
+FCG:                 41  5.514688962E+00  1.000000000E-07
+FCG:                 42  5.373441428E+00  1.000000000E-07
+FCG:                 43  5.722305826E+00  1.000000000E-07
+FCG:                 44  5.598174650E+00  1.000000000E-07
+FCG:                 45  4.677077926E+00  1.000000000E-07
+FCG:                 46  3.951078958E+00  1.000000000E-07
+FCG:                 47  3.433631422E+00  1.000000000E-07
+FCG:                 48  3.009116833E+00  1.000000000E-07
+FCG:                 49  2.840196611E+00  1.000000000E-07
+FCG:                 50  2.790517748E+00  1.000000000E-07
+FCG:                 51  2.923254093E+00  1.000000000E-07
+FCG:                 52  2.910027398E+00  1.000000000E-07
+FCG:                 53  2.523159549E+00  1.000000000E-07
+FCG:                 54  2.036635822E+00  1.000000000E-07
+FCG:                 55  1.793360365E+00  1.000000000E-07
+FCG:                 56  1.550015228E+00  1.000000000E-07
+FCG:                 57  1.307911197E+00  1.000000000E-07
+FCG:                 58  1.054613315E+00  1.000000000E-07
+FCG:                 59  8.412981580E-01  1.000000000E-07
+FCG:                 60  7.255637232E-01  1.000000000E-07
+FCG:                 61  6.692674022E-01  1.000000000E-07
+FCG:                 62  5.812221567E-01  1.000000000E-07
+FCG:                 63  5.468714181E-01  1.000000000E-07
+FCG:                 64  5.177328391E-01  1.000000000E-07
+FCG:                 65  4.651369777E-01  1.000000000E-07
+FCG:                 66  4.266907153E-01  1.000000000E-07
+FCG:                 67  3.424701728E-01  1.000000000E-07
+FCG:                 68  2.562069285E-01  1.000000000E-07
+FCG:                 69  2.189936310E-01  1.000000000E-07
+FCG:                 70  1.931506417E-01  1.000000000E-07
+FCG:                 71  1.644596646E-01  1.000000000E-07
+FCG:                 72  1.440753850E-01  1.000000000E-07
+FCG:                 73  1.169362871E-01  1.000000000E-07
+FCG:                 74  9.165860591E-02  1.000000000E-07
+FCG:                 75  7.798375636E-02  1.000000000E-07
+FCG:                 76  6.279956297E-02  1.000000000E-07
+FCG:                 77  5.094478401E-02  1.000000000E-07
+FCG:                 78  4.458357847E-02  1.000000000E-07
+FCG:                 79  3.778505559E-02  1.000000000E-07
+FCG:                 80  3.274860446E-02  1.000000000E-07
+FCG:                 81  2.895019643E-02  1.000000000E-07
+FCG:                 82  2.476518788E-02  1.000000000E-07
+FCG:                 83  2.220437906E-02  1.000000000E-07
+FCG:                 84  1.961766873E-02  1.000000000E-07
+FCG:                 85  1.583362271E-02  1.000000000E-07
+FCG:                 86  1.266544400E-02  1.000000000E-07
+FCG:                 87  1.079489837E-02  1.000000000E-07
+FCG:                 88  9.147296492E-03  1.000000000E-07
+FCG:                 89  7.168267384E-03  1.000000000E-07
+FCG:                 90  6.125150731E-03  1.000000000E-07
+FCG:                 91  5.502700573E-03  1.000000000E-07
+FCG:                 92  4.467214996E-03  1.000000000E-07
+FCG:                 93  3.990518164E-03  1.000000000E-07
+FCG:                 94  3.571789849E-03  1.000000000E-07
+FCG:                 95  2.778984688E-03  1.000000000E-07
+FCG:                 96  2.340713911E-03  1.000000000E-07
+FCG:                 97  1.894069280E-03  1.000000000E-07
+FCG:                 98  1.437742822E-03  1.000000000E-07
+FCG:                 99  1.244916495E-03  1.000000000E-07
+FCG:                100  1.026384049E-03  1.000000000E-07
+FCG:                101  8.206647025E-04  1.000000000E-07
+FCG:                102  7.384679307E-04  1.000000000E-07
+FCG:                103  6.384497959E-04  1.000000000E-07
+FCG:                104  5.357295136E-04  1.000000000E-07
+FCG:                105  4.650439447E-04  1.000000000E-07
+FCG:                106  3.760637249E-04  1.000000000E-07
+FCG:                107  2.907434582E-04  1.000000000E-07
+FCG:                108  2.380655901E-04  1.000000000E-07
+FCG:                109  1.975330187E-04  1.000000000E-07
+FCG:                110  1.665367596E-04  1.000000000E-07
+FCG:                111  1.395226149E-04  1.000000000E-07
+FCG:                112  1.153670432E-04  1.000000000E-07
+FCG:                113  9.910225561E-05  1.000000000E-07
+FCG:                114  8.174594234E-05  1.000000000E-07
+FCG:                115  6.678844787E-05  1.000000000E-07
+FCG:                116  6.028781305E-05  1.000000000E-07
+FCG:                117  5.192161077E-05  1.000000000E-07
+FCG:                118  4.228606627E-05  1.000000000E-07
+FCG:                119  3.479761890E-05  1.000000000E-07
+FCG:                120  2.940585812E-05  1.000000000E-07
+FCG:                121  2.462085941E-05  1.000000000E-07
+FCG:                122  2.000496607E-05  1.000000000E-07
+FCG:                123  1.712572244E-05  1.000000000E-07
+FCG:                124  1.477591505E-05  1.000000000E-07
+FCG:                125  1.210000111E-05  1.000000000E-07
+FCG:                126  9.963863609E-06  1.000000000E-07
+FCG:                127  7.901945283E-06  1.000000000E-07
+FCG:                128  6.349193879E-06  1.000000000E-07
+FCG:                129  5.370074182E-06  1.000000000E-07
+FCG:                130  4.398097777E-06  1.000000000E-07
+FCG:                131  3.634021088E-06  1.000000000E-07
+FCG:                132  3.060341977E-06  1.000000000E-07
+FCG:                133  2.446683135E-06  1.000000000E-07
+FCG:                134  1.984108911E-06  1.000000000E-07
+FCG:                135  1.726182909E-06  1.000000000E-07
+FCG:                136  1.456993960E-06  1.000000000E-07
+FCG:                137  1.196582629E-06  1.000000000E-07
+FCG:                138  9.984099520E-07  1.000000000E-07
+FCG:                139  8.100879166E-07  1.000000000E-07
+FCG:                140  6.961943856E-07  1.000000000E-07
+FCG:                141  6.199069606E-07  1.000000000E-07
+FCG:                142  4.945690884E-07  1.000000000E-07
+FCG:                143  3.954481953E-07  1.000000000E-07
+FCG:                144  3.312628995E-07  1.000000000E-07
+FCG:                145  2.767102731E-07  1.000000000E-07
+FCG:                146  2.404153153E-07  1.000000000E-07
+FCG:                147  1.968083170E-07  1.000000000E-07
+FCG:                148  1.506019767E-07  1.000000000E-07
+FCG:                149  1.215911890E-07  1.000000000E-07
+FCG:                150  9.935543344E-08  1.000000000E-07
 
  Preconditioner description
   Multilevel Preconditioner
@@ -298,7 +298,7 @@ FCG:                150  9.937725705E-08  1.000000000E-07
    Polynomial smoother   
          variant:        POLY_LOTTES_BETA
           Degree:                  10
-          rho_ba:          0.99989534026933224     
+          rho_ba:           1.0000000000000000     
     Coefficients:           1.0003031222965291        1.0030484066079688        1.0107702271538761        1.0261901159764004        1.0523172493375519        1.0925574320754976        1.1508337666397197        1.2317225087089441        1.3406080202445980        1.4838612440701109     
         Local solver details:
    L1 Diagonal solver 
@@ -428,82 +428,18 @@ Number of threads                  :            1
 Krylov method                      : FCG
 Preconditioner                     : ML-VSVBM-4OPTCHEB4-30L1JAC
 Iterations to convergence          :          150
-Relative error estimate on exit    :  9.93773E-08
+Relative error estimate on exit    :  9.93554E-08
 Number of levels in hierarchy      :            7
-Time to build hierarchy            :  6.36041E+00
-Time to build smoothers            :  1.91396E+01
-Total time for preconditioner      :  2.55000E+01
-Time to solve system               :  1.14648E+02
-Time per iteration                 :  7.64321E-01
-Total time                         :  1.40148E+02
-Residual 2-norm                    :  1.36176E-12
-Residual inf-norm                  :  2.43890E-15
+Time to build hierarchy            :  6.72473E+00
+Time to build smoothers            :  1.18775E+00
+Total time for preconditioner      :  7.91248E+00
+Time to solve system               :  1.17628E+02
+Time per iteration                 :  7.84189E-01
+Total time                         :  1.25541E+02
+Residual 2-norm                    :  1.36148E-12
+Residual inf-norm                  :  2.45454E-15
 Total memory occupation for A      :  44595580232
 Total memory occupation for DESC_A :    108694784
 Total memory occupation for PREC   :  58882142336
 Storage format for A               : HLG  
 Storage format for DESC_A          : BLOCK
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL

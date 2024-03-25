@@ -5,29 +5,29 @@ Created cusparses_handle
  - Compiled with CUDA support -
 Generating Matrix (size=6028568)...
 The matrix has been generated and assembled in HLG format.
--allocation  time :  5.54343E-02
--coeff. gen. time :  7.18334E-01
--desc asbly  time :  5.53647E-04
-- mat asbly  time :  9.80866E-01
--total       time :  1.75521E+00
+-allocation  time :  6.13835E-02
+-coeff. gen. time :  7.65685E-01
+-desc asbly  time :  4.30745E-04
+- mat asbly  time :  1.03478E+00
+-total       time :  1.86229E+00
 PDE Coefficients             : CONST
-Overall matrix creation time :  1.75567E+00
+Overall matrix creation time :  1.86258E+00
  
  
 Preconditioner: ML-VSVBM-6OCHEBY1-30L1JAC
-Preconditioner time:  7.15124E+00
+Preconditioner time:  6.04659E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
-FCG:                  1  3.895657458E-02  1.000000000E-07
-FCG:                  2  1.014706827E-02  1.000000000E-07
-FCG:                  3  2.476611710E-03  1.000000000E-07
-FCG:                  4  5.634189049E-04  1.000000000E-07
-FCG:                  5  1.088102441E-04  1.000000000E-07
-FCG:                  6  1.774905382E-05  1.000000000E-07
-FCG:                  7  3.076821516E-06  1.000000000E-07
-FCG:                  8  4.048631621E-07  1.000000000E-07
-FCG:                  9  5.425402397E-08  1.000000000E-07
+FCG:                  1  3.861824475E-02  1.000000000E-07
+FCG:                  2  9.200032175E-03  1.000000000E-07
+FCG:                  3  2.532479089E-03  1.000000000E-07
+FCG:                  4  5.643998817E-04  1.000000000E-07
+FCG:                  5  1.104885820E-04  1.000000000E-07
+FCG:                  6  1.603655206E-05  1.000000000E-07
+FCG:                  7  2.204423717E-06  1.000000000E-07
+FCG:                  8  4.294192506E-07  1.000000000E-07
+FCG:                  9  6.627974925E-08  1.000000000E-07
 
  Preconditioner description
   Multilevel Preconditioner
@@ -37,7 +37,7 @@ FCG:                  9  5.425402397E-08  1.000000000E-07
    Polynomial smoother   
          variant:        POLY_NEW
           Degree:                   6
-          rho_ba:          0.96115746593815676     
+          rho_ba:           1.0000000000000000     
      Coefficient:           4.8660582342606201E-002
         Local solver details:
    L1 Diagonal solver 
@@ -100,23 +100,22 @@ FCG:                  9  5.425402397E-08  1.000000000E-07
  
 Computed solution on        1 process(es)
 Number of threads                  :            1
-Number of gpus                     :            0/           1
 Total number of tasks              :            1
 Linear system size                 :      6028568
 PDE Coefficients                   : CONST
 Krylov method                      : FCG
 Preconditioner                     : ML-VSVBM-6OCHEBY1-30L1JAC
 Iterations to convergence          :            9
-Relative error estimate on exit    :  5.42540E-08
+Relative error estimate on exit    :  6.62797E-08
 Number of levels in hierarchy      :            5
-Time to build hierarchy            :  5.32430E+00
-Time to build smoothers            :  1.82694E+00
-Total time for preconditioner      :  7.15124E+00
-Time to solve system               :  3.03655E-01
-Time per iteration                 :  3.37395E-02
-Total time                         :  7.45490E+00
-Residual 2-norm                    :  6.00665E-03
-Residual inf-norm                  :  2.18159E-05
+Time to build hierarchy            :  5.72014E+00
+Time to build smoothers            :  3.26454E-01
+Total time for preconditioner      :  6.04659E+00
+Time to solve system               :  2.08546E-01
+Time per iteration                 :  2.31718E-02
+Total time                         :  6.25514E+00
+Residual 2-norm                    :  7.33806E-03
+Residual inf-norm                  :  3.09366E-05
 Total memory occupation for A      :    553862256
 Total memory occupation for DESC_A :           68
 Total memory occupation for PREC   :   1368344705
@@ -126,14 +125,13 @@ ICDASB: total:                       Sum:       0.00 Avg:       0.00 Max:       
 ICDASB: phase1:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 ICDASB: phase2:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 ICDASB: phase3:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
-SOC1_MAP: phase0:                    Sum:       0.46 Avg:       0.11 Max:       0.43 Min:       0.00
-SOC1_MAP: phase1:                    Sum:       0.16 Avg:       0.04 Max:       0.10 Min:       0.00
-SOC1_MAP: phase2:                    Sum:       0.09 Avg:       0.02 Max:       0.06 Min:       0.00
+SOC1_MAP: phase0:                    Sum:       0.51 Avg:       0.13 Max:       0.48 Min:       0.00
+SOC1_MAP: phase1:                    Sum:       0.19 Avg:       0.05 Max:       0.12 Min:       0.00
+SOC1_MAP: phase2:                    Sum:       0.10 Avg:       0.03 Max:       0.06 Min:       0.00
 SOC1_MAP: phase3:                    Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
 SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: noand exch:                    Sum:       0.15 Avg:       0.00 Max:       0.00 Min:       0.00
-SPMM: noand cmp:                     Sum:       1.20 Avg:       0.00 Max:       0.05 Min:       0.00
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+SPMM: noand cmp:                     Sum:       0.06 Avg:       0.00 Max:       0.06 Min:       0.00

@@ -5,17 +5,17 @@ Created cusparses_handle
  - Compiled with CUDA support -
 Generating Matrix (size=6028568)...
 The matrix has been generated and assembled in HLG format.
--allocation  time :  5.54124E-02
--coeff. gen. time :  7.23153E-01
--desc asbly  time :  4.21590E-04
-- mat asbly  time :  9.71103E-01
--total       time :  1.75010E+00
+-allocation  time :  5.99041E-02
+-coeff. gen. time :  8.43837E-01
+-desc asbly  time :  5.96763E-04
+- mat asbly  time :  1.09803E+00
+-total       time :  2.00238E+00
 PDE Coefficients             : CONST
-Overall matrix creation time :  1.75038E+00
+Overall matrix creation time :  2.00277E+00
  
  
 Preconditioner: ML-VSVBM-4L1JAC-30L1JAC
-Preconditioner time:  5.70826E+00
+Preconditioner time:  5.99211E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -99,7 +99,6 @@ FCG:                 12  5.781274875E-08  1.000000000E-07
  
 Computed solution on        1 process(es)
 Number of threads                  :            1
-Number of gpus                     :            0/           1
 Total number of tasks              :            1
 Linear system size                 :      6028568
 PDE Coefficients                   : CONST
@@ -108,12 +107,12 @@ Preconditioner                     : ML-VSVBM-4L1JAC-30L1JAC
 Iterations to convergence          :           12
 Relative error estimate on exit    :  5.78127E-08
 Number of levels in hierarchy      :            5
-Time to build hierarchy            :  5.39102E+00
-Time to build smoothers            :  3.17246E-01
-Total time for preconditioner      :  5.70826E+00
-Time to solve system               :  1.82574E-01
-Time per iteration                 :  1.52145E-02
-Total time                         :  5.89084E+00
+Time to build hierarchy            :  5.66477E+00
+Time to build smoothers            :  3.27342E-01
+Total time for preconditioner      :  5.99211E+00
+Time to solve system               :  1.85374E-01
+Time per iteration                 :  1.54479E-02
+Total time                         :  6.17749E+00
 Residual 2-norm                    :  6.40065E-03
 Residual inf-norm                  :  4.40018E-05
 Total memory occupation for A      :    553862256
@@ -125,9 +124,9 @@ ICDASB: total:                       Sum:       0.00 Avg:       0.00 Max:       
 ICDASB: phase1:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 ICDASB: phase2:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 ICDASB: phase3:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
-SOC1_MAP: phase0:                    Sum:       0.46 Avg:       0.12 Max:       0.43 Min:       0.00
+SOC1_MAP: phase0:                    Sum:       0.47 Avg:       0.12 Max:       0.44 Min:       0.00
 SOC1_MAP: phase1:                    Sum:       0.17 Avg:       0.04 Max:       0.11 Min:       0.00
-SOC1_MAP: phase2:                    Sum:       0.09 Avg:       0.02 Max:       0.06 Min:       0.00
+SOC1_MAP: phase2:                    Sum:       0.10 Avg:       0.02 Max:       0.06 Min:       0.00
 SOC1_MAP: phase3:                    Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
 SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********

@@ -4,44 +4,44 @@ Created cusparses_handle
  This is the Rotated Anisotropy test program
  
 Solving    2449 x    2449 grid with θ =          30.0000 ϵ =         100.0000
-Overall matrix creation time :  5.45631E+00
+Overall matrix creation time :  5.89781E+00
 Matrix is on device memory
  
-Elaboration time: 0.322057 for 6002500 nodes
+Elaboration time: 0.340290 for 6002500 nodes
            0 Matching statistics: Unmatched nodes                     4  Singletons:                    4  Pairs:              3001248
-Elaboration time: 0.144368 for 3001252 nodes
+Elaboration time: 0.172255 for 3001252 nodes
            0 Matching statistics: Unmatched nodes                     4  Singletons:                    4  Pairs:              1500624
-Elaboration time: 0.174223 for 1500628 nodes
+Elaboration time: 0.193451 for 1500628 nodes
            0 Matching statistics: Unmatched nodes                     4  Singletons:                    4  Pairs:               750312
-Elaboration time: 0.034892 for 750316 nodes
+Elaboration time: 0.042496 for 750316 nodes
            0 Matching statistics: Unmatched nodes                   612  Singletons:                  612  Pairs:               374852
-Elaboration time: 0.032692 for 375464 nodes
+Elaboration time: 0.036193 for 375464 nodes
            0 Matching statistics: Unmatched nodes                   612  Singletons:                  612  Pairs:               187426
-Elaboration time: 0.008598 for 188038 nodes
+Elaboration time: 0.010681 for 188038 nodes
            0 Matching statistics: Unmatched nodes                     2  Singletons:                    2  Pairs:                94018
-Elaboration time: 0.004776 for 94020 nodes
+Elaboration time: 0.005000 for 94020 nodes
            0 Matching statistics: Unmatched nodes                   382  Singletons:                  382  Pairs:                46819
-Elaboration time: 0.002127 for 47201 nodes
+Elaboration time: 0.002194 for 47201 nodes
            0 Matching statistics: Unmatched nodes                     3  Singletons:                    3  Pairs:                23599
-Elaboration time: 0.001194 for 23602 nodes
+Elaboration time: 0.001246 for 23602 nodes
            0 Matching statistics: Unmatched nodes                    38  Singletons:                   38  Pairs:                11782
-Elaboration time: 0.000544 for 11820 nodes
+Elaboration time: 0.000671 for 11820 nodes
            0 Matching statistics: Unmatched nodes                     2  Singletons:                    2  Pairs:                 5909
-Elaboration time: 0.000304 for 5911 nodes
+Elaboration time: 0.000384 for 5911 nodes
            0 Matching statistics: Unmatched nodes                    21  Singletons:                   21  Pairs:                 2945
-Elaboration time: 0.000135 for 2966 nodes
+Elaboration time: 0.000169 for 2966 nodes
            0 Matching statistics: Unmatched nodes                    38  Singletons:                   38  Pairs:                 1464
-Elaboration time: 0.000073 for 1502 nodes
+Elaboration time: 0.000091 for 1502 nodes
            0 Matching statistics: Unmatched nodes                    16  Singletons:                   16  Pairs:                  743
-Elaboration time: 0.000034 for 759 nodes
+Elaboration time: 0.000042 for 759 nodes
            0 Matching statistics: Unmatched nodes                    31  Singletons:                   31  Pairs:                  364
-Elaboration time: 0.000019 for 395 nodes
+Elaboration time: 0.000024 for 395 nodes
            0 Matching statistics: Unmatched nodes                    19  Singletons:                   19  Pairs:                  188
-Elaboration time: 0.000013 for 207 nodes
+Elaboration time: 0.000017 for 207 nodes
            0 Matching statistics: Unmatched nodes                    11  Singletons:                   11  Pairs:                   98
  
 Preconditioner: ML-VSMATCH-10L1JAC-30L1JAC
-Preconditioner time:  1.12711E+01
+Preconditioner time:  1.20945E+01
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -230,23 +230,65 @@ FCG:                 99  8.414598653E-08  1.000000000E-07
            Aggregation   ratio:            1.90
    L1 Diagonal solver 
  
+
+ Preconditioner memory usage
+ 
+  Level            1
+            Matrix:            696867096
+        Descriptor:                  128
+          Smoother:             48020008
+ 
+  Level            2
+            Matrix:            141317708
+        Descriptor:                   64
+        Linear map:            535670224
+          Smoother:              6002536
+ 
+  Level            3
+            Matrix:             17803928
+        Descriptor:                   64
+        Linear map:             67376720
+          Smoother:               752168
+ 
+  Level            4
+            Matrix:              3321652
+        Descriptor:                   64
+        Linear map:             10468472
+          Smoother:                94568
+ 
+  Level            5
+            Matrix:               428856
+        Descriptor:                   64
+        Linear map:              1255128
+          Smoother:                12024
+ 
+  Level            6
+            Matrix:                68128
+        Descriptor:                   64
+        Linear map:               187348
+          Smoother:                 1664
+ 
+  Level            7  (coarse)
+            Matrix:                81156
+        Descriptor:                   64
+        Linear map:                56616
+          Smoother:                  880
 Computed solution on        1 processors
 Linear system size                 :      6002500
 Theta                              :          0.52360
 Anisotropy eps                     :        100.00000
 Number of threads                  :            1
-Number of gpus                     :            0/           1
 Krylov method                      : FCG
 Preconditioner                     : ML-VSMATCH-10L1JAC-30L1JAC
 Iterations to convergence          :           99
 Relative error estimate on exit    :  8.41460E-08
 Number of levels in hierarchy      :            7
-Time to build hierarchy            :  1.10295E+01
-Time to build smoothers            :  2.41660E-01
-Total time for preconditioner      :  1.12711E+01
-Time to solve system               :  2.81525E+00
-Time per iteration                 :  2.84369E-02
-Total time                         :  1.40864E+01
+Time to build hierarchy            :  1.18199E+01
+Time to build smoothers            :  2.74588E-01
+Total time for preconditioner      :  1.20945E+01
+Time to solve system               :  2.83934E+00
+Time per iteration                 :  2.86802E-02
+Total time                         :  1.49338E+01
 Residual 2-norm                    :  8.61276E-12
 Residual inf-norm                  :  1.83263E-13
 Total memory occupation for A      :    696867096

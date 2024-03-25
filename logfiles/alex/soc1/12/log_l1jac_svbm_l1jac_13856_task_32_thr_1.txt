@@ -62,16 +62,16 @@ Created cusparses_handle
 Created cusparses_handle
 Created cusparses_handle
 Created cusparses_handle
-Created cusparses_handle
-Created cusparses_handle
  
 Solving   13856 x   13856 grid with θ =          30.0000 ϵ =         100.0000
-Overall matrix creation time :  7.26231E+00
+Created cusparses_handle
+Created cusparses_handle
+Overall matrix creation time :  7.86337E+00
 Matrix is on device memory
  
  
 Preconditioner: ML-VSVBM-12L1JAC-30L1JAC
-Preconditioner time:  6.10333E+00
+Preconditioner time:  6.39033E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -364,12 +364,12 @@ Preconditioner                     : ML-VSVBM-12L1JAC-30L1JAC
 Iterations to convergence          :          152
 Relative error estimate on exit    :  9.27196E-08
 Number of levels in hierarchy      :            7
-Time to build hierarchy            :  4.77248E+00
-Time to build smoothers            :  1.33085E+00
-Total time for preconditioner      :  6.10333E+00
-Time to solve system               :  1.18307E+02
-Time per iteration                 :  7.78334E-01
-Total time                         :  1.24410E+02
+Time to build hierarchy            :  5.26063E+00
+Time to build smoothers            :  1.12970E+00
+Total time for preconditioner      :  6.39033E+00
+Time to solve system               :  1.18229E+02
+Time per iteration                 :  7.77824E-01
+Total time                         :  1.24620E+02
 Residual 2-norm                    :  1.71325E-12
 Residual inf-norm                  :  1.33704E-14
 Total memory occupation for A      :  22297015432

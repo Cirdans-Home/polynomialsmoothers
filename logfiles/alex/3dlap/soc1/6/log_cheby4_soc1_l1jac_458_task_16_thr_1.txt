@@ -35,33 +35,34 @@ Created cusparses_handle
 Created cusparses_handle
 Generating Matrix (size=96071912)...
 The matrix has been generated and assembled in HLG format.
--allocation  time :  1.24443E+00
--coeff. gen. time :  2.07229E+00
--desc asbly  time :  2.99615E-01
-- mat asbly  time :  1.06143E+00
--total       time :  4.68641E+00
+-allocation  time :  1.30960E+00
+-coeff. gen. time :  2.16732E+00
+-desc asbly  time :  3.09652E-01
+- mat asbly  time :  1.42470E+00
+-total       time :  5.21892E+00
 PDE Coefficients             : CONST
-Overall matrix creation time :  4.68738E+00
+Overall matrix creation time :  5.21974E+00
  
  
 Preconditioner: ML-VSVBM-6CHEBY4-30L1JAC
-Preconditioner time:  1.11466E+01
+Preconditioner time:  8.68135E+00
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
-FCG:                  1  5.547358331E-02  1.000000000E-07
-FCG:                  2  1.548201785E-02  1.000000000E-07
-FCG:                  3  5.453532232E-03  1.000000000E-07
-FCG:                  4  2.622268371E-03  1.000000000E-07
-FCG:                  5  1.217601445E-03  1.000000000E-07
-FCG:                  6  3.884606793E-04  1.000000000E-07
-FCG:                  7  1.200055293E-04  1.000000000E-07
-FCG:                  8  3.459807939E-05  1.000000000E-07
-FCG:                  9  8.556022862E-06  1.000000000E-07
-FCG:                 10  2.111128890E-06  1.000000000E-07
-FCG:                 11  6.753048629E-07  1.000000000E-07
-FCG:                 12  2.677839698E-07  1.000000000E-07
-FCG:                 13  8.200730651E-08  1.000000000E-07
+FCG:                  1  5.644953489E-02  1.000000000E-07
+FCG:                  2  1.588515500E-02  1.000000000E-07
+FCG:                  3  5.575454138E-03  1.000000000E-07
+FCG:                  4  2.605057188E-03  1.000000000E-07
+FCG:                  5  1.256634061E-03  1.000000000E-07
+FCG:                  6  4.204147758E-04  1.000000000E-07
+FCG:                  7  1.303834387E-04  1.000000000E-07
+FCG:                  8  3.902676610E-05  1.000000000E-07
+FCG:                  9  1.022957788E-05  1.000000000E-07
+FCG:                 10  2.563721801E-06  1.000000000E-07
+FCG:                 11  8.115040976E-07  1.000000000E-07
+FCG:                 12  3.248022052E-07  1.000000000E-07
+FCG:                 13  1.021131761E-07  1.000000000E-07
+FCG:                 14  2.669572377E-08  1.000000000E-07
 
  Preconditioner description
   Multilevel Preconditioner
@@ -71,7 +72,7 @@ FCG:                 13  8.200730651E-08  1.000000000E-07
    Polynomial smoother   
          variant:        POLY_LOTTES
           Degree:                   6
-          rho_ba:          0.96114661826048098     
+          rho_ba:           1.0000000000000000     
         Local solver details:
    L1 Diagonal solver 
  
@@ -133,43 +134,42 @@ FCG:                 13  8.200730651E-08  1.000000000E-07
  
 Computed solution on       16 process(es)
 Number of threads                  :            1
-Number of gpus                     :           28/         128
 Total number of tasks              :           16
 Linear system size                 :     96071912
 PDE Coefficients                   : CONST
 Krylov method                      : FCG
 Preconditioner                     : ML-VSVBM-6CHEBY4-30L1JAC
-Iterations to convergence          :           13
-Relative error estimate on exit    :  8.20073E-08
+Iterations to convergence          :           14
+Relative error estimate on exit    :  2.66957E-08
 Number of levels in hierarchy      :            5
-Time to build hierarchy            :  7.04188E+00
-Time to build smoothers            :  4.10477E+00
-Total time for preconditioner      :  1.11466E+01
-Time to solve system               :  8.18800E+00
-Time per iteration                 :  6.29846E-01
-Total time                         :  1.93346E+01
-Residual 2-norm                    :  1.41413E-01
-Residual inf-norm                  :  2.89847E-04
+Time to build hierarchy            :  7.17616E+00
+Time to build smoothers            :  1.50519E+00
+Total time for preconditioner      :  8.68135E+00
+Time to solve system               :  8.39860E+00
+Time per iteration                 :  5.99900E-01
+Total time                         :  1.70799E+01
+Residual 2-norm                    :  4.60339E-02
+Residual inf-norm                  :  8.39663E-05
 Total memory occupation for A      :   8841236032
 Total memory occupation for DESC_A :   3033915936
 Total memory occupation for PREC   :  22974267484
 Storage format for A               : HLG  
 Storage format for DESC_A          : HASH 
-ICDASB: total:                       Sum:       0.49 Avg:       0.05 Max:       0.31 Min:       0.00
+ICDASB: total:                       Sum:       0.53 Avg:       0.06 Max:       0.32 Min:       0.00
 ICDASB: phase1:                      Sum:       0.10 Avg:       0.01 Max:       0.10 Min:       0.00
-ICDASB: phase2:                      Sum:       0.23 Avg:       0.03 Max:       0.10 Min:       0.00
-ICDASB: phase3:                      Sum:       0.17 Avg:       0.02 Max:       0.17 Min:       0.00
+ICDASB: phase2:                      Sum:       0.27 Avg:       0.03 Max:       0.11 Min:       0.00
+ICDASB: phase3:                      Sum:       0.18 Avg:       0.02 Max:       0.17 Min:       0.00
 I_DSC_IDX: phase1:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 I_DSC_IDX: phase2:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 I_DSC_IDX: phase3:                   Sum:       0.04 Avg:       0.01 Max:       0.02 Min:       0.00
 I_DSC_IDX: phase4:                   Sum:       0.02 Avg:       0.00 Max:       0.02 Min:       0.00
-SOC1_MAP: phase0:                    Sum:       0.47 Avg:       0.12 Max:       0.43 Min:       0.00
-SOC1_MAP: phase1:                    Sum:       0.18 Avg:       0.04 Max:       0.11 Min:       0.00
+SOC1_MAP: phase0:                    Sum:       0.47 Avg:       0.12 Max:       0.44 Min:       0.00
+SOC1_MAP: phase1:                    Sum:       0.17 Avg:       0.04 Max:       0.11 Min:       0.00
 SOC1_MAP: phase2:                    Sum:       0.11 Avg:       0.03 Max:       0.07 Min:       0.00
 SOC1_MAP: phase3:                    Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
 SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
-SPMM: noand exch:                    Sum:       6.57 Avg:       0.01 Max:       0.05 Min:       0.00
-SPMM: noand cmp:                     Sum:       2.31 Avg:       0.00 Max:       0.14 Min:       0.00
+SPMM: noand exch:                    Sum:       7.08 Avg:       0.01 Max:       0.05 Min:       0.00
+SPMM: noand cmp:                     Sum:       0.14 Avg:       0.00 Max:       0.13 Min:       0.00
