@@ -1,22 +1,23 @@
 #!/usr/bin/bash -l
 #SBATCH --job-name anisopb
-#SBATCH --partition a100
+#SBATCH --partition boost_usr_prod
 #SBATCH --time 01:00:00
 #SBATCH --nodes @NNODES@
-#SBATCH --gres=gpu:a100:@NGPUS@
+#SBATCH --gres=gpu:@NGPUS@
 #SBATCH --ntasks=@NTASKS@
 #SBATCH --export=NONE
+#SBATCH -A CNHPC_1465132
 @MORETHANONENODE@
 
 unset SLURM_EXPORT_ENV
 
 # Load environment
-module load openmpi/4.1.6-gcc11.2.0-cuda gcc/11.2.0 cuda/12.1.1 
+module load openmpi/4.1.6--gcc--12.2.0 openblas/0.3.24--gcc--12.2.0 gcc/12.2.0 cuda/12.1
 module list
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/hpc/ihpc/ihpc100h/polynomialsmoothers/install/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/leonardo/home/userexternal/pdambra0/polynomialsmoothers/install/lib
 
-cd ${HOME}/polynomialsmoothers/logfiles/alex
+cd ${HOME}/polynomialsmoothers/logfiles/leonardo
 
 degiter=@DEGITER@
 idim=@SIZE@
@@ -208,6 +209,8 @@ POLY                    ! smoother type
 1                       ! (pre-)smoother / 1-lev prec sweeps
 ${degiter}              ! degree for polynomial smoother
 POLY_NEW                ! polynomial variant
+POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
+1.0                     ! Spectral radius estimate
 0                       ! number of overlap layers
 HALO                    ! restriction  over application of AS
 NONE                    ! prolongation over application of AS

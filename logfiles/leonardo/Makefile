@@ -1,9 +1,9 @@
 anisopsblas:
-	ln -s /leonardo/home/userexternal/fdurasta/polynomialsmoothers/anisotropy/runs/anisopsblas anisopsblas
-	ln -s /leonardo/home/userexternal/fdurasta/polynomialsmoothers/anisotropy/runs/anisopsblascuda anisopsblascuda
+	ln -s /leonardo/home/userexternal/pdambra0/polynomialsmoothers/anisotropy/runs/anisopsblas anisopsblas
+	ln -s /leonardo/home/userexternal/pdambra0/polynomialsmoothers/anisotropy/runs/anisopsblascuda anisopsblascuda
 
 3dlaplacian:
-	ln -s /leonardo/home/userexternal/fdurasta/polynomialsmoothers/3dlaplacian/runs/amg_d_pde3d 3dlaplacian
+	ln -s /leonardo/home/userexternal/pdambra0/polynomialsmoothers/3dlaplacian/runs/amg_d_pde3d 3dlaplacian
 
 genmatch:
 	./gen_script.sh run-match-gpu.sh 4
