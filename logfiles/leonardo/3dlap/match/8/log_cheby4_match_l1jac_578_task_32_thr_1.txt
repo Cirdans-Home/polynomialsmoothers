@@ -1,0 +1,722 @@
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+ Welcome to AMG4PSBLAS version: 1.1.0
+ This is the amg_d_pde3d sample program
+ - Compiled with CUDA support -
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Generating Matrix (size=193100552)...
+The matrix has been generated and assembled in HLG format.
+-allocation  time :  4.60041E+00
+-coeff. gen. time :  3.18732E+00
+-desc asbly  time :  9.32944E-01
+- mat asbly  time :  9.82421E-01
+-total       time :  9.71030E+00
+PDE Coefficients             : CONST
+Overall matrix creation time :  9.71462E+00
+ 
+Elaboration time: 2.388036 for 5992704 nodes
+Elaboration time: 4.030809 for 5992704 nodes
+Elaboration time: 4.203609 for 5992704 nodes
+Elaboration time: 4.319610 for 5992704 nodes
+Elaboration time: 4.618601 for 5992704 nodes
+Elaboration time: 4.903322 for 6034320 nodes
+Elaboration time: 5.043382 for 6034320 nodes
+Elaboration time: 5.258356 for 6034320 nodes
+Elaboration time: 5.498553 for 5992704 nodes
+Elaboration time: 5.527057 for 5992704 nodes
+Elaboration time: 5.671880 for 6034320 nodes
+Elaboration time: 5.703397 for 5992704 nodes
+Elaboration time: 5.861745 for 6034320 nodes
+Elaboration time: 5.875039 for 6034320 nodes
+Elaboration time: 5.912525 for 6034320 nodes
+Elaboration time: 6.137417 for 6034320 nodes
+Elaboration time: 6.265726 for 6034320 nodes
+Elaboration time: 6.322159 for 6034320 nodes
+Elaboration time: 6.407900 for 6034320 nodes
+Elaboration time: 6.724304 for 6034320 nodes
+Elaboration time: 6.988213 for 6034320 nodes
+Elaboration time: 7.187948 for 6034320 nodes
+Elaboration time: 7.200022 for 6034320 nodes
+Elaboration time: 7.210691 for 6076225 nodes
+Elaboration time: 7.226806 for 6034320 nodes
+Elaboration time: 7.667015 for 6076225 nodes
+Elaboration time: 7.707412 for 6076225 nodes
+Elaboration time: 7.733975 for 6076225 nodes
+Elaboration time: 8.918158 for 6076225 nodes
+Elaboration time: 8.916929 for 6076225 nodes
+Elaboration time: 8.942017 for 6076225 nodes
+Elaboration time: 8.932790 for 6076225 nodes
+           0 Matching statistics: Unmatched nodes                     0  Singletons:                    0  Pairs:             96550276
+Elaboration time: 0.790764 for 2996352 nodes
+Elaboration time: 0.800819 for 2996352 nodes
+Elaboration time: 1.081247 for 3017160 nodes
+Elaboration time: 1.096463 for 3017160 nodes
+Elaboration time: 1.127285 for 3017160 nodes
+Elaboration time: 1.135011 for 3017160 nodes
+Elaboration time: 2.207055 for 2996352 nodes
+Elaboration time: 2.229733 for 2996352 nodes
+Elaboration time: 2.274207 for 2996352 nodes
+Elaboration time: 2.276971 for 2996352 nodes
+Elaboration time: 2.943023 for 3017160 nodes
+Elaboration time: 2.947296 for 3017160 nodes
+Elaboration time: 2.950244 for 2996352 nodes
+Elaboration time: 2.989758 for 2996352 nodes
+Elaboration time: 2.996545 for 3017160 nodes
+Elaboration time: 3.006460 for 3017160 nodes
+Elaboration time: 3.009629 for 3017160 nodes
+Elaboration time: 3.014071 for 3017160 nodes
+Elaboration time: 3.608229 for 3017160 nodes
+Elaboration time: 3.595311 for 3038113 nodes
+Elaboration time: 3.598192 for 3038112 nodes
+Elaboration time: 3.606548 for 3017160 nodes
+Elaboration time: 3.632619 for 3017160 nodes
+Elaboration time: 3.642197 for 3038113 nodes
+Elaboration time: 3.638018 for 3038112 nodes
+Elaboration time: 3.657361 for 3017160 nodes
+Elaboration time: 3.647594 for 3017160 nodes
+Elaboration time: 3.662052 for 3017160 nodes
+Elaboration time: 3.679822 for 3038113 nodes
+Elaboration time: 3.682243 for 3038113 nodes
+Elaboration time: 3.674146 for 3038112 nodes
+Elaboration time: 3.672485 for 3038112 nodes
+           0 Matching statistics: Unmatched nodes                     4  Singletons:                    4  Pairs:             48275136
+Elaboration time: 0.135746 for 1508580 nodes
+Elaboration time: 0.159075 for 1498176 nodes
+Elaboration time: 0.162338 for 1508580 nodes
+Elaboration time: 0.162772 for 1498176 nodes
+Elaboration time: 0.176644 for 1498176 nodes
+Elaboration time: 0.177419 for 1498176 nodes
+Elaboration time: 0.206288 for 1508580 nodes
+Elaboration time: 0.225032 for 1508580 nodes
+Elaboration time: 0.262653 for 1498176 nodes
+Elaboration time: 0.270550 for 1508580 nodes
+Elaboration time: 0.270986 for 1498176 nodes
+Elaboration time: 0.277545 for 1508580 nodes
+Elaboration time: 0.289816 for 1498176 nodes
+Elaboration time: 0.304948 for 1508580 nodes
+Elaboration time: 0.298052 for 1498176 nodes
+Elaboration time: 0.302825 for 1508580 nodes
+Elaboration time: 0.317037 for 1508580 nodes
+Elaboration time: 0.319344 for 1508580 nodes
+Elaboration time: 0.327134 for 1508580 nodes
+Elaboration time: 0.337100 for 1508580 nodes
+Elaboration time: 0.336753 for 1519057 nodes
+Elaboration time: 0.327949 for 1508580 nodes
+Elaboration time: 0.348581 for 1519057 nodes
+Elaboration time: 0.337884 for 1519057 nodes
+Elaboration time: 0.341267 for 1519056 nodes
+Elaboration time: 0.343771 for 1519057 nodes
+Elaboration time: 0.337987 for 1508580 nodes
+Elaboration time: 0.341189 for 1519056 nodes
+Elaboration time: 0.350773 for 1519056 nodes
+Elaboration time: 0.345636 for 1508580 nodes
+Elaboration time: 0.346786 for 1519056 nodes
+Elaboration time: 0.343228 for 1508580 nodes
+           0 Matching statistics: Unmatched nodes                     4  Singletons:                    4  Pairs:             24137568
+Elaboration time: 0.276825 for 749088 nodes
+Elaboration time: 0.280764 for 749088 nodes
+Elaboration time: 0.426058 for 754290 nodes
+Elaboration time: 0.424195 for 749088 nodes
+Elaboration time: 0.427028 for 754290 nodes
+Elaboration time: 0.423571 for 749088 nodes
+Elaboration time: 0.424166 for 754290 nodes
+Elaboration time: 0.425783 for 754290 nodes
+Elaboration time: 0.549916 for 754290 nodes
+Elaboration time: 0.551610 for 754290 nodes
+Elaboration time: 0.555370 for 749088 nodes
+Elaboration time: 0.560348 for 749088 nodes
+Elaboration time: 0.594215 for 754290 nodes
+Elaboration time: 0.619681 for 754290 nodes
+Elaboration time: 0.621082 for 754290 nodes
+Elaboration time: 0.616895 for 749088 nodes
+Elaboration time: 0.617605 for 749088 nodes
+Elaboration time: 0.636815 for 754290 nodes
+Elaboration time: 0.722382 for 754290 nodes
+Elaboration time: 0.722873 for 754290 nodes
+Elaboration time: 0.752723 for 754290 nodes
+Elaboration time: 0.760879 for 759529 nodes
+Elaboration time: 0.758097 for 759528 nodes
+Elaboration time: 0.755722 for 754290 nodes
+Elaboration time: 0.757739 for 759528 nodes
+Elaboration time: 0.764961 for 754290 nodes
+Elaboration time: 0.773436 for 759529 nodes
+Elaboration time: 0.783900 for 759529 nodes
+Elaboration time: 0.780365 for 754290 nodes
+Elaboration time: 0.781135 for 759528 nodes
+Elaboration time: 0.780179 for 759529 nodes
+Elaboration time: 0.777360 for 759528 nodes
+           0 Matching statistics: Unmatched nodes                     4  Singletons:                    4  Pairs:             12068784
+Elaboration time: 0.106738 for 374544 nodes
+Elaboration time: 0.158119 for 377145 nodes
+Elaboration time: 0.167886 for 377145 nodes
+Elaboration time: 0.170247 for 374544 nodes
+Elaboration time: 0.174229 for 374544 nodes
+Elaboration time: 0.176854 for 374544 nodes
+Elaboration time: 0.177991 for 374544 nodes
+Elaboration time: 0.183628 for 374544 nodes
+Elaboration time: 0.187345 for 377145 nodes
+Elaboration time: 0.189788 for 377145 nodes
+Elaboration time: 0.225872 for 377145 nodes
+Elaboration time: 0.225058 for 374544 nodes
+Elaboration time: 0.229637 for 379765 nodes
+Elaboration time: 0.227075 for 377145 nodes
+Elaboration time: 0.230602 for 379764 nodes
+Elaboration time: 0.228564 for 377145 nodes
+Elaboration time: 0.232251 for 377145 nodes
+Elaboration time: 0.230352 for 374544 nodes
+Elaboration time: 0.232657 for 377145 nodes
+Elaboration time: 0.235092 for 377145 nodes
+Elaboration time: 0.238863 for 377145 nodes
+Elaboration time: 0.236412 for 377145 nodes
+Elaboration time: 0.237723 for 377145 nodes
+Elaboration time: 0.237058 for 377145 nodes
+Elaboration time: 0.237193 for 379764 nodes
+Elaboration time: 0.236699 for 379765 nodes
+Elaboration time: 0.235542 for 379764 nodes
+Elaboration time: 0.235892 for 377145 nodes
+Elaboration time: 0.236229 for 377145 nodes
+Elaboration time: 0.235399 for 379764 nodes
+Elaboration time: 0.239049 for 379765 nodes
+Elaboration time: 0.238822 for 379765 nodes
+           0 Matching statistics: Unmatched nodes                   158  Singletons:                  158  Pairs:              6034315
+Elaboration time: 0.019643 for 187272 nodes
+Elaboration time: 0.024789 for 187272 nodes
+Elaboration time: 0.030121 for 187272 nodes
+Elaboration time: 0.032506 for 188573 nodes
+Elaboration time: 0.030857 for 187272 nodes
+Elaboration time: 0.040163 for 187272 nodes
+Elaboration time: 0.042357 for 188573 nodes
+Elaboration time: 0.040631 for 188572 nodes
+Elaboration time: 0.040759 for 188572 nodes
+Elaboration time: 0.043946 for 187272 nodes
+Elaboration time: 0.050717 for 187272 nodes
+Elaboration time: 0.056537 for 188572 nodes
+Elaboration time: 0.057649 for 189921 nodes
+Elaboration time: 0.057284 for 188572 nodes
+Elaboration time: 0.057007 for 188573 nodes
+Elaboration time: 0.056950 for 188572 nodes
+Elaboration time: 0.055242 for 187272 nodes
+Elaboration time: 0.058663 for 188573 nodes
+Elaboration time: 0.058116 for 188573 nodes
+Elaboration time: 0.061215 for 188572 nodes
+Elaboration time: 0.061210 for 189920 nodes
+Elaboration time: 0.060197 for 189884 nodes
+Elaboration time: 0.060089 for 189884 nodes
+Elaboration time: 0.059180 for 188573 nodes
+Elaboration time: 0.059175 for 188573 nodes
+Elaboration time: 0.060246 for 188573 nodes
+Elaboration time: 0.059998 for 188572 nodes
+Elaboration time: 0.062074 for 189882 nodes
+Elaboration time: 0.060408 for 189882 nodes
+Elaboration time: 0.063033 for 189882 nodes
+Elaboration time: 0.062053 for 188572 nodes
+Elaboration time: 0.062019 for 189882 nodes
+           0 Matching statistics: Unmatched nodes                   155  Singletons:                  155  Pairs:              3017159
+Elaboration time: 0.041531 for 93636 nodes
+Elaboration time: 0.050402 for 93636 nodes
+Elaboration time: 0.056004 for 93636 nodes
+Elaboration time: 0.058043 for 93636 nodes
+Elaboration time: 0.066133 for 93636 nodes
+Elaboration time: 0.066941 for 93636 nodes
+Elaboration time: 0.080517 for 94286 nodes
+Elaboration time: 0.079969 for 93636 nodes
+Elaboration time: 0.082482 for 94286 nodes
+Elaboration time: 0.081856 for 94286 nodes
+Elaboration time: 0.081627 for 94286 nodes
+Elaboration time: 0.085228 for 94286 nodes
+Elaboration time: 0.086835 for 94287 nodes
+Elaboration time: 0.087360 for 94286 nodes
+Elaboration time: 0.084327 for 93636 nodes
+Elaboration time: 0.088808 for 94287 nodes
+Elaboration time: 0.089152 for 94286 nodes
+Elaboration time: 0.095297 for 94286 nodes
+Elaboration time: 0.099378 for 94947 nodes
+Elaboration time: 0.104973 for 94286 nodes
+Elaboration time: 0.104057 for 94287 nodes
+Elaboration time: 0.104255 for 94287 nodes
+Elaboration time: 0.105932 for 94983 nodes
+Elaboration time: 0.105655 for 94286 nodes
+Elaboration time: 0.107191 for 94983 nodes
+Elaboration time: 0.106418 for 94947 nodes
+Elaboration time: 0.106038 for 94951 nodes
+Elaboration time: 0.106157 for 94953 nodes
+Elaboration time: 0.105515 for 94941 nodes
+Elaboration time: 0.105794 for 94941 nodes
+Elaboration time: 0.104908 for 94286 nodes
+Elaboration time: 0.105771 for 94286 nodes
+           0 Matching statistics: Unmatched nodes                    62  Singletons:                   62  Pairs:              1508626
+Elaboration time: 0.012366 for 46818 nodes
+Elaboration time: 0.014041 for 46818 nodes
+Elaboration time: 0.015875 for 47143 nodes
+Elaboration time: 0.015863 for 46818 nodes
+Elaboration time: 0.015845 for 46818 nodes
+Elaboration time: 0.017374 for 46818 nodes
+Elaboration time: 0.021674 for 47143 nodes
+Elaboration time: 0.022902 for 47143 nodes
+Elaboration time: 0.022283 for 46818 nodes
+Elaboration time: 0.025211 for 47143 nodes
+Elaboration time: 0.024726 for 47143 nodes
+Elaboration time: 0.024700 for 47143 nodes
+Elaboration time: 0.020380 for 46818 nodes
+Elaboration time: 0.025004 for 47143 nodes
+Elaboration time: 0.025423 for 47143 nodes
+Elaboration time: 0.025310 for 47143 nodes
+Elaboration time: 0.027476 for 47473 nodes
+Elaboration time: 0.027188 for 47143 nodes
+Elaboration time: 0.028497 for 47496 nodes
+Elaboration time: 0.029410 for 47143 nodes
+Elaboration time: 0.029950 for 47503 nodes
+Elaboration time: 0.030931 for 47143 nodes
+Elaboration time: 0.031025 for 47474 nodes
+Elaboration time: 0.029675 for 47144 nodes
+Elaboration time: 0.030763 for 47144 nodes
+Elaboration time: 0.031621 for 47479 nodes
+Elaboration time: 0.031698 for 47487 nodes
+Elaboration time: 0.031484 for 47471 nodes
+Elaboration time: 0.031511 for 47471 nodes
+           0 Matching statistics: Unmatched nodes                   134  Singletons:                  134  Pairs:               754277
+Elaboration time: 0.024748 for 46818 nodes
+Elaboration time: 0.031755 for 47143 nodes
+Elaboration time: 0.031421 for 47143 nodes
+Elaboration time: 0.004323 for 23409 nodes
+Elaboration time: 0.004738 for 23409 nodes
+Elaboration time: 0.005910 for 23409 nodes
+Elaboration time: 0.006319 for 23409 nodes
+Elaboration time: 0.007733 for 23409 nodes
+Elaboration time: 0.008043 for 23572 nodes
+Elaboration time: 0.007961 for 23571 nodes
+Elaboration time: 0.008559 for 23572 nodes
+Elaboration time: 0.008390 for 23571 nodes
+Elaboration time: 0.008352 for 23571 nodes
+Elaboration time: 0.008368 for 23571 nodes
+Elaboration time: 0.008303 for 23409 nodes
+Elaboration time: 0.008979 for 23573 nodes
+Elaboration time: 0.009636 for 23573 nodes
+Elaboration time: 0.010057 for 23755 nodes
+Elaboration time: 0.010212 for 23573 nodes
+Elaboration time: 0.009958 for 23574 nodes
+Elaboration time: 0.010285 for 23573 nodes
+Elaboration time: 0.010605 for 23741 nodes
+Elaboration time: 0.010104 for 23573 nodes
+Elaboration time: 0.010354 for 23571 nodes
+Elaboration time: 0.010868 for 23737 nodes
+Elaboration time: 0.010971 for 23573 nodes
+Elaboration time: 0.011697 for 23762 nodes
+Elaboration time: 0.011143 for 23741 nodes
+Elaboration time: 0.011355 for 23756 nodes
+Elaboration time: 0.011003 for 23741 nodes
+Elaboration time: 0.011565 for 23750 nodes
+           0 Matching statistics: Unmatched nodes                   189  Singletons:                  189  Pairs:               377111
+Elaboration time: 0.006809 for 23409 nodes
+Elaboration time: 0.009542 for 23409 nodes
+Elaboration time: 0.010063 for 23574 nodes
+Elaboration time: 0.011199 for 23571 nodes
+Elaboration time: 0.008093 for 11705 nodes
+Elaboration time: 0.008298 for 11785 nodes
+Elaboration time: 0.010256 for 11705 nodes
+Elaboration time: 0.010205 for 11785 nodes
+Elaboration time: 0.010269 for 11705 nodes
+Elaboration time: 0.010178 for 11705 nodes
+Elaboration time: 0.010847 for 11786 nodes
+Elaboration time: 0.010805 for 11704 nodes
+Elaboration time: 0.010842 for 11704 nodes
+Elaboration time: 0.011033 for 11786 nodes
+Elaboration time: 0.012888 for 11786 nodes
+Elaboration time: 0.012833 for 11704 nodes
+Elaboration time: 0.013443 for 11788 nodes
+Elaboration time: 0.013402 for 11786 nodes
+Elaboration time: 0.012992 for 11787 nodes
+Elaboration time: 0.013741 for 11870 nodes
+Elaboration time: 0.013639 for 11787 nodes
+Elaboration time: 0.015285 for 11901 nodes
+Elaboration time: 0.015231 for 11874 nodes
+Elaboration time: 0.011598 for 11704 nodes
+Elaboration time: 0.026986 for 11789 nodes
+Elaboration time: 0.026941 for 11786 nodes
+Elaboration time: 0.027283 for 11789 nodes
+Elaboration time: 0.027431 for 11788 nodes
+Elaboration time: 0.027275 for 11789 nodes
+Elaboration time: 0.027435 for 11895 nodes
+Elaboration time: 0.027055 for 11872 nodes
+Elaboration time: 0.027127 for 11873 nodes
+Elaboration time: 0.027129 for 11891 nodes
+Elaboration time: 0.027300 for 11892 nodes
+           0 Matching statistics: Unmatched nodes                   152  Singletons:                  152  Pairs:               188574
+Elaboration time: 0.027229 for 11788 nodes
+Elaboration time: 0.027379 for 11791 nodes
+Elaboration time: 0.002837 for 5853 nodes
+Elaboration time: 0.002942 for 5893 nodes
+Elaboration time: 0.002928 for 5852 nodes
+Elaboration time: 0.003130 for 5893 nodes
+Elaboration time: 0.004043 for 5897 nodes
+Elaboration time: 0.003697 for 5893 nodes
+Elaboration time: 0.003850 for 5852 nodes
+Elaboration time: 0.003835 for 5895 nodes
+Elaboration time: 0.004102 for 5852 nodes
+Elaboration time: 0.004103 for 5852 nodes
+Elaboration time: 0.004084 for 5896 nodes
+Elaboration time: 0.003768 for 5853 nodes
+Elaboration time: 0.004357 for 5897 nodes
+Elaboration time: 0.005201 for 5892 nodes
+Elaboration time: 0.006395 for 5894 nodes
+Elaboration time: 0.006405 for 5893 nodes
+Elaboration time: 0.006392 for 5895 nodes
+Elaboration time: 0.006482 for 5852 nodes
+Elaboration time: 0.006440 for 5893 nodes
+Elaboration time: 0.006650 for 5942 nodes
+Elaboration time: 0.006535 for 5852 nodes
+Elaboration time: 0.013909 for 5937 nodes
+Elaboration time: 0.014305 for 5939 nodes
+Elaboration time: 0.014648 for 5962 nodes
+Elaboration time: 0.014346 for 5951 nodes
+Elaboration time: 0.014607 for 5967 nodes
+Elaboration time: 0.013403 for 5895 nodes
+Elaboration time: 0.014304 for 5900 nodes
+Elaboration time: 0.021084 for 5936 nodes
+Elaboration time: 0.021265 for 5897 nodes
+Elaboration time: 0.021074 for 5954 nodes
+Elaboration time: 0.021319 for 5897 nodes
+           0 Matching statistics: Unmatched nodes                   144  Singletons:                  144  Pairs:                94291
+Elaboration time: 0.001724 for 2926 nodes
+Elaboration time: 0.001743 for 2926 nodes
+Elaboration time: 0.001730 for 2947 nodes
+Elaboration time: 0.002010 for 2946 nodes
+Elaboration time: 0.002250 for 2926 nodes
+Elaboration time: 0.002265 for 2926 nodes
+Elaboration time: 0.001840 for 2946 nodes
+Elaboration time: 0.002031 for 2945 nodes
+Elaboration time: 0.002152 for 2926 nodes
+Elaboration time: 0.002375 for 2950 nodes
+Elaboration time: 0.002493 for 2953 nodes
+Elaboration time: 0.002601 for 2952 nodes
+Elaboration time: 0.002263 for 2947 nodes
+Elaboration time: 0.002550 for 2952 nodes
+Elaboration time: 0.002225 for 2947 nodes
+Elaboration time: 0.002290 for 2996 nodes
+Elaboration time: 0.002251 for 2971 nodes
+Elaboration time: 0.002325 for 2973 nodes
+Elaboration time: 0.002404 for 2926 nodes
+Elaboration time: 0.002204 for 2947 nodes
+Elaboration time: 0.002429 for 2989 nodes
+Elaboration time: 0.002357 for 2949 nodes
+Elaboration time: 0.002309 for 2948 nodes
+Elaboration time: 0.002473 for 2954 nodes
+Elaboration time: 0.002237 for 2981 nodes
+Elaboration time: 0.002274 for 2973 nodes
+Elaboration time: 0.002246 for 2986 nodes
+Elaboration time: 0.002240 for 2966 nodes
+           0 Matching statistics: Unmatched nodes                   201  Singletons:                  201  Pairs:                47117
+Elaboration time: 0.002214 for 2926 nodes
+Elaboration time: 0.002572 for 2926 nodes
+Elaboration time: 0.002547 for 2952 nodes
+Elaboration time: 0.002607 for 2957 nodes
+Elaboration time: 0.001340 for 1463 nodes
+Elaboration time: 0.001231 for 1463 nodes
+Elaboration time: 0.001364 for 1463 nodes
+Elaboration time: 0.001322 for 1463 nodes
+Elaboration time: 0.001494 for 1486 nodes
+Elaboration time: 0.001608 for 1479 nodes
+Elaboration time: 0.001613 for 1476 nodes
+Elaboration time: 0.001678 for 1474 nodes
+Elaboration time: 0.001699 for 1474 nodes
+Elaboration time: 0.001628 for 1474 nodes
+Elaboration time: 0.002068 for 1481 nodes
+Elaboration time: 0.001660 for 1463 nodes
+Elaboration time: 0.001860 for 1463 nodes
+Elaboration time: 0.001737 for 1463 nodes
+Elaboration time: 0.001805 for 1486 nodes
+Elaboration time: 0.001797 for 1475 nodes
+Elaboration time: 0.001918 for 1480 nodes
+Elaboration time: 0.001628 for 1472 nodes
+Elaboration time: 0.001610 for 1499 nodes
+Elaboration time: 0.001861 for 1463 nodes
+Elaboration time: 0.001835 for 1517 nodes
+Elaboration time: 0.001634 for 1486 nodes
+Elaboration time: 0.001893 for 1473 nodes
+Elaboration time: 0.002027 for 1473 nodes
+Elaboration time: 0.001954 for 1473 nodes
+Elaboration time: 0.001902 for 1518 nodes
+Elaboration time: 0.001946 for 1487 nodes
+Elaboration time: 0.001772 for 1474 nodes
+Elaboration time: 0.001725 for 1504 nodes
+Elaboration time: 0.001678 for 1489 nodes
+           0 Matching statistics: Unmatched nodes                   238  Singletons:                  238  Pairs:                23540
+Elaboration time: 0.002083 for 1477 nodes
+Elaboration time: 0.002066 for 1487 nodes
+Elaboration time: 0.000700 for 732 nodes
+Elaboration time: 0.000741 for 732 nodes
+Elaboration time: 0.000709 for 752 nodes
+Elaboration time: 0.000772 for 732 nodes
+Elaboration time: 0.000737 for 732 nodes
+Elaboration time: 0.000812 for 755 nodes
+Elaboration time: 0.000858 for 738 nodes
+Elaboration time: 0.000973 for 740 nodes
+Elaboration time: 0.000910 for 732 nodes
+Elaboration time: 0.001035 for 751 nodes
+Elaboration time: 0.001169 for 732 nodes
+Elaboration time: 0.001033 for 741 nodes
+Elaboration time: 0.001074 for 743 nodes
+Elaboration time: 0.000825 for 764 nodes
+Elaboration time: 0.001110 for 737 nodes
+Elaboration time: 0.001183 for 737 nodes
+Elaboration time: 0.001063 for 770 nodes
+Elaboration time: 0.000925 for 732 nodes
+Elaboration time: 0.000904 for 731 nodes
+Elaboration time: 0.001106 for 754 nodes
+Elaboration time: 0.001022 for 745 nodes
+Elaboration time: 0.001075 for 736 nodes
+Elaboration time: 0.001182 for 737 nodes
+Elaboration time: 0.001267 for 737 nodes
+Elaboration time: 0.001228 for 737 nodes
+Elaboration time: 0.001224 for 773 nodes
+Elaboration time: 0.001216 for 746 nodes
+Elaboration time: 0.001085 for 769 nodes
+Elaboration time: 0.001251 for 737 nodes
+Elaboration time: 0.001176 for 737 nodes
+Elaboration time: 0.001088 for 746 nodes
+           0 Matching statistics: Unmatched nodes                   116  Singletons:                  116  Pairs:                11831
+Elaboration time: 0.001295 for 741 nodes
+Elaboration time: 0.000456 for 366 nodes
+Elaboration time: 0.000621 for 367 nodes
+Elaboration time: 0.000649 for 366 nodes
+Elaboration time: 0.000609 for 367 nodes
+Elaboration time: 0.000649 for 380 nodes
+Elaboration time: 0.000603 for 382 nodes
+Elaboration time: 0.000616 for 368 nodes
+Elaboration time: 0.000672 for 375 nodes
+Elaboration time: 0.000616 for 390 nodes
+Elaboration time: 0.000731 for 373 nodes
+Elaboration time: 0.000760 for 368 nodes
+Elaboration time: 0.000792 for 369 nodes
+Elaboration time: 0.000549 for 367 nodes
+Elaboration time: 0.000724 for 366 nodes
+Elaboration time: 0.000716 for 391 nodes
+Elaboration time: 0.000711 for 370 nodes
+Elaboration time: 0.000789 for 375 nodes
+Elaboration time: 0.000820 for 384 nodes
+Elaboration time: 0.000848 for 368 nodes
+Elaboration time: 0.000817 for 370 nodes
+Elaboration time: 0.000553 for 369 nodes
+Elaboration time: 0.000660 for 368 nodes
+Elaboration time: 0.000763 for 368 nodes
+Elaboration time: 0.000637 for 372 nodes
+Elaboration time: 0.000819 for 369 nodes
+Elaboration time: 0.000653 for 385 nodes
+Elaboration time: 0.000690 for 376 nodes
+Elaboration time: 0.000776 for 392 nodes
+           0 Matching statistics: Unmatched nodes                   123  Singletons:                  123  Pairs:                 5912
+Elaboration time: 0.000670 for 366 nodes
+Elaboration time: 0.000831 for 381 nodes
+Elaboration time: 0.000892 for 366 nodes
+Elaboration time: 0.000836 for 373 nodes
+ 
+Preconditioner: ML-VSMATCH-8CHEB4-30L1JAC
+Preconditioner time:  4.37813E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-07
+FCG:                  1  3.932378421E-02  1.000000000E-07
+FCG:                  2  5.095290993E-03  1.000000000E-07
+FCG:                  3  2.317126329E-03  1.000000000E-07
+FCG:                  4  8.120999512E-04  1.000000000E-07
+FCG:                  5  1.578871078E-04  1.000000000E-07
+FCG:                  6  2.111278745E-05  1.000000000E-07
+FCG:                  7  2.402387509E-06  1.000000000E-07
+FCG:                  8  2.897269099E-07  1.000000000E-07
+FCG:                  9  5.399261587E-08  1.000000000E-07
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES
+          Degree:                   8
+          rho_ba:           1.0000000000000000     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            6
+   Operator complexity:    1.8917939140165259     
+   Average coarsening :    7.9622230875616991     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Parallel Matching Aggregator
+     Number of matching  sweeps:            3
+     Matching algorithm         : MatchBoxP (PREIS)
+  Aggregator object type: Parallel Matching aggregation   
+   Parallel aggregation algorithm: coupled aggr.     
+   Aggregation type: Parallel Matching 
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666685     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:              24137572
+                     Nonzeros:             792369242
+      Local  matrix sizes: min:       749088         max:       759529
+                           avg:       754299.1
+           Aggregation   ratio:            8.00
+ 
+  Level            3
+   Damping omega value  :  0.59236947791164640     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               3017314
+                     Nonzeros:             346625958
+      Local  matrix sizes: min:        93636         max:        94983
+                           avg:        94291.1
+           Aggregation   ratio:            8.00
+ 
+  Level            4
+   Damping omega value  :  0.52579544778215503     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                377300
+                     Nonzeros:              51185202
+      Local  matrix sizes: min:        11704         max:        11901
+                           avg:        11790.6
+           Aggregation   ratio:            8.00
+ 
+  Level            5
+   Damping omega value  :  0.37916519043320823     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 47318
+                     Nonzeros:              11993018
+      Local  matrix sizes: min:         1463         max:         1518
+                           avg:         1478.7
+           Aggregation   ratio:            7.97
+ 
+  Level            6  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.43657651846669598     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                  6035
+                     Nonzeros:               1480255
+      Local  matrix sizes: min:          182         max:          205
+                           avg:          188.6
+           Aggregation   ratio:            7.84
+   L1 Diagonal solver 
+ 
+Computed solution on       32 process(es)
+Number of threads                  :            1
+Total number of tasks              :           32
+Linear system size                 :    193100552
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VSMATCH-8CHEB4-30L1JAC
+Iterations to convergence          :            9
+Relative error estimate on exit    :  5.39926E-08
+Number of levels in hierarchy      :            6
+Time to build hierarchy            :  4.27033E+01
+Time to build smoothers            :  1.07806E+00
+Total time for preconditioner      :  4.37813E+01
+Time to solve system               :  3.93518E+00
+Time per iteration                 :  4.37242E-01
+Total time                         :  4.77165E+01
+Residual 2-norm                    :  1.86547E-01
+Residual inf-norm                  :  3.74861E-04
+Total memory occupation for A      :  17774043488
+Total memory occupation for DESC_A :   6111932960
+Total memory occupation for PREC   :  62259112455
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ICDASB: total:                       Sum:       4.22 Avg:       0.12 Max:       0.94 Min:       0.00
+ICDASB: phase1:                      Sum:       0.64 Avg:       0.02 Max:       0.58 Min:       0.00
+ICDASB: phase2:                      Sum:       3.26 Avg:       0.09 Max:       0.39 Min:       0.00
+ICDASB: phase3:                      Sum:       0.37 Avg:       0.01 Max:       0.31 Min:       0.00
+I_DSC_IDX: phase1:                   Sum:       0.01 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase2:                   Sum:       0.02 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase3:                   Sum:       1.40 Avg:       0.04 Max:       0.27 Min:       0.00
+I_DSC_IDX: phase4:                   Sum:       0.09 Avg:       0.00 Max:       0.03 Min:       0.00
+PMC_TPROL: MatchBoxP:                Sum:      21.88 Avg:       1.46 Max:      12.94 Min:       0.00
+PMC_TPROL: spmm_bld:                 Sum:       6.34 Avg:       0.42 Max:       2.38 Min:       0.02
+PMC_TPROL: sweeps_mult:              Sum:       0.75 Avg:       0.15 Max:       0.64 Min:       0.00
+MBP_BLDP: phase1:                    Sum:       0.26 Avg:       0.02 Max:       0.13 Min:       0.00
+MBP_BLDP: buil_matching:             Sum:      21.17 Avg:       1.41 Max:      12.59 Min:       0.00
+MBP_BLDP: phase2:                    Sum:       6.21 Avg:       0.41 Max:       3.54 Min:       0.00
+MBP_BLDP: phase3:                    Sum:       3.64 Avg:       0.24 Max:       3.24 Min:       0.00
+BLD_MTCH: bld_ahat:                  Sum:       4.85 Avg:       0.32 Max:       2.57 Min:       0.00
+BLD_MTCH: PMatchBox:                 Sum:      14.36 Avg:       0.96 Max:       9.02 Min:       0.00
+BLD_MTCH: phase2:                    Sum:       1.91 Avg:       0.13 Max:       0.98 Min:       0.00
+BLD_MTCH: phase3:                    Sum:       0.03 Avg:       0.00 Max:       0.02 Min:       0.00
+BLD_AHAT: phase1:                    Sum:       1.21 Avg:       0.08 Max:       0.65 Min:       0.00
+BLD_AHAT: glob_transp:               Sum:       1.74 Avg:       0.12 Max:       0.94 Min:       0.00
+BLD_AHAT: phase2:                    Sum:       2.18 Avg:       0.15 Max:       1.13 Min:       0.00
+SPMM_BLD: spspmm:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM_BLD: prolcnv:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM_BLD: proltrans:                 Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM_BLD: asb:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: noand exch:                    Sum:       2.98 Avg:       0.00 Max:       0.01 Min:       0.00
+SPMM: noand cmp:                     Sum:       0.15 Avg:       0.00 Max:       0.14 Min:       0.00

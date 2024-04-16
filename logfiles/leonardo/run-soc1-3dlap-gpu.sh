@@ -1,5 +1,5 @@
 #!/usr/bin/bash -l
-#SBATCH --job-name 3dlap
+#SBATCH --job-name anisopb
 #SBATCH --partition boost_usr_prod
 #SBATCH --time 01:00:00
 #SBATCH --nodes @NNODES@
@@ -24,19 +24,19 @@ degiter=@DEGITER@
 idim=@SIZE@
 psize=@NTASKS@
 
-mpirun -np ${psize} ./3dlaplacian >> 3dlap/match/${degiter}/log_cheby4_match_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
+mpirun -n ${psize}  ./3dlaplacian >> 3dlap/soc1/${degiter}/log_cheby4_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 HLG                     ! matrix storage format
 ${idim}                 ! Discretization grid size
 CONST                   ! PDECOEFF: CONST, EXP, BOX, GAUSS Coefficients of the PDE
 FCG                     ! Krylov Solver
 2                       ! Stopping criterion
-00500                   ! Maximum number of iterations
+00500                     ! Maximum number of iterations
 1                       ! Trace of FCG
 30                      ! Restart (RGMRES e BICGSTAB)
 1.d-7                   ! Tolerance
 %%%%%%%%%%%  Main preconditioner choices %%%%%%%%%%%%%%%%
-ML-VSMATCH-${degiter}CHEB4-30L1JAC ! verbose description of the prec
+ML-VSVBM-${degiter}CHEB4-30L1JAC ! verbose description of the prec
 ML                      ! Preconditioner type
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
 POLY                    ! smoother type
@@ -57,7 +57,7 @@ LLK                     ! AINV variant
 %%%%%%%%%%%  Second smoother, always ignored for non-ML  %%%%%%%%%%%%%%%%
 NONE                    ! Second (post) smoother, ignored if NONE
 1                       ! Number of sweeps for (post) smoother
-4                       ! degree for polynomial smoother
+8                       ! degree for polynomial smoother
 POLY_LOTTES_BETA        ! Polynomial variant
 POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
 1.0                     ! Spectral radius estimate
@@ -76,8 +76,8 @@ VCYCLE                  ! AMG cycle type
 -3                      ! Max Number of levels in a multilevel preconditioner; if <0, lib default
 -3                      ! Target coarse matrix size per process; if <0, lib default
 SMOOTHED                ! Type of aggregation: SMOOTHED UNSMOOTHED
-COUPLED                 ! Parallel aggregation: DEC, SYMDEC, COUPLED
-MATCHBOXP               ! aggregation measure SOC1, MATCHBOXP 
+DEC                     ! Parallel aggregation: DEC, SYMDEC, COUPLED
+SOC1                    ! aggregation measure SOC1, MATCHBOXPcall read_data(prec%aggr_size,inp_unit) ! Requested size of the aggregates for MATCHBOXP
 8                       ! Requested size of the aggregates for MATCHBOXP
 NATURAL                 ! Ordering of aggregation NATURAL DEGREE
 -1.5                    ! Coarsening ratio, if < 0 use library default
@@ -104,7 +104,7 @@ T                       ! Dump coarse solver
 T                       ! Dump using global numbering?
 EOF
 
-mpirun -np ${psize} ./3dlaplacian >> 3dlap/match/${degiter}/log_optcheby4_match_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
+mpirun -n ${psize}  ./3dlaplacian >> 3dlap/soc1/${degiter}/log_optcheby4_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 HLG                     ! matrix storage format
 ${idim}                 ! Discretization grid size
@@ -116,7 +116,7 @@ FCG                     ! Krylov Solver
 30                      ! Restart (RGMRES e BICGSTAB)
 1.d-7                   ! Tolerance
 %%%%%%%%%%%  Main preconditioner choices %%%%%%%%%%%%%%%%
-ML-VSMATCH-${degiter}OPTCHEB4-30L1JAC ! verbose description of the prec
+ML-VSVBM-4OPTCHEB4-30L1JAC ! verbose description of the prec
 ML                      ! Preconditioner type
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
 POLY                    ! smoother type
@@ -137,7 +137,7 @@ LLK                     ! AINV variant
 %%%%%%%%%%%  Second smoother, always ignored for non-ML  %%%%%%%%%%%%%%%%
 NONE                    ! Second (post) smoother, ignored if NONE
 1                       ! Number of sweeps for (post) smoother
-4                       ! degree for polynomial smoother
+8                       ! degree for polynomial smoother
 POLY_LOTTES_BETA        ! Polynomial variant
 POLY_RHO_EST_POWER      ! Algorithm to estimate spectral radius (ignored if next larger than 0)
 1.0                     ! Spectral radius estimate
@@ -156,8 +156,8 @@ VCYCLE                  ! AMG cycle type
 -3                      ! Max Number of levels in a multilevel preconditioner; if <0, lib default
 -3                      ! Target coarse matrix size per process; if <0, lib default
 SMOOTHED                ! Type of aggregation: SMOOTHED UNSMOOTHED
-COUPLED                 ! Parallel aggregation: DEC, SYMDEC, COUPLED
-MATCHBOXP               ! aggregation measure SOC1, MATCHBOXP 
+DEC                     ! Parallel aggregation: DEC, SYMDEC, COUPLED
+SOC1                    ! aggregation measure SOC1, MATCHBOXPcall read_data(prec%aggr_size,inp_unit) ! Requested size of the aggregates for MATCHBOXP
 8                       ! Requested size of the aggregates for MATCHBOXP
 NATURAL                 ! Ordering of aggregation NATURAL DEGREE
 -1.5                    ! Coarsening ratio, if < 0 use library default
@@ -184,7 +184,7 @@ T                       ! Dump coarse solver
 T                       ! Dump using global numbering?
 EOF
 
-mpirun -np ${psize} ./3dlaplacian >> 3dlap/match/${degiter}/log_optcheby1_match_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
+mpirun -n ${psize}  ./3dlaplacian >> 3dlap/soc1/${degiter}/log_optcheby1_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 HLG                     ! matrix storage format
 ${idim}                 ! Discretization grid size
@@ -196,7 +196,7 @@ FCG                     ! Krylov Solver
 30                      ! Restart (RGMRES e BICGSTAB)
 1.d-7                   ! Tolerance
 %%%%%%%%%%%  Main preconditioner choices %%%%%%%%%%%%%%%%
-ML-VSMATCH-${degiter}OPTCHEB1-30L1JAC ! verbose description of the prec
+ML-VSVBM-${degiter}OPTCHEB1-30L1JAC ! verbose description of the prec
 ML                      ! Preconditioner type
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
 POLY                    ! smoother type
@@ -236,8 +236,8 @@ VCYCLE                  ! AMG cycle type
 -3                      ! Max Number of levels in a multilevel preconditioner; if <0, lib default
 -3                      ! Target coarse matrix size per process; if <0, lib default
 SMOOTHED                ! Type of aggregation: SMOOTHED UNSMOOTHED
-COUPLED                 ! Parallel aggregation: DEC, SYMDEC, COUPLED
-MATCHBOXP               ! aggregation measure SOC1, MATCHBOXP 
+DEC                     ! Parallel aggregation: DEC, SYMDEC, COUPLED
+SOC1                    ! aggregation measure SOC1, MATCHBOXPcall read_data(prec%aggr_size,inp_unit) ! Requested size of the aggregates for MATCHBOXP
 8                       ! Requested size of the aggregates for MATCHBOXP
 NATURAL                 ! Ordering of aggregation NATURAL DEGREE
 -1.5                    ! Coarsening ratio, if < 0 use library default
@@ -264,7 +264,7 @@ T                       ! Dump coarse solver
 T                       ! Dump using global numbering?
 EOF
 
-mpirun -np ${psize} ./3dlaplacian >> 3dlap/match/${degiter}/log_l1jacobi_match_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
+mpirun -np ${psize}  ./3dlaplacian >> 3dlap/soc1/${degiter}/log_l1jac_svbm_l1jac_${idim}_task_${psize}_thr_1.txt 2>&1  <<EOF
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 HLG                     ! matrix storage format
 ${idim}                 ! Discretization grid size
@@ -276,7 +276,7 @@ FCG                     ! Krylov Solver
 30                      ! Restart (RGMRES e BICGSTAB)
 1.d-7                   ! Tolerance
 %%%%%%%%%%%  Main preconditioner choices %%%%%%%%%%%%%%%%
-ML-VSMATCH-${degiter}L1JAC-30L1JAC ! verbose description of the prec
+ML-VSVBM-${degiter}L1JAC-30L1JAC ! verbose description of the prec
 ML                      ! Preconditioner type
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
 L1-JACOBI               ! smoother type
@@ -316,8 +316,8 @@ VCYCLE                  ! AMG cycle type
 -3                      ! Max Number of levels in a multilevel preconditioner; if <0, lib default
 -3                      ! Target coarse matrix size per process; if <0, lib default
 SMOOTHED                ! Type of aggregation: SMOOTHED UNSMOOTHED
-COUPLED                 ! Parallel aggregation: DEC, SYMDEC, COUPLED
-MATCHBOXP               ! aggregation measure SOC1, MATCHBOXP 
+DEC                     ! Parallel aggregation: DEC, SYMDEC, COUPLED
+SOC1                    ! aggregation measure SOC1, MATCHBOXPcall read_data(prec%aggr_size,inp_unit) ! Requested size of the aggregates for MATCHBOXP
 8                       ! Requested size of the aggregates for MATCHBOXP
 NATURAL                 ! Ordering of aggregation NATURAL DEGREE
 -1.5                    ! Coarsening ratio, if < 0 use library default
