@@ -5,47 +5,47 @@ Created cusparses_handle
  - Compiled with CUDA support -
 Generating Matrix (size=6028568)...
 The matrix has been generated and assembled in HLG format.
--allocation  time :  1.42135E-01
--coeff. gen. time :  9.01701E-01
--desc asbly  time :  5.45582E-04
-- mat asbly  time :  1.18314E+00
--total       time :  2.22752E+00
+-allocation  time :  1.42522E-01
+-coeff. gen. time :  8.99635E-01
+-desc asbly  time :  5.52990E-04
+- mat asbly  time :  1.25971E+00
+-total       time :  2.30242E+00
 PDE Coefficients             : CONST
-Overall matrix creation time :  2.22917E+00
+Overall matrix creation time :  2.30400E+00
  
-Elaboration time: 1.203601 for 6028568 nodes
+Elaboration time: 1.220796 for 6028568 nodes
            0 Matching statistics: Unmatched nodes                     0  Singletons:                    0  Pairs:              3014284
-Elaboration time: 0.332307 for 3014284 nodes
+Elaboration time: 0.328709 for 3014284 nodes
            0 Matching statistics: Unmatched nodes                     0  Singletons:                    0  Pairs:              1507142
-Elaboration time: 0.079597 for 1507142 nodes
+Elaboration time: 0.076341 for 1507142 nodes
            0 Matching statistics: Unmatched nodes                     0  Singletons:                    0  Pairs:               753571
-Elaboration time: 0.123378 for 753571 nodes
+Elaboration time: 0.122738 for 753571 nodes
            0 Matching statistics: Unmatched nodes                     1  Singletons:                    1  Pairs:               376785
-Elaboration time: 0.036453 for 376786 nodes
+Elaboration time: 0.036272 for 376786 nodes
            0 Matching statistics: Unmatched nodes                     2  Singletons:                    2  Pairs:               188392
-Elaboration time: 0.009931 for 188394 nodes
+Elaboration time: 0.009783 for 188394 nodes
            0 Matching statistics: Unmatched nodes                     2  Singletons:                    2  Pairs:                94196
-Elaboration time: 0.007220 for 94198 nodes
+Elaboration time: 0.007979 for 94198 nodes
            0 Matching statistics: Unmatched nodes                    32  Singletons:                   32  Pairs:                47083
-Elaboration time: 0.003133 for 47115 nodes
+Elaboration time: 0.003046 for 47115 nodes
            0 Matching statistics: Unmatched nodes                     3  Singletons:                    3  Pairs:                23556
-Elaboration time: 0.001173 for 23559 nodes
+Elaboration time: 0.001141 for 23559 nodes
            0 Matching statistics: Unmatched nodes                     5  Singletons:                    5  Pairs:                11777
-Elaboration time: 0.000797 for 11782 nodes
+Elaboration time: 0.000778 for 11782 nodes
            0 Matching statistics: Unmatched nodes                    34  Singletons:                   34  Pairs:                 5874
-Elaboration time: 0.000370 for 5908 nodes
+Elaboration time: 0.000369 for 5908 nodes
            0 Matching statistics: Unmatched nodes                     8  Singletons:                    8  Pairs:                 2950
-Elaboration time: 0.000174 for 2958 nodes
+Elaboration time: 0.000172 for 2958 nodes
            0 Matching statistics: Unmatched nodes                    22  Singletons:                   22  Pairs:                 1468
-Elaboration time: 0.000142 for 1490 nodes
+Elaboration time: 0.000137 for 1490 nodes
            0 Matching statistics: Unmatched nodes                    14  Singletons:                   14  Pairs:                  738
-Elaboration time: 0.000085 for 752 nodes
+Elaboration time: 0.000092 for 752 nodes
            0 Matching statistics: Unmatched nodes                    12  Singletons:                   12  Pairs:                  370
 Elaboration time: 0.000042 for 382 nodes
            0 Matching statistics: Unmatched nodes                    14  Singletons:                   14  Pairs:                  184
  
 Preconditioner: ML-VSMATCH-8L1JAC-30L1JAC
-Preconditioner time:  2.06261E+01
+Preconditioner time:  2.06870E+01
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -143,12 +143,12 @@ Preconditioner                     : ML-VSMATCH-8L1JAC-30L1JAC
 Iterations to convergence          :            7
 Relative error estimate on exit    :  3.10473E-08
 Number of levels in hierarchy      :            6
-Time to build hierarchy            :  1.98853E+01
-Time to build smoothers            :  7.40859E-01
-Total time for preconditioner      :  2.06261E+01
-Time to solve system               :  2.05742E-01
-Time per iteration                 :  2.93917E-02
-Total time                         :  2.08319E+01
+Time to build hierarchy            :  1.99457E+01
+Time to build smoothers            :  7.41221E-01
+Total time for preconditioner      :  2.06870E+01
+Time to solve system               :  2.03612E-01
+Time per iteration                 :  2.90874E-02
+Total time                         :  2.08906E+01
 Residual 2-norm                    :  3.43735E-03
 Residual inf-norm                  :  2.19152E-05
 Total memory occupation for A      :    553862256
@@ -160,20 +160,20 @@ ICDASB: total:                       Sum:       0.00 Avg:       0.00 Max:       
 ICDASB: phase1:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 ICDASB: phase2:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 ICDASB: phase3:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
-PMC_TPROL: MatchBoxP:                Sum:       7.54 Avg:       0.50 Max:       4.32 Min:       0.00
-PMC_TPROL: spmm_bld:                 Sum:       2.21 Avg:       0.15 Max:       1.17 Min:       0.00
-PMC_TPROL: sweeps_mult:              Sum:       0.42 Avg:       0.08 Max:       0.38 Min:       0.00
-MBP_BLDP: phase1:                    Sum:       0.13 Avg:       0.01 Max:       0.09 Min:       0.00
-MBP_BLDP: buil_matching:             Sum:       7.09 Avg:       0.47 Max:       4.05 Min:       0.00
-MBP_BLDP: phase2:                    Sum:       0.08 Avg:       0.01 Max:       0.05 Min:       0.00
+PMC_TPROL: MatchBoxP:                Sum:       7.57 Avg:       0.50 Max:       4.34 Min:       0.00
+PMC_TPROL: spmm_bld:                 Sum:       2.22 Avg:       0.15 Max:       1.18 Min:       0.00
+PMC_TPROL: sweeps_mult:              Sum:       0.43 Avg:       0.09 Max:       0.38 Min:       0.00
+MBP_BLDP: phase1:                    Sum:       0.13 Avg:       0.01 Max:       0.08 Min:       0.00
+MBP_BLDP: buil_matching:             Sum:       7.12 Avg:       0.47 Max:       4.08 Min:       0.00
+MBP_BLDP: phase2:                    Sum:       0.09 Avg:       0.01 Max:       0.05 Min:       0.00
 MBP_BLDP: phase3:                    Sum:       0.22 Avg:       0.01 Max:       0.12 Min:       0.00
-BLD_MTCH: bld_ahat:                  Sum:       3.68 Avg:       0.25 Max:       1.99 Min:       0.00
-BLD_MTCH: PMatchBox:                 Sum:       1.91 Avg:       0.13 Max:       1.26 Min:       0.00
-BLD_MTCH: phase2:                    Sum:       1.46 Avg:       0.10 Max:       0.78 Min:       0.00
+BLD_MTCH: bld_ahat:                  Sum:       3.69 Avg:       0.25 Max:       1.99 Min:       0.00
+BLD_MTCH: PMatchBox:                 Sum:       1.92 Avg:       0.13 Max:       1.28 Min:       0.00
+BLD_MTCH: phase2:                    Sum:       1.47 Avg:       0.10 Max:       0.79 Min:       0.00
 BLD_MTCH: phase3:                    Sum:       0.02 Avg:       0.00 Max:       0.01 Min:       0.00
-BLD_AHAT: phase1:                    Sum:       0.96 Avg:       0.06 Max:       0.54 Min:       0.00
+BLD_AHAT: phase1:                    Sum:       0.96 Avg:       0.06 Max:       0.53 Min:       0.00
 BLD_AHAT: glob_transp:               Sum:       1.17 Avg:       0.08 Max:       0.64 Min:       0.00
-BLD_AHAT: phase2:                    Sum:       1.55 Avg:       0.10 Max:       0.81 Min:       0.00
+BLD_AHAT: phase2:                    Sum:       1.56 Avg:       0.10 Max:       0.81 Min:       0.00
 SPMM_BLD: spspmm:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM_BLD: prolcnv:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM_BLD: proltrans:                 Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
@@ -182,5 +182,5 @@ SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       
 SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
-SPMM: noand exch:                    Sum:       0.17 Avg:       0.00 Max:       0.00 Min:       0.00
-SPMM: noand cmp:                     Sum:       0.09 Avg:       0.00 Max:       0.09 Min:       0.00
+SPMM: noand exch:                    Sum:       0.16 Avg:       0.00 Max:       0.00 Min:       0.00
+SPMM: noand cmp:                     Sum:       0.11 Avg:       0.00 Max:       0.11 Min:       0.00

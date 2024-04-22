@@ -7,17 +7,17 @@ Created cusparses_handle
 Created cusparses_handle
 Generating Matrix (size=12167000)...
 The matrix has been generated and assembled in HLG format.
--allocation  time :  3.32054E+00
--coeff. gen. time :  2.62535E+00
--desc asbly  time :  2.51363E-01
-- mat asbly  time :  8.08528E-01
--total       time :  7.00581E+00
+-allocation  time :  3.44996E+00
+-coeff. gen. time :  2.82037E+00
+-desc asbly  time :  2.59206E-01
+- mat asbly  time :  8.14626E-01
+-total       time :  7.34766E+00
 PDE Coefficients             : CONST
-Overall matrix creation time :  7.00840E+00
+Overall matrix creation time :  7.35003E+00
  
  
 Preconditioner: ML-VSVBM-8CHEB4-30L1JAC
-Preconditioner time:  1.15764E+01
+Preconditioner time:  1.18529E+01
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -109,12 +109,12 @@ Preconditioner                     : ML-VSVBM-8CHEB4-30L1JAC
 Iterations to convergence          :            9
 Relative error estimate on exit    :  6.81691E-08
 Number of levels in hierarchy      :            5
-Time to build hierarchy            :  1.09386E+01
-Time to build smoothers            :  6.37795E-01
-Total time for preconditioner      :  1.15764E+01
-Time to solve system               :  3.02874E-01
-Time per iteration                 :  3.36526E-02
-Total time                         :  1.18793E+01
+Time to build hierarchy            :  1.11990E+01
+Time to build smoothers            :  6.53881E-01
+Total time for preconditioner      :  1.18529E+01
+Time to solve system               :  2.80721E-01
+Time per iteration                 :  3.11912E-02
+Total time                         :  1.21336E+01
 Residual 2-norm                    :  1.51121E-02
 Residual inf-norm                  :  6.96038E-05
 Total memory occupation for A      :   1118436808
@@ -122,15 +122,15 @@ Total memory occupation for DESC_A :    378039504
 Total memory occupation for PREC   :   2769756814
 Storage format for A               : HLG  
 Storage format for DESC_A          : HASH 
-ICDASB: total:                       Sum:       0.26 Avg:       0.03 Max:       0.25 Min:       0.00
+ICDASB: total:                       Sum:       0.27 Avg:       0.03 Max:       0.26 Min:       0.00
 ICDASB: phase1:                      Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
 ICDASB: phase2:                      Sum:       0.02 Avg:       0.00 Max:       0.01 Min:       0.00
-ICDASB: phase3:                      Sum:       0.24 Avg:       0.03 Max:       0.24 Min:       0.00
+ICDASB: phase3:                      Sum:       0.25 Avg:       0.03 Max:       0.25 Min:       0.00
 I_DSC_IDX: phase1:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 I_DSC_IDX: phase2:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 I_DSC_IDX: phase3:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 I_DSC_IDX: phase4:                   Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
-SOC1_MAP: phase0:                    Sum:       0.95 Avg:       0.24 Max:       0.86 Min:       0.00
+SOC1_MAP: phase0:                    Sum:       0.98 Avg:       0.25 Max:       0.88 Min:       0.00
 SOC1_MAP: phase1:                    Sum:       0.15 Avg:       0.04 Max:       0.10 Min:       0.00
 SOC1_MAP: phase2:                    Sum:       0.09 Avg:       0.02 Max:       0.06 Min:       0.00
 SOC1_MAP: phase3:                    Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
@@ -138,5 +138,11 @@ SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       
 SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
-SPMM: noand exch:                    Sum:       0.25 Avg:       0.00 Max:       0.00 Min:       0.00
+SPMM: noand exch:                    Sum:       0.23 Avg:       0.00 Max:       0.00 Min:       0.00
 SPMM: noand cmp:                     Sum:       0.12 Avg:       0.00 Max:       0.12 Min:       0.00
+POLY: Chebychev4:                    Sum:       0.19 Avg:       0.00 Max:       0.01 Min:       0.00
+POLY: OptChebychev4:                 Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+POLY: OptChebychev1:                 Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+POLY: spMV:                          Sum:       0.19 Avg:       0.00 Max:       0.00 Min:       0.00
+POLY: Vectors:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
+POLY: solver:                        Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
