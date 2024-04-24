@@ -1,0 +1,180 @@
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+ Welcome to AMG4PSBLAS version: 1.1.0
+ This is the amg_d_pde3d sample program
+ - Compiled with CUDA support -
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Generating Matrix (size=96071912)...
+The matrix has been generated and assembled in HLG format.
+-allocation  time :  4.26453E+00
+-coeff. gen. time :  3.13520E+00
+-desc asbly  time :  5.75012E-01
+- mat asbly  time :  9.65401E-01
+-total       time :  8.94686E+00
+PDE Coefficients             : CONST
+Overall matrix creation time :  8.95094E+00
+ 
+ 
+Preconditioner: ML-VSVBM-10OPTCHEB1-30L1JAC
+Preconditioner time:  1.39480E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-07
+FCG:                  1  3.441087397E-02  1.000000000E-07
+FCG:                  2  8.840926686E-03  1.000000000E-07
+FCG:                  3  3.166354858E-03  1.000000000E-07
+FCG:                  4  1.437143134E-03  1.000000000E-07
+FCG:                  5  5.749732615E-04  1.000000000E-07
+FCG:                  6  1.817974299E-04  1.000000000E-07
+FCG:                  7  5.221855529E-05  1.000000000E-07
+FCG:                  8  1.258646584E-05  1.000000000E-07
+FCG:                  9  2.553189771E-06  1.000000000E-07
+FCG:                 10  6.296661313E-07  1.000000000E-07
+FCG:                 11  2.279395455E-07  1.000000000E-07
+FCG:                 12  5.954581306E-08  1.000000000E-07
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_NEW
+          Degree:                  10
+          rho_ba:           1.0000000000000000     
+     Coefficient:           2.3998740960062000E-002
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5840084764902462     
+   Average coarsening :    22.475150889688315     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666663     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:              11938088
+                     Nonzeros:             371149000
+      Local  matrix sizes: min:       743087         max:       749174
+                           avg:       746130.5
+           Aggregation   ratio:            8.05
+ 
+  Level            3
+   Damping omega value  :  0.62337662337662314     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                291570
+                     Nonzeros:              19803584
+      Local  matrix sizes: min:        17903         max:        18465
+                           avg:        18223.1
+           Aggregation   ratio:           40.94
+ 
+  Level            4
+   Damping omega value  :  0.63141453049481611     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 12253
+                     Nonzeros:               1002523
+      Local  matrix sizes: min:          738         max:          794
+                           avg:          765.8
+           Aggregation   ratio:           23.80
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.57745074155887222     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                   716
+                     Nonzeros:                 57546
+      Local  matrix sizes: min:           41         max:           51
+                           avg:           44.8
+           Aggregation   ratio:           17.11
+   L1 Diagonal solver 
+ 
+Computed solution on       16 process(es)
+Number of threads                  :            1
+Total number of tasks              :           16
+Linear system size                 :     96071912
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VSVBM-10OPTCHEB1-30L1JAC
+Iterations to convergence          :           12
+Relative error estimate on exit    :  5.95458E-08
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.30557E+01
+Time to build smoothers            :  8.92219E-01
+Total time for preconditioner      :  1.39480E+01
+Time to solve system               :  3.87929E+00
+Time per iteration                 :  3.23274E-01
+Total time                         :  1.78273E+01
+Residual 2-norm                    :  1.02680E-01
+Residual inf-norm                  :  2.80861E-04
+Total memory occupation for A      :   8841236032
+Total memory occupation for DESC_A :   3033915936
+Total memory occupation for PREC   :  22974267484
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ICDASB: total:                       Sum:       0.92 Avg:       0.10 Max:       0.58 Min:       0.00
+ICDASB: phase1:                      Sum:       0.23 Avg:       0.03 Max:       0.23 Min:       0.00
+ICDASB: phase2:                      Sum:       0.38 Avg:       0.04 Max:       0.17 Min:       0.00
+ICDASB: phase3:                      Sum:       0.32 Avg:       0.04 Max:       0.31 Min:       0.00
+I_DSC_IDX: phase1:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase2:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
+I_DSC_IDX: phase3:                   Sum:       0.18 Avg:       0.04 Max:       0.10 Min:       0.00
+I_DSC_IDX: phase4:                   Sum:       0.03 Avg:       0.01 Max:       0.02 Min:       0.00
+SOC1_MAP: phase0:                    Sum:       1.08 Avg:       0.27 Max:       0.97 Min:       0.00
+SOC1_MAP: phase1:                    Sum:       0.18 Avg:       0.04 Max:       0.12 Min:       0.00
+SOC1_MAP: phase2:                    Sum:       0.11 Avg:       0.03 Max:       0.06 Min:       0.00
+SOC1_MAP: phase3:                    Sum:       0.02 Avg:       0.00 Max:       0.01 Min:       0.00
+SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+SPMM: noand exch:                    Sum:       3.19 Avg:       0.00 Max:       0.01 Min:       0.00
+SPMM: noand cmp:                     Sum:       0.15 Avg:       0.00 Max:       0.15 Min:       0.00
+POLY: Chebychev4:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+POLY: OptChebychev4:                 Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+POLY: OptChebychev1:                 Sum:       2.58 Avg:       0.03 Max:       0.05 Min:       0.01
+POLY: spMV:                          Sum:       2.57 Avg:       0.00 Max:       0.01 Min:       0.00
+POLY: Vectors:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
+POLY: solver:                        Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00

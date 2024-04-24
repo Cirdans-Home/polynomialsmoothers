@@ -114,10 +114,6 @@ Created cusparses_handle
 Created cusparses_handle
 Created cusparses_handle
 Created cusparses_handle
-Created cusparses_handle
-Created cusparses_handle
-Created cusparses_handle
-Created cusparses_handle
  Welcome to AMG4PSBLAS version: 1.1.0
  This is the amg_d_pde3d sample program
  - Compiled with CUDA support -
@@ -129,19 +125,23 @@ Created cusparses_handle
 Created cusparses_handle
 Created cusparses_handle
 Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
+Created cusparses_handle
 Generating Matrix (size=385828352)...
 The matrix has been generated and assembled in HLG format.
--allocation  time :  3.43025E+00
--coeff. gen. time :  2.84858E+00
--desc asbly  time :  4.62730E-01
-- mat asbly  time :  9.79377E-01
--total       time :  7.72328E+00
+-allocation  time :  3.43594E+00
+-coeff. gen. time :  2.84296E+00
+-desc asbly  time :  4.44419E-01
+- mat asbly  time :  9.79299E-01
+-total       time :  7.70897E+00
 PDE Coefficients             : CONST
-Overall matrix creation time :  7.72805E+00
+Overall matrix creation time :  7.71498E+00
  
  
 Preconditioner: ML-VSVBM-4OPTCHEB4-30L1JAC
-Preconditioner time:  1.40892E+01
+Preconditioner time:  1.40498E+01
  
 FCG:               Iter   Error Estimate        Tolerance
 FCG:                  0  1.000000000E+00  1.000000000E-07
@@ -238,12 +238,12 @@ Preconditioner                     : ML-VSVBM-4OPTCHEB4-30L1JAC
 Iterations to convergence          :           13
 Relative error estimate on exit    :  7.48684E-08
 Number of levels in hierarchy      :            5
-Time to build hierarchy            :  1.31853E+01
-Time to build smoothers            :  9.03814E-01
-Total time for preconditioner      :  1.40892E+01
-Time to solve system               :  6.05090E+00
-Time per iteration                 :  4.65454E-01
-Total time                         :  2.01400E+01
+Time to build hierarchy            :  1.31491E+01
+Time to build smoothers            :  9.00667E-01
+Total time for preconditioner      :  1.40498E+01
+Time to solve system               :  5.70150E+00
+Time per iteration                 :  4.38577E-01
+Total time                         :  1.97513E+01
 Residual 2-norm                    :  5.15566E-01
 Residual inf-norm                  :  7.46101E-04
 Total memory occupation for A      :  35521130496
@@ -251,21 +251,27 @@ Total memory occupation for DESC_A :  12220065760
 Total memory occupation for PREC   :  90093947328
 Storage format for A               : HLG  
 Storage format for DESC_A          : HASH 
-ICDASB: total:                       Sum:       0.81 Avg:       0.09 Max:       0.46 Min:       0.00
-ICDASB: phase1:                      Sum:       0.12 Avg:       0.01 Max:       0.11 Min:       0.00
-ICDASB: phase2:                      Sum:       0.40 Avg:       0.04 Max:       0.18 Min:       0.00
+ICDASB: total:                       Sum:       0.81 Avg:       0.09 Max:       0.45 Min:       0.00
+ICDASB: phase1:                      Sum:       0.11 Avg:       0.01 Max:       0.10 Min:       0.00
+ICDASB: phase2:                      Sum:       0.41 Avg:       0.05 Max:       0.19 Min:       0.00
 ICDASB: phase3:                      Sum:       0.31 Avg:       0.03 Max:       0.30 Min:       0.00
 I_DSC_IDX: phase1:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 I_DSC_IDX: phase2:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
 I_DSC_IDX: phase3:                   Sum:       0.01 Avg:       0.00 Max:       0.01 Min:       0.00
-I_DSC_IDX: phase4:                   Sum:       0.03 Avg:       0.01 Max:       0.03 Min:       0.00
-SOC1_MAP: phase0:                    Sum:       1.09 Avg:       0.27 Max:       0.98 Min:       0.00
-SOC1_MAP: phase1:                    Sum:       0.20 Avg:       0.05 Max:       0.14 Min:       0.00
-SOC1_MAP: phase2:                    Sum:       0.11 Avg:       0.03 Max:       0.06 Min:       0.00
+I_DSC_IDX: phase4:                   Sum:       0.03 Avg:       0.01 Max:       0.02 Min:       0.00
+SOC1_MAP: phase0:                    Sum:       1.09 Avg:       0.27 Max:       0.97 Min:       0.00
+SOC1_MAP: phase1:                    Sum:       0.16 Avg:       0.04 Max:       0.11 Min:       0.00
+SOC1_MAP: phase2:                    Sum:       0.11 Avg:       0.03 Max:       0.07 Min:       0.00
 SOC1_MAP: phase3:                    Sum:       0.02 Avg:       0.00 Max:       0.01 Min:       0.00
 SPMM: and send:                      Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp ad:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and rcv:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
 SPMM: and cmp and:                   Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
-SPMM: noand exch:                    Sum:       4.42 Avg:       0.00 Max:       0.01 Min:       0.00
-SPMM: noand cmp:                     Sum:       0.16 Avg:       0.00 Max:       0.15 Min:       0.00
+SPMM: noand exch:                    Sum:       4.23 Avg:       0.00 Max:       0.01 Min:       0.00
+SPMM: noand cmp:                     Sum:       0.15 Avg:       0.00 Max:       0.15 Min:       0.00
+POLY: Chebychev4:                    Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+POLY: OptChebychev4:                 Sum:       4.04 Avg:       0.04 Max:       0.07 Min:       0.02
+POLY: OptChebychev1:                 Sum:       0.00 Avg:       0.00 Max:       0.00 Min: **********
+POLY: spMV:                          Sum:       4.03 Avg:       0.00 Max:       0.01 Min:       0.00
+POLY: Vectors:                       Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
+POLY: solver:                        Sum:       0.00 Avg:       0.00 Max:       0.00 Min:       0.00
