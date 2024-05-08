@@ -14,7 +14,7 @@ EXEDIR=./runs
 DGEN3D=amg_d_pde3d_base_mod.o amg_d_pde3d_exp_mod.o amg_d_pde3d_gauss_mod.o amg_d_pde3d_box_mod.o 	
 
 
-all: amg_d_pde3d
+all: amg_d_pde3d amg_d_pde3d_multi
 
 amg_d_pde3d: amg_d_pde3d.o amg_d_genpde_mod.o $(DGEN3D) data_input.o
 	$(FLINK) $(LINKOPT) amg_d_pde3d.o  amg_d_genpde_mod.o $(DGEN3D) data_input.o -o amg_d_pde3d $(AMG_LIBS) -lpsb_cuda $(PSBGPULDLIBS) $(PSBLAS_LIBS) $(LDLIBS)
@@ -27,9 +27,23 @@ amg_d_pde3d.o: amg_d_genpde_mod.o $(DGEN3D)
 amg_d_pde3d.o: amg_d_pde3d.F90
 	$(FC) $(FCOPT) $(FINCLUDES) $(FDEFINES) -DCUDA_MODE -c $< -o $@
 
+
+amg_d_pde3d_multi: amg_d_pde3d_multi.o amg_d_genpde_mod.o $(DGEN3D) data_input.o
+	$(FLINK) $(LINKOPT) amg_d_pde3d_multi.o  amg_d_genpde_mod.o $(DGEN3D) data_input.o -o amg_d_pde3d_multi $(AMG_LIBS) -lpsb_cuda $(PSBGPULDLIBS) $(PSBLAS_LIBS) $(LDLIBS)
+	/bin/mv amg_d_pde3d_multi $(EXEDIR)
+
+amg_d_pde3d_multi.o: data_input.o
+
+amg_d_pde3d_multi.o: amg_d_genpde_mod.o $(DGEN3D)
+
+amg_d_pde3d_multi.o: amg_d_pde3d_multi.F90
+	$(FC) $(FCOPT) $(FINCLUDES) $(FDEFINES) -DCUDA_MODE -c $< -o $@
+
+
+
 clean:
 	/bin/rm -f data_input.o *.o *$(.mod)\
-        $(EXEDIR)/amg_d_pde3d  
+        $(EXEDIR)/amg_d_pde3d  $(EXEDIR)/amg_d_pde3d_multi
         
 # Many suffixes are covered by implicit rules, but you may need to write custom rules
 # such as these if you use suffixes that do not have implicit rules.
