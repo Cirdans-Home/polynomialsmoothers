@@ -1,10 +1,10 @@
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 CSR                         ! Storage format CSR COO JAD
-0160                        ! IDIM; domain size. Linear system size is IDIM**3
+00160                       ! IDIM; domain size. Linear system size is IDIM**3
 CONST                       ! PDECOEFF: CONST, EXP, BOX, GAUSS Coefficients of the PDE
 CG                          ! Iterative method: BiCGSTAB BiCGSTABL BiCG CG CGS FCG GCR RGMRES
 2                           ! ISTOPC
-00050                       ! ITMAX
+00100                       ! ITMAX
 1                           ! ITRACE
 30                          ! IRST (restart for RGMRES and BiCGSTABL)
 1.d-6                       ! EPS
@@ -27,11 +27,11 @@ FILTER                      ! Filtering of matrix:  FILTER NOFILTER
 -2                           ! Number of thresholds in vector, next line ignored if <= 0
 0.05 0.025                  ! Thresholds
 %%%%%%%%%%%  Next preconditioner name and smoothers  %%%%%%%%%%%%%%%%
-ML-VBM-VCYCLE-AINV-D-BJAC       ! Longer descriptive name for preconditioner (up to 20 chars)
+ML-VBM-VCYCLE-INVK-D-BJAC       ! Longer descriptive name for preconditioner (up to 20 chars)
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
 BJAC                        ! Smoother type JACOBI FBGS GS BWGS BJAC AS POLY  r 1-level, repeats previous.
-6                           ! Number of sweeps for smoother
-1                           ! degree for polynomial smoother
+1                           ! Number of sweeps for smoother
+6                           ! degree for polynomial smoother
 POLY_NEW                    ! Polynomial variant
 %  Fields to be added for POLY
 %    POLY_RHO_ESTIMATE             Currently only POLY_RHO_EST_POWER
@@ -43,7 +43,7 @@ POLY_RHO_EST_POWER
 0                           ! Number of overlap layers for AS preconditioner
 HALO                        ! AS restriction operator: NONE HALO
 NONE                        ! AS prolongation operator: NONE SUM AVG
-ILU                           ! Subdomain solver for BJAC/AS: JACOBI GS BGS ILU ILUT MILU MUMPS SLU UMF
+INVK                          ! Subdomain solver for BJAC/AS: JACOBI GS BGS ILU ILUT MILU MUMPS SLU UMF
 1                           ! Inner solver sweeps (GS and JACOBI)
 LLK                         ! AINV variant
 0                           ! Fill level P for ILU(P) and ILU(T,P)
@@ -51,54 +51,8 @@ LLK                         ! AINV variant
 1.d-4                       ! Threshold T for ILU(T,P)
 %%%%%%%%%%%  Second smoother, always ignored for non-ML  %%%%%%%%%%%%%%%%
 NONE                        ! Second (post) smoother, ignored if NONE
-6                           ! Number of sweeps for (post) smoother
-1                           ! degree for polynomial smoother
-POLY_LOTTES_BETA                 ! Polynomial variant
-POLY_RHO_EST_POWER
-1.0
-0                           ! Number of overlap layers for AS preconditioner
-HALO                        ! AS restriction operator: NONE HALO
-NONE                        ! AS prolongation operator: NONE SUM AVG
-L1-JACOBI                  ! Subdomain solver for BJAC/AS: JACOBI GS BGS ILU ILUT MILU MUMPS SLU UMF
-1                           ! Inner solver sweeps (GS and JACOBI)
-LLK                         ! AINV variant
-0                           ! Fill level P for ILU(P) and ILU(T,P)
-8                           ! Inverse Fill level P for INVK
-1.d-4                       ! Threshold T for ILU(T,P)
-%%%%%%%%%%%  Coarse level solver  %%%%%%%%%%%%%%%%
-L1-JACOBI                   ! Coarsest-level solver: MUMPS UMF SLU SLUDIST JACOBI GS BJAC
-ILU                         ! Coarsest-level subsolver for BJAC: ILU ILUT MILU UMF MUMPS SLU
-1                           ! Coarsest-level fillin P for ILU(P) and ILU(T,P)
-1.d-4                       ! Coarsest-level threshold T for ILU(T,P)
-30                          ! Number of sweeps for JACOBI/GS/BJAC coarsest-level solver
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%  Next preconditioner name and smoothers  %%%%%%%%%%%%%%%%
-ML-VBM-VCYCLE-FBGS-D-BJAC       ! Longer descriptive name for preconditioner (up to 20 chars)
-%%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
-FBGS                        ! Smoother type JACOBI FBGS GS BWGS BJAC AS POLY  r 1-level, repeats previous.
-6                           ! Number of sweeps for smoother
-1                           ! degree for polynomial smoother
-POLY_NEW                    ! Polynomial variant
-%  Fields to be added for POLY
-%    POLY_RHO_ESTIMATE             Currently only POLY_RHO_EST_POWER
-POLY_RHO_EST_POWER
-%    POLY_RHO_ESTIMATE_ITERATIONS  default = 20
-%    POLY_RHO_BA                   set to value
-1.0
-%
-0                           ! Number of overlap layers for AS preconditioner
-HALO                        ! AS restriction operator: NONE HALO
-NONE                        ! AS prolongation operator: NONE SUM AVG
-L1-JACOBI                     ! Subdomain solver for BJAC/AS: JACOBI GS BGS ILU ILUT MILU MUMPS SLU UMF
-1                           ! Inner solver sweeps (GS and JACOBI)
-LLK                         ! AINV variant
-0                           ! Fill level P for ILU(P) and ILU(T,P)
-1                           ! Inverse Fill level P for INVK
-1.d-4                       ! Threshold T for ILU(T,P)
-%%%%%%%%%%%  Second smoother, always ignored for non-ML  %%%%%%%%%%%%%%%%
-NONE                        ! Second (post) smoother, ignored if NONE
-6                           ! Number of sweeps for (post) smoother
-1                           ! degree for polynomial smoother
+1                           ! Number of sweeps for (post) smoother
+6                           ! degree for polynomial smoother
 POLY_LOTTES_BETA                 ! Polynomial variant
 POLY_RHO_EST_POWER
 1.0
@@ -122,8 +76,8 @@ ILU                         ! Coarsest-level subsolver for BJAC: ILU ILUT MILU U
 ML-VBM-VCYCLE-POLY-D-BJAC       ! Longer descriptive name for preconditioner (up to 20 chars)
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
 POLY                        ! Smoother type JACOBI FBGS GS BWGS BJAC AS POLY  r 1-level, repeats previous.
-6                           ! Number of sweeps for smoother
-1                           ! degree for polynomial smoother
+1                           ! Number of sweeps for smoother
+6                           ! degree for polynomial smoother
 POLY_NEW                    ! Polynomial variant
 %  Fields to be added for POLY
 %    POLY_RHO_ESTIMATE             Currently only POLY_RHO_EST_POWER
@@ -143,8 +97,54 @@ LLK                         ! AINV variant
 1.d-4                       ! Threshold T for ILU(T,P)
 %%%%%%%%%%%  Second smoother, always ignored for non-ML  %%%%%%%%%%%%%%%%
 NONE                        ! Second (post) smoother, ignored if NONE
-6                           ! Number of sweeps for (post) smoother
-1                           ! degree for polynomial smoother
+1                           ! Number of sweeps for (post) smoother
+6                           ! degree for polynomial smoother
+POLY_LOTTES_BETA                 ! Polynomial variant
+POLY_RHO_EST_POWER
+1.0
+0                           ! Number of overlap layers for AS preconditioner
+HALO                        ! AS restriction operator: NONE HALO
+NONE                        ! AS prolongation operator: NONE SUM AVG
+L1-JACOBI                  ! Subdomain solver for BJAC/AS: JACOBI GS BGS ILU ILUT MILU MUMPS SLU UMF
+1                           ! Inner solver sweeps (GS and JACOBI)
+LLK                         ! AINV variant
+0                           ! Fill level P for ILU(P) and ILU(T,P)
+8                           ! Inverse Fill level P for INVK
+1.d-4                       ! Threshold T for ILU(T,P)
+%%%%%%%%%%%  Coarse level solver  %%%%%%%%%%%%%%%%
+L1-JACOBI                   ! Coarsest-level solver: MUMPS UMF SLU SLUDIST JACOBI GS BJAC
+ILU                         ! Coarsest-level subsolver for BJAC: ILU ILUT MILU UMF MUMPS SLU
+1                           ! Coarsest-level fillin P for ILU(P) and ILU(T,P)
+1.d-4                       ! Coarsest-level threshold T for ILU(T,P)
+30                          ! Number of sweeps for JACOBI/GS/BJAC coarsest-level solver
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  Next preconditioner name and smoothers  %%%%%%%%%%%%%%%%
+ML-VBM-VCYCLE-FBGS-D-BJAC       ! Longer descriptive name for preconditioner (up to 20 chars)
+%%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
+FBGS                        ! Smoother type JACOBI FBGS GS BWGS BJAC AS POLY  r 1-level, repeats previous.
+1                           ! Number of sweeps for smoother
+6                           ! degree for polynomial smoother
+POLY_NEW                    ! Polynomial variant
+%  Fields to be added for POLY
+%    POLY_RHO_ESTIMATE             Currently only POLY_RHO_EST_POWER
+POLY_RHO_EST_POWER
+%    POLY_RHO_ESTIMATE_ITERATIONS  default = 20
+%    POLY_RHO_BA                   set to value
+1.0
+%
+0                           ! Number of overlap layers for AS preconditioner
+HALO                        ! AS restriction operator: NONE HALO
+NONE                        ! AS prolongation operator: NONE SUM AVG
+L1-JACOBI                     ! Subdomain solver for BJAC/AS: JACOBI GS BGS ILU ILUT MILU MUMPS SLU UMF
+1                           ! Inner solver sweeps (GS and JACOBI)
+LLK                         ! AINV variant
+0                           ! Fill level P for ILU(P) and ILU(T,P)
+1                           ! Inverse Fill level P for INVK
+1.d-4                       ! Threshold T for ILU(T,P)
+%%%%%%%%%%%  Second smoother, always ignored for non-ML  %%%%%%%%%%%%%%%%
+NONE                        ! Second (post) smoother, ignored if NONE
+1                           ! Number of sweeps for (post) smoother
+6                           ! degree for polynomial smoother
 POLY_LOTTES_BETA                 ! Polynomial variant
 POLY_RHO_EST_POWER
 1.0

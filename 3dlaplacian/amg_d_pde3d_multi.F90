@@ -319,8 +319,15 @@ program amg_d_pde3d
     write(*,*) 'Unknown format defaulting to HLG'
     amold => ahlg
   end select
-  vmold  => dvgpu
-  imold  => ivgpu
+  ! Select the vector format
+  select case(psb_toupper(afmt))
+    case('ELG','HLG','HDIAG','CSRG')
+     vmold  => dvgpu
+     imold  => ivgpu
+    case default
+     vmold => dvect
+     imold => ivect
+  end select
 #else
   select case(psb_toupper(afmt))
   case('ELL')
@@ -338,6 +345,8 @@ program amg_d_pde3d
     write(*,*) 'Unknown format defaulting to CSR'
     amold => acsr
   end select
+  vmold => dvect
+  imold => ivect
 #endif
 
   !
@@ -444,7 +453,7 @@ program amg_d_pde3d
         else
           call prec%set('poly_rho_estimate', p_choice%prhovariant, info)
         end if
-        call prec%set('coarse_mat',      p_choice%cmat,      info)
+        !call prec%set('coarse_mat',      p_choice%cmat,      info)
       end select
 
     end if
@@ -592,6 +601,15 @@ program amg_d_pde3d
       write(psb_out_unit,'("Total prec time: ",es12.5)')thier+tprec
       write(psb_out_unit,'(" ")')
     end if
+
+!!$    call prec%dump(info,istart=1,iend=20,&
+!!$         & ac=.true.,rp=.true.,tprol=p_choice%dump_tprol,&
+!!$         & smoother=.true., solver=.true., &
+!!$         & global_num=.false.)
+!!$    call prec%dump(info,istart=p_choice%dlmin,iend=p_choice%dlmax,&
+!!$         & ac=p_choice%dump_ac,rp=p_choice%dump_rp,tprol=p_choice%dump_tprol,&
+!!$         & smoother=p_choice%dump_smoother, solver=p_choice%dump_solver, &
+!!$         & global_num=p_choice%dump_global_num)
 
     call x%zero()
     !
