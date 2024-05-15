@@ -443,20 +443,21 @@ program amg_d_pde3d
         call prec%set('aggr_ord',        p_choice%aggr_ord,   info)
         call prec%set('aggr_filter',     p_choice%aggr_filter,info)
 
-
-        call prec%set('smoother_type',   p_choice%smther,     info)
-        call prec%set('smoother_sweeps', p_choice%jsweeps,    info)
-        call prec%set('poly_degree',     p_choice%degree,    info)
-        call prec%set('poly_variant',    p_choice%pvariant,  info)
-        if (p_choice%prhovalue > dzero ) then
-          call prec%set('poly_rho_ba', p_choice%prhovalue, info)
-        else
-          call prec%set('poly_rho_estimate', p_choice%prhovariant, info)
-        end if
-        !call prec%set('coarse_mat',      p_choice%cmat,      info)
       end select
 
     end if
+
+
+    call prec%set('smoother_type',   p_choice%smther,     info)
+    call prec%set('smoother_sweeps', p_choice%jsweeps,    info)
+    call prec%set('poly_degree',     p_choice%degree,    info)
+    call prec%set('poly_variant',    p_choice%pvariant,  info)
+    if (p_choice%prhovalue > dzero ) then
+      call prec%set('poly_rho_ba', p_choice%prhovalue, info)
+    else
+      call prec%set('poly_rho_estimate', p_choice%prhovariant, info)
+    end if
+    !call prec%set('coarse_mat',      p_choice%cmat,      info)
 
     select case(trim(psb_toupper(p_choice%ptype)))
     case ('NONE','NOPREC')
@@ -579,6 +580,13 @@ program amg_d_pde3d
         write(psb_out_unit,'(" ")')
       end if
       built_hierarchy = .true.
+    end if
+
+    if(iam == psb_root_) then
+      write(psb_out_unit,'(" ")')
+      write(psb_out_unit,'("=================================")')
+      write(psb_out_unit,'("Building new smoother: ",a)') trim(p_choice%descr)
+      write(psb_out_unit,'(" ")')
     end if
     
     call psb_barrier(ctxt)
