@@ -632,7 +632,6 @@ program amg_d_pde3d
     call psb_barrier(ctxt)
     tslv = psb_wtime() - t1
 
-    call prec%free_wrk(info)
     call psb_amx(ctxt,tslv)
 
     if(info /= psb_success_) then
@@ -698,6 +697,9 @@ program amg_d_pde3d
     end if
     !$OMP END SINGLE
     !$OMP END PARALLEL
+    call prec%free_wrk(info)
+    call prec%smoothers_free(info)
+
     !xit testloop
   end do testloop
 
