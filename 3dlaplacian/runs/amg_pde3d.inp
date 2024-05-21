@@ -1,31 +1,32 @@
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 HLG                         ! Storage format CSR COO JAD
-0150                        ! IDIM; domain size. Linear system size is IDIM**3
+00160                        ! IDIM; domain size. Linear system size is IDIM**3
 CONST                       ! PDECOEFF: CONST, EXP, BOX, GAUSS Coefficients of the PDE
 CG                          ! Iterative method: BiCGSTAB BiCGSTABL BiCG CG CGS FCG GCR RGMRES
 2                           ! ISTOPC
-00500                       ! ITMAX
+00100                       ! ITMAX
 1                           ! ITRACE
 30                          ! IRST (restart for RGMRES and BiCGSTABL)
 1.d-6                       ! EPS
 %%%%%%%%%%%  Main preconditioner choices %%%%%%%%%%%%%%%%
-ML-VBM-VCYCLE-FBGS-D-BJAC       ! Longer descriptive name for preconditioner (up to 20 chars)
+ML-VBM-VCYCLE-INVK-D-BJAC       ! Longer descriptive name for preconditioner (up to 20 chars)
 ML                        ! Preconditioner type: NONE JACOBI GS FBGS BJAC AS ML POLY
 %
 %%%%%%%%%%%  First smoother (for all levels but coarsest) %%%%%%%%%%%%%%%%
-POLY                        ! Smoother type JACOBI FBGS GS BWGS BJAC AS POLY  r 1-level, repeats previous.
+BJAC  !FBGS                        ! Smoother type JACOBI FBGS GS BWGS BJAC AS POLY  r 1-level, repeats previous.
 1                           ! Number of sweeps for smoother
 6                           ! degree for polynomial smoother
 POLY_NEW                    ! Polynomial variant
 %  Fields to be added for POLY
-%    POLY_RHO_ESTIMATE             Currently only POLY_RHO_EST_POWER
+POLY_RHO_EST_POWER           !  Currently only POLY_RHO_EST_POWER
 %    POLY_RHO_ESTIMATE_ITERATIONS  default = 20
 %    POLY_RHO_BA                   set to value
+1.0
 %
 0                           ! Number of overlap layers for AS preconditioner
 HALO                        ! AS restriction operator: NONE HALO
 NONE                        ! AS prolongation operator: NONE SUM AVG
-L1-JACOBI                     ! Subdomain solver for BJAC/AS: JACOBI GS BGS ILU ILUT MILU MUMPS SLU UMF
+INVK !L1-JACOBI                     ! Subdomain solver for BJAC/AS: JACOBI GS BGS ILU ILUT MILU MUMPS SLU UMF
 1                           ! Inner solver sweeps (GS and JACOBI)
 LLK                         ! AINV variant
 0                           ! Fill level P for ILU(P) and ILU(T,P)
@@ -36,6 +37,8 @@ NONE                        ! Second (post) smoother, ignored if NONE
 6                           ! Number of sweeps for (post) smoother
 1                           ! degree for polynomial smoother
 POLY_LOTTES_BETA                 ! Polynomial variant
+POLY_RHO_EST_POWER
+1.0
 0                           ! Number of overlap layers for AS preconditioner
 HALO                        ! AS restriction operator: NONE HALO
 NONE                        ! AS prolongation operator: NONE SUM AVG
@@ -51,8 +54,8 @@ VCYCLE                      ! Type of multilevel CYCLE: VCYCLE WCYCLE KCYCLE MUL
 -3                          ! Max Number of levels in a multilevel preconditioner; if <0, lib default
 -3                          ! Target coarse matrix size per process; if <0, lib default
 SMOOTHED                    ! Type of aggregation: SMOOTHED UNSMOOTHED
-DEC                         ! Parallel aggregation: DEC, SYMDEC, COUPLED
-SOC1                        ! aggregation measure SOC1, MATCHBOXP
+COUPLED                     ! Parallel aggregation: DEC, SYMDEC, COUPLED
+MATCHBOXP                   ! aggregation measure SOC1, MATCHBOXP
 8                           ! Requested size of the aggregates for MATCHBOXP
 NATURAL                     ! Ordering of aggregation NATURAL DEGREE
 -1.5                        ! Coarsening ratio, if < 0 use library default
@@ -74,6 +77,6 @@ F                           ! Dump preconditioner on file
 T                           ! Dump AC
 T                           ! Dump RP
 F                           ! Dump TPROL
-F                           ! Dump SMOOTHER
-F                           ! Dump SOLVER
+T                           ! Dump SMOOTHER
+T                           ! Dump SOLVER
 F                           ! Global numering ? 
