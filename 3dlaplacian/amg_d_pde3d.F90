@@ -309,15 +309,6 @@ program amg_d_pde3d
     write(*,*) 'Unknown format defaulting to HLG'
     amold => ahlg
   end select
-<<<<<<< HEAD
-  select case(psb_toupper(afmt))
-  case('ELG', 'HLG', 'HDIAG', 'CSRG')
-  vmold  => dvgpu
-  imold  => ivgpu
-  case default
-          vmold => dvect
-          imold => ivect
-=======
   ! Select the vector format
   select case(psb_toupper(afmt))
     case('ELG','HLG','HDIAG','CSRG')
@@ -326,7 +317,6 @@ program amg_d_pde3d
     case default
      vmold => dvect
      imold => ivect
->>>>>>> 5c57f37d386543c0659f8c1dd8c59d9c328dddd6
   end select
 #else
   select case(psb_toupper(afmt))
