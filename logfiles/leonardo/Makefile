@@ -33,22 +33,22 @@ runsoc:
 	sbatch run-soc1-gpu-64.sh
 
 run3dlapmatch:
-	sbatch run-3dlap-match-gpu-1.sh
-	sbatch run-3dlap-match-gpu-2.sh
-	sbatch run-3dlap-match-gpu-4.sh
-	sbatch run-3dlap-match-gpu-8.sh
-	sbatch run-3dlap-match-gpu-16.sh
-	sbatch run-3dlap-match-gpu-32.sh
-	sbatch run-3dlap-match-gpu-64.sh
+	sbatch run-match-3dlap-gpu-1.sh
+	sbatch run-match-3dlap-gpu-2.sh
+	sbatch run-match-3dlap-gpu-4.sh
+	sbatch run-match-3dlap-gpu-8.sh
+	sbatch run-match-3dlap-gpu-16.sh
+	sbatch run-match-3dlap-gpu-32.sh
+	sbatch run-match-3dlap-gpu-64.sh
 
 run3dlapsoc1:
-	sbatch run-3dlap-soc1-gpu-1.sh
-	sbatch run-3dlap-soc1-gpu-2.sh
-	sbatch run-3dlap-soc1-gpu-4.sh
-	sbatch run-3dlap-soc1-gpu-8.sh
-	sbatch run-3dlap-soc1-gpu-16.sh
-	sbatch run-3dlap-soc1-gpu-32.sh
-	sbatch run-3dlap-soc1-gpu-64.sh
+	sbatch run-soc1-3dlap-gpu-1.sh
+	sbatch run-soc1-3dlap-gpu-2.sh
+	sbatch run-soc1-3dlap-gpu-4.sh
+	sbatch run-soc1-3dlap-gpu-8.sh
+	sbatch run-soc1-3dlap-gpu-16.sh
+	sbatch run-soc1-3dlap-gpu-32.sh
+	sbatch run-soc1-3dlap-gpu-64.sh
 
 cleanscript:
 	rm run-match-gpu-*

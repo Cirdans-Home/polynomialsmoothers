@@ -641,6 +641,8 @@ program anisopsblas
     write(psb_out_unit,'("Preconditioner time: ",es12.5)')thier+tprec
     write(psb_out_unit,'(" ")')
   end if
+  call prec%memory_use(info,iout=psb_out_unit)
+  flush(psb_out_unit)
 
   if (p_choice%dump) then
     call prec%dump(info,istart=p_choice%dlmin,iend=p_choice%dlmax,&

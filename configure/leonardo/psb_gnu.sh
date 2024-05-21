@@ -1,6 +1,6 @@
-./configure --prefix=/leonardo/home/userexternal/fdurasta/polynomialsmoothers/install \
-	--with-metisincdir=/leonardo/home/userexternal/fdurasta/polynomialsmoothers/install/include \
-	--with-metislibdir=/leonardo/home/userexternal/fdurasta/polynomialsmoothers/install/lib \
+./configure --prefix=/leonardo/home/userexternal/pdambra0/polynomialsmoothers/install \
+	--with-metisincdir=/leonardo/home/userexternal/pdambra0/polynomialsmoothers/install/include \
+	--with-metislibdir=/leonardo/home/userexternal/pdambra0/polynomialsmoothers/install/lib \
 	--with-ccopt="-O3 -fPIC -march=native" \
 	--with-fcopt="-O3 -frecursive -march=native" \
 	--with-cxxopt="-O3" \

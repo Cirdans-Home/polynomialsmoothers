@@ -309,8 +309,14 @@ program amg_d_pde3d
     write(*,*) 'Unknown format defaulting to HLG'
     amold => ahlg
   end select
+  select case(psb_toupper(afmt))
+  case('ELG', 'HLG', 'HDIAG', 'CSRG')
   vmold  => dvgpu
   imold  => ivgpu
+  case default
+          vmold => dvect
+          imold => ivect
+  end select
 #else
   select case(psb_toupper(afmt))
   case('ELL')

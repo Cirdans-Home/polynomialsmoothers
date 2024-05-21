@@ -5,6 +5,7 @@
 #SBATCH --nodes @NNODES@
 #SBATCH --gres=gpu:@NGPUS@
 #SBATCH --ntasks=@NTASKS@
+#SBATCH --ntasks-per-node=4
 #SBATCH --export=NONE
 #SBATCH -A CNHPC_1465132
 @MORETHANONENODE@
@@ -16,6 +17,7 @@ module load openmpi/4.1.6--gcc--12.2.0 openblas/0.3.24--gcc--12.2.0 gcc/12.2.0 c
 module list
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/leonardo/home/userexternal/pdambra0/polynomialsmoothers/install/lib
+export UCX_IB_LS=1 
 
 cd ${HOME}/polynomialsmoothers/logfiles/leonardo
 

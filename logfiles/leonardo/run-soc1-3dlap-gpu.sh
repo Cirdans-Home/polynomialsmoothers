@@ -1,5 +1,5 @@
 #!/usr/bin/bash -l
-#SBATCH --job-name anisopb
+#SBATCH --job-name 3dlap
 #SBATCH --partition boost_usr_prod
 #SBATCH --time 01:00:00
 #SBATCH --nodes @NNODES@
