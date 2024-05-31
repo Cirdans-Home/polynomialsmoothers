@@ -1,6 +1,6 @@
 %%%%%%%%%%%  General  arguments % Lines starting with % are ignored.
 HLG                         ! Storage format CSR COO JAD
-00160                       ! IDIM; domain size. Linear system size is IDIM**3
+00120                       ! IDIM; domain size. Linear system size is IDIM**3
 CONST                       ! PDECOEFF: CONST, EXP, BOX, GAUSS Coefficients of the PDE
 CG                          ! Iterative method: BiCGSTAB BiCGSTABL BiCG CG CGS FCG GCR RGMRES
 2                           ! ISTOPC

@@ -641,9 +641,6 @@ program amg_d_pde3d
       goto 9999
     end if
 
-    call psb_barrier(ctxt)
-    tslv = psb_wtime() - t1
-    call psb_amx(ctxt,tslv)
 
     ! compute residual norms
     call psb_geall(r,desc_a,info)
