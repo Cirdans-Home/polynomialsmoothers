@@ -19,11 +19,18 @@ psctoolkitgpu: anisotropy_gpu.o data_input.o
 	$(FLINK) $(LINKOPT) anisotropy_gpu.o data_input.o -o anisopsblascuda $(AMG_LIBS) -lpsb_cuda $(PSBGPULDLIBS) $(PSBLAS_LIBS) $(LDLIBS)
 	/bin/mv anisopsblascuda $(EXEDIR)
 
-anisotropy.o: data_input.o
+anisotropy_gpu_multi: anisotropy_gpu_multi.o data_input.o
+	$(FLINK) $(LINKOPT) anisotropy_gpu_multi.o data_input.o -o anisocuda_multi $(AMG_LIBS) -lpsb_cuda $(PSBGPULDLIBS) $(PSBLAS_LIBS) $(LDLIBS)
+	/bin/mv  anisocuda_multi  $(EXEDIR)
 
+anisotropy.o: data_input.o
 anisotropy_gpu.o: data_input.o
+anisotropy_gpu_multi.o: data_input.o
 
 anisotropy_gpu.o: anisotropy_gpu.F90
+	$(FC) $(FCOPT) $(FINCLUDES) $(FDEFINES) -DCUDA_MODE -c $< -o $@
+
+anisotropy_gpu_multi.o: anisotropy_gpu_multi.F90
 	$(FC) $(FCOPT) $(FINCLUDES) $(FDEFINES) -DCUDA_MODE -c $< -o $@
 
 check: psctoolkit psctoolkitgpu
@@ -31,8 +38,8 @@ check: psctoolkit psctoolkitgpu
 	(cd runs && ./anisopsblas testinput.inp)
 	echo "TEST OF ANISOPSBLAS with GPU support"
 	(cd runs && ./anisopsblascuda testinputgpu.inp) 
-	
-all: psctoolkit psctoolkitgpu
+
+all: psctoolkit psctoolkitgpu anisotropy_gpu_multi
 
 clean:
 	rm -rf *.o

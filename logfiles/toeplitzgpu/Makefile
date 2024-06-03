@@ -1,5 +1,6 @@
 anisopsblas:
 	ln -s /home/durastante/polynomialsmoothers/anisotropy/runs/anisopsblascuda anisopsblascuda
+	ln -s /home/durastante/polynomialsmoothers/anisotropy/runs/anisocuda_multi anisopsblascuda_multi
 laplacian:
 	ln -s /home/durastante/polynomialsmoothers/3dlaplacian/runs/amg_d_pde3d 3dlaplacian
 	ln -s /home/durastante/polynomialsmoothers/3dlaplacian/runs/amg_d_pde3d_multi 3dlaplacian_multi
