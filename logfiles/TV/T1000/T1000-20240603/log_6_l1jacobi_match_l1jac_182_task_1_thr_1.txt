@@ -1,0 +1,159 @@
+hwloc/linux: Ignoring PCI device with non-16bit domain.
+Pass --enable-32bits-pci-domain to configure to support such devices
+(warning: it would break the library ABI, don't enable unless really needed).
+ Welcome to AMG4PSBLAS version: 1.1.0
+ This is the amg_d_pde3d sample program
+ - Compiled with CUDA support -
+Generating Matrix (size=6028568)...
+The matrix has been generated and assembled in HLG format.
+-allocation  time :  8.33487E-02
+-coeff. gen. time :  4.91242E+00
+-desc asbly  time :  1.77099E-04
+- mat asbly  time :  6.08310E-01
+-total       time :  5.60426E+00
+PDE Coefficients             : CONST
+Overall matrix creation time :  5.60548E+00
+ 
+Elaboration time: 0.853929 for 6028568 nodes
+           0 Matching statistics: Unmatched nodes            0  Singletons:           0  Pairs:     3014284
+Elaboration time: 0.117650 for 3014284 nodes
+           0 Matching statistics: Unmatched nodes            0  Singletons:           0  Pairs:     1507142
+Elaboration time: 0.035080 for 1507142 nodes
+           0 Matching statistics: Unmatched nodes            0  Singletons:           0  Pairs:      753571
+Elaboration time: 0.056202 for 753571 nodes
+           0 Matching statistics: Unmatched nodes            1  Singletons:           1  Pairs:      376785
+Elaboration time: 0.014178 for 376786 nodes
+           0 Matching statistics: Unmatched nodes            2  Singletons:           2  Pairs:      188392
+Elaboration time: 0.004622 for 188394 nodes
+           0 Matching statistics: Unmatched nodes            2  Singletons:           2  Pairs:       94196
+Elaboration time: 0.004078 for 94198 nodes
+           0 Matching statistics: Unmatched nodes           32  Singletons:          32  Pairs:       47083
+Elaboration time: 0.001605 for 47115 nodes
+           0 Matching statistics: Unmatched nodes            3  Singletons:           3  Pairs:       23556
+Elaboration time: 0.000604 for 23559 nodes
+           0 Matching statistics: Unmatched nodes            5  Singletons:           5  Pairs:       11777
+Elaboration time: 0.000395 for 11782 nodes
+           0 Matching statistics: Unmatched nodes           34  Singletons:          34  Pairs:        5874
+Elaboration time: 0.000208 for 5908 nodes
+           0 Matching statistics: Unmatched nodes            8  Singletons:           8  Pairs:        2950
+Elaboration time: 0.000110 for 2958 nodes
+           0 Matching statistics: Unmatched nodes           22  Singletons:          22  Pairs:        1468
+Elaboration time: 0.000083 for 1490 nodes
+           0 Matching statistics: Unmatched nodes           14  Singletons:          14  Pairs:         738
+Elaboration time: 0.000055 for 752 nodes
+           0 Matching statistics: Unmatched nodes           12  Singletons:          12  Pairs:         370
+Elaboration time: 0.000029 for 382 nodes
+           0 Matching statistics: Unmatched nodes           14  Singletons:          14  Pairs:         184
+ 
+Preconditioner: ML-VSMATCH-6L1JAC-30L1JAC
+Preconditioner time:  1.43913E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-07
+FCG:                  1  8.413043606E-02  1.000000000E-07
+FCG:                  2  5.460642352E-03  1.000000000E-07
+FCG:                  3  5.102700601E-04  1.000000000E-07
+FCG:                  4  6.310481184E-05  1.000000000E-07
+FCG:                  5  4.256310948E-06  1.000000000E-07
+FCG:                  6  3.159564711E-07  1.000000000E-07
+FCG:                  7  3.683206262E-08  1.000000000E-07
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Point Jacobi  
+        Local diagonal:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            6
+   Operator complexity:    1.8914291609350888     
+   Average coarsening :    7.8855148609748245     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            6   post:            6
+  Parallel Matching Aggregator
+     Number of matching  sweeps:            3
+     Matching algorithm         : MatchBoxP (PREIS)
+  Aggregator object type: Parallel Matching aggregation   
+   Parallel aggregation algorithm: coupled aggr.     
+   Aggregation type: Parallel Matching 
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666685     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:       753571
+                     Nonzeros:     24324565
+      Local  matrix sizes: min:       753571         max:       753571
+                           avg:       753571.0
+           Aggregation   ratio:            8.00
+ 
+  Level            3
+   Damping omega value  :  0.66666666666666663     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:        94198
+                     Nonzeros:     10237830
+      Local  matrix sizes: min:        94198         max:        94198
+                           avg:        94198.0
+           Aggregation   ratio:            8.00
+ 
+  Level            4
+   Damping omega value  :  0.59667417527305666     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:        11782
+                     Nonzeros:      2447664
+      Local  matrix sizes: min:        11782         max:        11782
+                           avg:        11782.0
+           Aggregation   ratio:            8.00
+ 
+  Level            5
+   Damping omega value  :  0.51258118592383284     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:         1490
+                     Nonzeros:       398288
+      Local  matrix sizes: min:         1490         max:         1490
+                           avg:         1490.0
+           Aggregation   ratio:            7.91
+ 
+  Level            6  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.48068218359495596     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:          198
+                     Nonzeros:        32776
+      Local  matrix sizes: min:          198         max:          198
+                           avg:          198.0
+           Aggregation   ratio:            7.53
+   L1 Diagonal solver 
+ 
+Computed solution on        1 process(es)
+Number of threads                  :            4
+Total number of tasks              :            4
+Linear system size                 :      6028568
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VSMATCH-6L1JAC-30L1JAC
+Iterations to convergence          :            7
+Relative error estimate on exit    :  3.68321E-08
+Number of levels in hierarchy      :            6
+Time to build hierarchy            :  1.38489E+01
+Time to build smoothers            :  5.42340E-01
+Total time for preconditioner      :  1.43913E+01
+Time to solve system               :  1.12921E+00
+Time per iteration                 :  1.61315E-01
+Total time                         :  1.55205E+01
+Residual 2-norm                    :  4.07781E-03
+Residual inf-norm                  :  4.46232E-05
+Total memory occupation for A      :    553862256
+Total memory occupation for DESC_A :           68
+Total memory occupation for PREC   :   1536541308
+Storage format for A               : HLG  
+Storage format for DESC_A          : REPL 
