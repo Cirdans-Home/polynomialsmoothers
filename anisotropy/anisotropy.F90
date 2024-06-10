@@ -199,7 +199,8 @@ program anisopsblas
   ! Building the discretization
   !
   h = 2.0/ne
-  M = (ne+1)*(ne+1)
+  M = (ne+1)
+  M = M*(ne+1)
   ! Block-row distribution *n   = bs*(Nbs/size + ((Nbs % size) > rank)); Nbs = *N/bs;
   ! nt = (M+np-1)/np !-1
   nt = M/np
