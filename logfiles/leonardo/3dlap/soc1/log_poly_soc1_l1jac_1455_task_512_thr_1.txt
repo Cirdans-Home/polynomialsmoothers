@@ -1,0 +1,2488 @@
+ Welcome to AMG4PSBLAS version: 1.1.0
+ This is the amg_d_pde3d sample program
+ - Compiled with CUDA support -
+Generating Matrix (size=3080271375)...
+The matrix has been generated and assembled in HLG format.
+-allocation  time :  4.43298E+00
+-coeff. gen. time :  3.22370E+00
+-desc asbly  time :  4.94348E-01
+- mat asbly  time :  9.59824E-01
+-total       time :  9.12078E+00
+PDE Coefficients             : CONST
+Overall matrix creation time :  9.12562E+00
+ 
+Hierarchy time:  1.52730E+01
+ 
+ 
+=================================
+Building new smoother: ML-VMATCH-4CHEBY4-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-4CHEBY4-L1JAC30
+ 
+Smoothers  time:  9.09350E-01
+Total prec time:  1.61825E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  7.755809952E-02  1.000000000E-06
+FCG:                  2  2.776401082E-02  1.000000000E-06
+FCG:                  3  1.295754176E-02  1.000000000E-06
+FCG:                  4  7.687052406E-03  1.000000000E-06
+FCG:                  5  5.471761523E-03  1.000000000E-06
+FCG:                  6  3.723954082E-03  1.000000000E-06
+FCG:                  7  2.891026425E-03  1.000000000E-06
+FCG:                  8  2.454108020E-03  1.000000000E-06
+FCG:                  9  1.971227769E-03  1.000000000E-06
+FCG:                 10  1.235895832E-03  1.000000000E-06
+FCG:                 11  7.069037571E-04  1.000000000E-06
+FCG:                 12  3.312205134E-04  1.000000000E-06
+FCG:                 13  1.286682311E-04  1.000000000E-06
+FCG:                 14  5.411217171E-05  1.000000000E-06
+FCG:                 15  2.846225984E-05  1.000000000E-06
+FCG:                 16  1.754823670E-05  1.000000000E-06
+FCG:                 17  1.258657489E-05  1.000000000E-06
+FCG:                 18  8.782474973E-06  1.000000000E-06
+FCG:                 19  4.952211199E-06  1.000000000E-06
+FCG:                 20  2.583359988E-06  1.000000000E-06
+FCG:                 21  1.251319652E-06  1.000000000E-06
+FCG:                 22  5.462631274E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES
+          Degree:                   4
+          rho_ba:           1.0000000000000000     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-4CHEBY4-L1JAC30
+Iterations to convergence          :           22
+Relative error estimate on exit    :  5.46263E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  9.09350E-01
+Total time for preconditioner      :  1.61825E+01
+Time to solve system               :  5.19123E+00
+Time per iteration                 :  2.35965E-01
+Total time                         :  2.13737E+01
+Residual 2-norm                    :  2.98884E+01
+Residual inf-norm                  :  2.11834E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-6CHEBY4-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-6CHEBY4-L1JAC30
+ 
+Smoothers  time:  2.46838E+00
+Total prec time:  1.77415E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  6.350940318E-02  1.000000000E-06
+FCG:                  2  1.917007739E-02  1.000000000E-06
+FCG:                  3  8.601480871E-03  1.000000000E-06
+FCG:                  4  5.438847264E-03  1.000000000E-06
+FCG:                  5  4.172252637E-03  1.000000000E-06
+FCG:                  6  2.884633173E-03  1.000000000E-06
+FCG:                  7  2.358919749E-03  1.000000000E-06
+FCG:                  8  1.885031523E-03  1.000000000E-06
+FCG:                  9  1.294484640E-03  1.000000000E-06
+FCG:                 10  7.190788749E-04  1.000000000E-06
+FCG:                 11  3.285590638E-04  1.000000000E-06
+FCG:                 12  1.272670145E-04  1.000000000E-06
+FCG:                 13  5.008102329E-05  1.000000000E-06
+FCG:                 14  2.285972132E-05  1.000000000E-06
+FCG:                 15  1.162083325E-05  1.000000000E-06
+FCG:                 16  7.718258984E-06  1.000000000E-06
+FCG:                 17  5.251841927E-06  1.000000000E-06
+FCG:                 18  3.234456529E-06  1.000000000E-06
+FCG:                 19  1.896690392E-06  1.000000000E-06
+FCG:                 20  8.637838738E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES
+          Degree:                   6
+          rho_ba:           1.0000000000000000     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-6CHEBY4-L1JAC30
+Iterations to convergence          :           20
+Relative error estimate on exit    :  8.63784E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.46838E+00
+Total time for preconditioner      :  1.77415E+01
+Time to solve system               :  5.94000E+00
+Time per iteration                 :  2.97000E-01
+Total time                         :  2.36815E+01
+Residual 2-norm                    :  4.72614E+01
+Residual inf-norm                  :  2.62013E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-8CHEBY4-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-8CHEBY4-L1JAC30
+ 
+Smoothers  time:  2.45415E+00
+Total prec time:  1.77273E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  4.615966239E-02  1.000000000E-06
+FCG:                  2  1.378417032E-02  1.000000000E-06
+FCG:                  3  6.680307874E-03  1.000000000E-06
+FCG:                  4  4.551445598E-03  1.000000000E-06
+FCG:                  5  3.586931466E-03  1.000000000E-06
+FCG:                  6  2.438842312E-03  1.000000000E-06
+FCG:                  7  1.943012718E-03  1.000000000E-06
+FCG:                  8  1.393621406E-03  1.000000000E-06
+FCG:                  9  8.392213032E-04  1.000000000E-06
+FCG:                 10  4.102871733E-04  1.000000000E-06
+FCG:                 11  1.618939678E-04  1.000000000E-06
+FCG:                 12  6.171063531E-05  1.000000000E-06
+FCG:                 13  2.562065589E-05  1.000000000E-06
+FCG:                 14  1.136851804E-05  1.000000000E-06
+FCG:                 15  6.465227948E-06  1.000000000E-06
+FCG:                 16  4.036993254E-06  1.000000000E-06
+FCG:                 17  2.561983678E-06  1.000000000E-06
+FCG:                 18  1.558590687E-06  1.000000000E-06
+FCG:                 19  7.367073497E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES
+          Degree:                   8
+          rho_ba:           1.0000000000000000     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-8CHEBY4-L1JAC30
+Iterations to convergence          :           19
+Relative error estimate on exit    :  7.36707E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.45415E+00
+Total time for preconditioner      :  1.77273E+01
+Time to solve system               :  7.03016E+00
+Time per iteration                 :  3.70008E-01
+Total time                         :  2.47575E+01
+Residual 2-norm                    :  4.03085E+01
+Residual inf-norm                  :  2.92651E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-10CHEBY4-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-10CHEBY4-L1JAC30
+ 
+Smoothers  time:  2.44943E+00
+Total prec time:  1.77226E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  3.690140685E-02  1.000000000E-06
+FCG:                  2  1.071278530E-02  1.000000000E-06
+FCG:                  3  5.271608671E-03  1.000000000E-06
+FCG:                  4  3.661892472E-03  1.000000000E-06
+FCG:                  5  2.950435142E-03  1.000000000E-06
+FCG:                  6  2.123145953E-03  1.000000000E-06
+FCG:                  7  1.745955615E-03  1.000000000E-06
+FCG:                  8  1.183782908E-03  1.000000000E-06
+FCG:                  9  6.527807821E-04  1.000000000E-06
+FCG:                 10  2.706020179E-04  1.000000000E-06
+FCG:                 11  9.291493553E-05  1.000000000E-06
+FCG:                 12  3.323391713E-05  1.000000000E-06
+FCG:                 13  1.260811577E-05  1.000000000E-06
+FCG:                 14  5.841568754E-06  1.000000000E-06
+FCG:                 15  3.432382332E-06  1.000000000E-06
+FCG:                 16  2.147812392E-06  1.000000000E-06
+FCG:                 17  1.375221563E-06  1.000000000E-06
+FCG:                 18  7.377437625E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES
+          Degree:                  10
+          rho_ba:           1.0000000000000000     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-10CHEBY4-L1JAC30
+Iterations to convergence          :           18
+Relative error estimate on exit    :  7.37744E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.44943E+00
+Total time for preconditioner      :  1.77226E+01
+Time to solve system               :  8.02738E+00
+Time per iteration                 :  4.45966E-01
+Total time                         :  2.57500E+01
+Residual 2-norm                    :  4.03652E+01
+Residual inf-norm                  :  2.45867E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-12CHEBY4-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-12CHEBY4-L1JAC30
+ 
+Smoothers  time:  2.43850E+00
+Total prec time:  1.77116E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  3.156395526E-02  1.000000000E-06
+FCG:                  2  9.169315067E-03  1.000000000E-06
+FCG:                  3  4.606687804E-03  1.000000000E-06
+FCG:                  4  3.232019774E-03  1.000000000E-06
+FCG:                  5  2.599059050E-03  1.000000000E-06
+FCG:                  6  1.914127058E-03  1.000000000E-06
+FCG:                  7  1.477630824E-03  1.000000000E-06
+FCG:                  8  8.940360695E-04  1.000000000E-06
+FCG:                  9  4.306026836E-04  1.000000000E-06
+FCG:                 10  1.527313077E-04  1.000000000E-06
+FCG:                 11  4.974602070E-05  1.000000000E-06
+FCG:                 12  1.723400370E-05  1.000000000E-06
+FCG:                 13  6.579138068E-06  1.000000000E-06
+FCG:                 14  3.333920994E-06  1.000000000E-06
+FCG:                 15  2.003157481E-06  1.000000000E-06
+FCG:                 16  1.281895536E-06  1.000000000E-06
+FCG:                 17  7.696547272E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES
+          Degree:                  12
+          rho_ba:           1.0000000000000000     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-12CHEBY4-L1JAC30
+Iterations to convergence          :           17
+Relative error estimate on exit    :  7.69655E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43850E+00
+Total time for preconditioner      :  1.77116E+01
+Time to solve system               :  8.76728E+00
+Time per iteration                 :  5.15722E-01
+Total time                         :  2.64789E+01
+Residual 2-norm                    :  4.21111E+01
+Residual inf-norm                  :  2.63941E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-4CHEBY4O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-4CHEBY4O-L1JAC30
+ 
+Smoothers  time:  2.43451E+00
+Total prec time:  1.77077E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  1.046061661E-01  1.000000000E-06
+FCG:                  2  3.524458428E-02  1.000000000E-06
+FCG:                  3  1.540920129E-02  1.000000000E-06
+FCG:                  4  9.694664405E-03  1.000000000E-06
+FCG:                  5  7.255725230E-03  1.000000000E-06
+FCG:                  6  4.846098312E-03  1.000000000E-06
+FCG:                  7  3.815748567E-03  1.000000000E-06
+FCG:                  8  3.021718248E-03  1.000000000E-06
+FCG:                  9  2.412120070E-03  1.000000000E-06
+FCG:                 10  1.547352629E-03  1.000000000E-06
+FCG:                 11  8.664299360E-04  1.000000000E-06
+FCG:                 12  3.813404966E-04  1.000000000E-06
+FCG:                 13  1.489711699E-04  1.000000000E-06
+FCG:                 14  6.563691791E-05  1.000000000E-06
+FCG:                 15  3.376607172E-05  1.000000000E-06
+FCG:                 16  2.004654926E-05  1.000000000E-06
+FCG:                 17  1.441780026E-05  1.000000000E-06
+FCG:                 18  9.793623772E-06  1.000000000E-06
+FCG:                 19  5.535137619E-06  1.000000000E-06
+FCG:                 20  2.883549616E-06  1.000000000E-06
+FCG:                 21  1.316024702E-06  1.000000000E-06
+FCG:                 22  5.519519729E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES_BETA
+          Degree:                   4
+          rho_ba:           1.0000000000000000     
+    Coefficients:           1.0039131042728535        1.0403581118859304        1.1486349854625493        1.3826886924100055     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-4CHEBY4O-L1JAC30
+Iterations to convergence          :           22
+Relative error estimate on exit    :  5.51952E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43451E+00
+Total time for preconditioner      :  1.77077E+01
+Time to solve system               :  5.42257E+00
+Time per iteration                 :  2.46480E-01
+Total time                         :  2.31302E+01
+Residual 2-norm                    :  3.01997E+01
+Residual inf-norm                  :  1.93370E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255585488
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-6CHEBY4O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-6CHEBY4O-L1JAC30
+ 
+Smoothers  time:  2.43883E+00
+Total prec time:  1.77120E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  7.618733268E-02  1.000000000E-06
+FCG:                  2  2.484060786E-02  1.000000000E-06
+FCG:                  3  1.173590409E-02  1.000000000E-06
+FCG:                  4  7.606652473E-03  1.000000000E-06
+FCG:                  5  5.439613990E-03  1.000000000E-06
+FCG:                  6  3.329305999E-03  1.000000000E-06
+FCG:                  7  2.748224999E-03  1.000000000E-06
+FCG:                  8  2.222686539E-03  1.000000000E-06
+FCG:                  9  1.572263960E-03  1.000000000E-06
+FCG:                 10  8.675683760E-04  1.000000000E-06
+FCG:                 11  3.790615207E-04  1.000000000E-06
+FCG:                 12  1.375415956E-04  1.000000000E-06
+FCG:                 13  5.245096604E-05  1.000000000E-06
+FCG:                 14  2.321460827E-05  1.000000000E-06
+FCG:                 15  1.171760134E-05  1.000000000E-06
+FCG:                 16  7.885240934E-06  1.000000000E-06
+FCG:                 17  5.072049857E-06  1.000000000E-06
+FCG:                 18  3.283965907E-06  1.000000000E-06
+FCG:                 19  1.842480991E-06  1.000000000E-06
+FCG:                 20  8.151841203E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES_BETA
+          Degree:                   6
+          rho_ba:           1.0000000000000000     
+    Coefficients:           1.0012851725594023        1.0130429303523338        1.0467821512411335        1.1161648941967548        1.2382902021844453        1.4352429710674484     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-6CHEBY4O-L1JAC30
+Iterations to convergence          :           20
+Relative error estimate on exit    :  8.15184E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43883E+00
+Total time for preconditioner      :  1.77120E+01
+Time to solve system               :  6.55912E+00
+Time per iteration                 :  3.27956E-01
+Total time                         :  2.42711E+01
+Residual 2-norm                    :  4.46023E+01
+Residual inf-norm                  :  2.47007E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255618256
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-8CHEBY4O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-8CHEBY4O-L1JAC30
+ 
+Smoothers  time:  2.43475E+00
+Total prec time:  1.77079E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  5.418818939E-02  1.000000000E-06
+FCG:                  2  1.865664359E-02  1.000000000E-06
+FCG:                  3  9.353227674E-03  1.000000000E-06
+FCG:                  4  6.046314619E-03  1.000000000E-06
+FCG:                  5  4.237528888E-03  1.000000000E-06
+FCG:                  6  2.576916275E-03  1.000000000E-06
+FCG:                  7  2.197877100E-03  1.000000000E-06
+FCG:                  8  1.726341133E-03  1.000000000E-06
+FCG:                  9  1.114415323E-03  1.000000000E-06
+FCG:                 10  5.248930086E-04  1.000000000E-06
+FCG:                 11  1.836144186E-04  1.000000000E-06
+FCG:                 12  6.172333769E-05  1.000000000E-06
+FCG:                 13  2.304129591E-05  1.000000000E-06
+FCG:                 14  9.997111828E-06  1.000000000E-06
+FCG:                 15  5.755091216E-06  1.000000000E-06
+FCG:                 16  3.474434939E-06  1.000000000E-06
+FCG:                 17  2.300344388E-06  1.000000000E-06
+FCG:                 18  1.386132677E-06  1.000000000E-06
+FCG:                 19  6.483813290E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES_BETA
+          Degree:                   8
+          rho_ba:           1.0000000000000000     
+    Coefficients:           1.0005724663119766        1.0057742766241562        1.0205018792294143        1.0501980344456543        1.1011557298494106        1.1808604280685657        1.2983858538257604        1.4648607315109978     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-8CHEBY4O-L1JAC30
+Iterations to convergence          :           19
+Relative error estimate on exit    :  6.48381E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43475E+00
+Total time for preconditioner      :  1.77079E+01
+Time to solve system               :  7.32973E+00
+Time per iteration                 :  3.85775E-01
+Total time                         :  2.50376E+01
+Residual 2-norm                    :  3.54758E+01
+Residual inf-norm                  :  1.84167E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255651024
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-10CHEBY4O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-10CHEBY4O-L1JAC30
+ 
+Smoothers  time:  2.44099E+00
+Total prec time:  1.77141E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  4.188631565E-02  1.000000000E-06
+FCG:                  2  1.430441692E-02  1.000000000E-06
+FCG:                  3  7.670099855E-03  1.000000000E-06
+FCG:                  4  5.351560444E-03  1.000000000E-06
+FCG:                  5  3.908681466E-03  1.000000000E-06
+FCG:                  6  2.400144305E-03  1.000000000E-06
+FCG:                  7  1.821876745E-03  1.000000000E-06
+FCG:                  8  1.188505280E-03  1.000000000E-06
+FCG:                  9  6.574741378E-04  1.000000000E-06
+FCG:                 10  2.691152453E-04  1.000000000E-06
+FCG:                 11  9.305912727E-05  1.000000000E-06
+FCG:                 12  3.245017598E-05  1.000000000E-06
+FCG:                 13  1.177102200E-05  1.000000000E-06
+FCG:                 14  5.451763979E-06  1.000000000E-06
+FCG:                 15  3.135082710E-06  1.000000000E-06
+FCG:                 16  1.986802690E-06  1.000000000E-06
+FCG:                 17  1.234089723E-06  1.000000000E-06
+FCG:                 18  6.319197369E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES_BETA
+          Degree:                  10
+          rho_ba:           1.0000000000000000     
+    Coefficients:           1.0003031222965291        1.0030484066079688        1.0107702271538761        1.0261901159764004        1.0523172493375519        1.0925574320754976        1.1508337666397197        1.2317225087089441        1.3406080202445980        1.4838612440701109     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-10CHEBY4O-L1JAC30
+Iterations to convergence          :           18
+Relative error estimate on exit    :  6.31920E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.44099E+00
+Total time for preconditioner      :  1.77141E+01
+Time to solve system               :  7.80655E+00
+Time per iteration                 :  4.33697E-01
+Total time                         :  2.55207E+01
+Residual 2-norm                    :  3.45751E+01
+Residual inf-norm                  :  1.82735E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255683792
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-12CHEBY4O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-12CHEBY4O-L1JAC30
+ 
+Smoothers  time:  2.44323E+00
+Total prec time:  1.77164E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  3.546408718E-02  1.000000000E-06
+FCG:                  2  1.236230020E-02  1.000000000E-06
+FCG:                  3  6.842143908E-03  1.000000000E-06
+FCG:                  4  4.710123328E-03  1.000000000E-06
+FCG:                  5  3.268760489E-03  1.000000000E-06
+FCG:                  6  1.987147265E-03  1.000000000E-06
+FCG:                  7  1.388651630E-03  1.000000000E-06
+FCG:                  8  8.447217844E-04  1.000000000E-06
+FCG:                  9  4.311781077E-04  1.000000000E-06
+FCG:                 10  1.628149566E-04  1.000000000E-06
+FCG:                 11  5.617636860E-05  1.000000000E-06
+FCG:                 12  1.888541459E-05  1.000000000E-06
+FCG:                 13  6.782089095E-06  1.000000000E-06
+FCG:                 14  3.266932213E-06  1.000000000E-06
+FCG:                 15  1.879756060E-06  1.000000000E-06
+FCG:                 16  1.158981465E-06  1.000000000E-06
+FCG:                 17  6.976077871E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_LOTTES_BETA
+          Degree:                  12
+          rho_ba:           1.0000000000000000     
+    Coefficients:           1.0001794720082837        1.0018018913961957        1.0063486190730762        1.0153786456630600        1.0305694283076039        1.0537601969394355        1.0869986259207296        1.1325918309791341        1.1931627335817252        1.2717129367511055        1.3716933796979953        1.4970841857556243     
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-12CHEBY4O-L1JAC30
+Iterations to convergence          :           17
+Relative error estimate on exit    :  6.97608E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.44323E+00
+Total time for preconditioner      :  1.77164E+01
+Time to solve system               :  8.43873E+00
+Time per iteration                 :  4.96396E-01
+Total time                         :  2.61551E+01
+Residual 2-norm                    :  3.81691E+01
+Residual inf-norm                  :  2.83334E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255716560
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-4CHEBY1O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-4CHEBY1O-L1JAC30
+ 
+Smoothers  time:  2.43496E+00
+Total prec time:  1.77081E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  7.593065133E-02  1.000000000E-06
+FCG:                  2  2.693396177E-02  1.000000000E-06
+FCG:                  3  1.284518677E-02  1.000000000E-06
+FCG:                  4  7.839648945E-03  1.000000000E-06
+FCG:                  5  5.659354966E-03  1.000000000E-06
+FCG:                  6  3.835156550E-03  1.000000000E-06
+FCG:                  7  2.903855244E-03  1.000000000E-06
+FCG:                  8  2.412590452E-03  1.000000000E-06
+FCG:                  9  1.883086758E-03  1.000000000E-06
+FCG:                 10  1.170095405E-03  1.000000000E-06
+FCG:                 11  6.701386880E-04  1.000000000E-06
+FCG:                 12  3.152427501E-04  1.000000000E-06
+FCG:                 13  1.231527146E-04  1.000000000E-06
+FCG:                 14  5.235879934E-05  1.000000000E-06
+FCG:                 15  2.737834783E-05  1.000000000E-06
+FCG:                 16  1.661105693E-05  1.000000000E-06
+FCG:                 17  1.180283011E-05  1.000000000E-06
+FCG:                 18  8.156805943E-06  1.000000000E-06
+FCG:                 19  4.592384707E-06  1.000000000E-06
+FCG:                 20  2.438581489E-06  1.000000000E-06
+FCG:                 21  1.192088953E-06  1.000000000E-06
+FCG:                 22  5.231453501E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_NEW
+          Degree:                   4
+          rho_ba:           1.0000000000000000     
+     Coefficient:           8.2078065959038299E-002
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-4CHEBY1O-L1JAC30
+Iterations to convergence          :           22
+Relative error estimate on exit    :  5.23145E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43496E+00
+Total time for preconditioner      :  1.77081E+01
+Time to solve system               :  5.23116E+00
+Time per iteration                 :  2.37780E-01
+Total time                         :  2.29393E+01
+Residual 2-norm                    :  2.86236E+01
+Residual inf-norm                  :  1.62480E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-6CHEBY1O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-6CHEBY1O-L1JAC30
+ 
+Smoothers  time:  2.43663E+00
+Total prec time:  1.77098E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  6.245862905E-02  1.000000000E-06
+FCG:                  2  1.929908477E-02  1.000000000E-06
+FCG:                  3  8.949027987E-03  1.000000000E-06
+FCG:                  4  5.738281087E-03  1.000000000E-06
+FCG:                  5  4.399508632E-03  1.000000000E-06
+FCG:                  6  3.157171694E-03  1.000000000E-06
+FCG:                  7  2.623597430E-03  1.000000000E-06
+FCG:                  8  2.130546117E-03  1.000000000E-06
+FCG:                  9  1.444101409E-03  1.000000000E-06
+FCG:                 10  7.873058049E-04  1.000000000E-06
+FCG:                 11  3.513004206E-04  1.000000000E-06
+FCG:                 12  1.329743928E-04  1.000000000E-06
+FCG:                 13  5.148229301E-05  1.000000000E-06
+FCG:                 14  2.353221835E-05  1.000000000E-06
+FCG:                 15  1.218985369E-05  1.000000000E-06
+FCG:                 16  8.262863505E-06  1.000000000E-06
+FCG:                 17  5.839362184E-06  1.000000000E-06
+FCG:                 18  3.655825283E-06  1.000000000E-06
+FCG:                 19  2.152766333E-06  1.000000000E-06
+FCG:                 20  9.747540825E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_NEW
+          Degree:                   6
+          rho_ba:           1.0000000000000000     
+     Coefficient:           4.8660582342606201E-002
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-6CHEBY1O-L1JAC30
+Iterations to convergence          :           20
+Relative error estimate on exit    :  9.74754E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43663E+00
+Total time for preconditioner      :  1.77098E+01
+Time to solve system               :  5.92927E+00
+Time per iteration                 :  2.96464E-01
+Total time                         :  2.36390E+01
+Residual 2-norm                    :  5.33330E+01
+Residual inf-norm                  :  3.33288E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-8CHEBY1O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-8CHEBY1O-L1JAC30
+ 
+Smoothers  time:  2.44401E+00
+Total prec time:  1.77172E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  4.663101556E-02  1.000000000E-06
+FCG:                  2  1.395850444E-02  1.000000000E-06
+FCG:                  3  6.584580575E-03  1.000000000E-06
+FCG:                  4  4.270553688E-03  1.000000000E-06
+FCG:                  5  3.258153284E-03  1.000000000E-06
+FCG:                  6  2.349628321E-03  1.000000000E-06
+FCG:                  7  2.015031693E-03  1.000000000E-06
+FCG:                  8  1.593133588E-03  1.000000000E-06
+FCG:                  9  1.029200512E-03  1.000000000E-06
+FCG:                 10  5.242107741E-04  1.000000000E-06
+FCG:                 11  2.059207104E-04  1.000000000E-06
+FCG:                 12  7.304623335E-05  1.000000000E-06
+FCG:                 13  2.821246662E-05  1.000000000E-06
+FCG:                 14  1.197580986E-05  1.000000000E-06
+FCG:                 15  6.643016687E-06  1.000000000E-06
+FCG:                 16  4.377152161E-06  1.000000000E-06
+FCG:                 17  2.838471831E-06  1.000000000E-06
+FCG:                 18  1.821690297E-06  1.000000000E-06
+FCG:                 19  9.118905827E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_NEW
+          Degree:                   8
+          rho_ba:           1.0000000000000000     
+     Coefficient:           3.2870101754487999E-002
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-8CHEBY1O-L1JAC30
+Iterations to convergence          :           19
+Relative error estimate on exit    :  9.11891E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.44401E+00
+Total time for preconditioner      :  1.77172E+01
+Time to solve system               :  6.83205E+00
+Time per iteration                 :  3.59582E-01
+Total time                         :  2.45492E+01
+Residual 2-norm                    :  4.98935E+01
+Residual inf-norm                  :  2.72089E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-10CHEBY1O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-10CHEBY1O-L1JAC30
+ 
+Smoothers  time:  2.44385E+00
+Total prec time:  1.77170E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  3.832244556E-02  1.000000000E-06
+FCG:                  2  1.120682338E-02  1.000000000E-06
+FCG:                  3  5.358529579E-03  1.000000000E-06
+FCG:                  4  3.505861739E-03  1.000000000E-06
+FCG:                  5  2.685613077E-03  1.000000000E-06
+FCG:                  6  1.981692294E-03  1.000000000E-06
+FCG:                  7  1.705049887E-03  1.000000000E-06
+FCG:                  8  1.261942352E-03  1.000000000E-06
+FCG:                  9  7.574464033E-04  1.000000000E-06
+FCG:                 10  3.447558951E-04  1.000000000E-06
+FCG:                 11  1.237616562E-04  1.000000000E-06
+FCG:                 12  4.366842829E-05  1.000000000E-06
+FCG:                 13  1.624664556E-05  1.000000000E-06
+FCG:                 14  7.102121730E-06  1.000000000E-06
+FCG:                 15  4.130144020E-06  1.000000000E-06
+FCG:                 16  2.508100548E-06  1.000000000E-06
+FCG:                 17  1.600388357E-06  1.000000000E-06
+FCG:                 18  8.666153309E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_NEW
+          Degree:                  10
+          rho_ba:           1.0000000000000000     
+     Coefficient:           2.3998740960062000E-002
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-10CHEBY1O-L1JAC30
+Iterations to convergence          :           18
+Relative error estimate on exit    :  8.66615E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.44385E+00
+Total time for preconditioner      :  1.77170E+01
+Time to solve system               :  7.56971E+00
+Time per iteration                 :  4.20540E-01
+Total time                         :  2.52867E+01
+Residual 2-norm                    :  4.74163E+01
+Residual inf-norm                  :  2.62341E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-12CHEBY1O-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-12CHEBY1O-L1JAC30
+ 
+Smoothers  time:  2.43564E+00
+Total prec time:  1.77088E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  3.224125897E-02  1.000000000E-06
+FCG:                  2  9.174604814E-03  1.000000000E-06
+FCG:                  3  4.406562216E-03  1.000000000E-06
+FCG:                  4  2.901694835E-03  1.000000000E-06
+FCG:                  5  2.239291441E-03  1.000000000E-06
+FCG:                  6  1.722096841E-03  1.000000000E-06
+FCG:                  7  1.469129895E-03  1.000000000E-06
+FCG:                  8  1.029594156E-03  1.000000000E-06
+FCG:                  9  5.800593537E-04  1.000000000E-06
+FCG:                 10  2.397171879E-04  1.000000000E-06
+FCG:                 11  8.346782020E-05  1.000000000E-06
+FCG:                 12  2.918378252E-05  1.000000000E-06
+FCG:                 13  1.064204327E-05  1.000000000E-06
+FCG:                 14  4.989666285E-06  1.000000000E-06
+FCG:                 15  2.821926143E-06  1.000000000E-06
+FCG:                 16  1.693596096E-06  1.000000000E-06
+FCG:                 17  9.777563426E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Polynomial smoother   
+         variant:        POLY_NEW
+          Degree:                  12
+          rho_ba:           1.0000000000000000     
+     Coefficient:           1.8451309904506601E-002
+        Local solver details:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            1   post:            1
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-12CHEBY1O-L1JAC30
+Iterations to convergence          :           17
+Relative error estimate on exit    :  9.77756E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43564E+00
+Total time for preconditioner      :  1.77088E+01
+Time to solve system               :  8.12151E+00
+Time per iteration                 :  4.77736E-01
+Total time                         :  2.58303E+01
+Residual 2-norm                    :  5.34973E+01
+Residual inf-norm                  :  3.46820E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 957255519952
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-4L1JAC-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-4L1JAC-L1JAC30
+ 
+Smoothers  time:  2.43626E+00
+Total prec time:  1.77094E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  8.562517103E-02  1.000000000E-06
+FCG:                  2  3.041857798E-02  1.000000000E-06
+FCG:                  3  1.681304941E-02  1.000000000E-06
+FCG:                  4  1.045303905E-02  1.000000000E-06
+FCG:                  5  7.227464444E-03  1.000000000E-06
+FCG:                  6  4.844822097E-03  1.000000000E-06
+FCG:                  7  4.031757570E-03  1.000000000E-06
+FCG:                  8  3.627071899E-03  1.000000000E-06
+FCG:                  9  2.524105462E-03  1.000000000E-06
+FCG:                 10  1.618922351E-03  1.000000000E-06
+FCG:                 11  1.141416487E-03  1.000000000E-06
+FCG:                 12  4.978112199E-04  1.000000000E-06
+FCG:                 13  2.150193041E-04  1.000000000E-06
+FCG:                 14  1.125900878E-04  1.000000000E-06
+FCG:                 15  5.079226949E-05  1.000000000E-06
+FCG:                 16  2.289839457E-05  1.000000000E-06
+FCG:                 17  1.700552062E-05  1.000000000E-06
+FCG:                 18  1.439163591E-05  1.000000000E-06
+FCG:                 19  7.739729572E-06  1.000000000E-06
+FCG:                 20  4.411818987E-06  1.000000000E-06
+FCG:                 21  2.742269701E-06  1.000000000E-06
+FCG:                 22  1.330511993E-06  1.000000000E-06
+FCG:                 23  5.869937740E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Point Jacobi  
+        Local diagonal:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            4   post:            4
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-4L1JAC-L1JAC30
+Iterations to convergence          :           23
+Relative error estimate on exit    :  5.86994E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43626E+00
+Total time for preconditioner      :  1.77094E+01
+Time to solve system               :  5.20312E+00
+Time per iteration                 :  2.26223E-01
+Total time                         :  2.29125E+01
+Residual 2-norm                    :  3.21170E+01
+Residual inf-norm                  :  4.45211E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 899419434112
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-6L1JAC-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-6L1JAC-L1JAC30
+ 
+Smoothers  time:  2.43755E+00
+Total prec time:  1.77107E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  8.254995904E-02  1.000000000E-06
+FCG:                  2  2.703417994E-02  1.000000000E-06
+FCG:                  3  1.270250753E-02  1.000000000E-06
+FCG:                  4  7.481277525E-03  1.000000000E-06
+FCG:                  5  5.833830137E-03  1.000000000E-06
+FCG:                  6  4.676530562E-03  1.000000000E-06
+FCG:                  7  3.182318810E-03  1.000000000E-06
+FCG:                  8  2.355341911E-03  1.000000000E-06
+FCG:                  9  1.840602456E-03  1.000000000E-06
+FCG:                 10  1.336038576E-03  1.000000000E-06
+FCG:                 11  7.823233940E-04  1.000000000E-06
+FCG:                 12  4.046470049E-04  1.000000000E-06
+FCG:                 13  1.856912789E-04  1.000000000E-06
+FCG:                 14  7.424513410E-05  1.000000000E-06
+FCG:                 15  3.215784531E-05  1.000000000E-06
+FCG:                 16  1.848945568E-05  1.000000000E-06
+FCG:                 17  1.377886102E-05  1.000000000E-06
+FCG:                 18  9.603819379E-06  1.000000000E-06
+FCG:                 19  6.676391117E-06  1.000000000E-06
+FCG:                 20  4.069190165E-06  1.000000000E-06
+FCG:                 21  1.821073778E-06  1.000000000E-06
+FCG:                 22  7.828752452E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Point Jacobi  
+        Local diagonal:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            6   post:            6
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-6L1JAC-L1JAC30
+Iterations to convergence          :           22
+Relative error estimate on exit    :  7.82875E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43755E+00
+Total time for preconditioner      :  1.77107E+01
+Time to solve system               :  6.21606E+00
+Time per iteration                 :  2.82548E-01
+Total time                         :  2.39268E+01
+Residual 2-norm                    :  4.28345E+01
+Residual inf-norm                  :  8.01608E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 899419434112
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-8L1JAC-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-8L1JAC-L1JAC30
+ 
+Smoothers  time:  2.42991E+00
+Total prec time:  1.77031E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  7.604981825E-02  1.000000000E-06
+FCG:                  2  2.470558931E-02  1.000000000E-06
+FCG:                  3  1.133367094E-02  1.000000000E-06
+FCG:                  4  6.397998737E-03  1.000000000E-06
+FCG:                  5  4.525369380E-03  1.000000000E-06
+FCG:                  6  3.533005926E-03  1.000000000E-06
+FCG:                  7  2.791222359E-03  1.000000000E-06
+FCG:                  8  2.361786335E-03  1.000000000E-06
+FCG:                  9  1.849657987E-03  1.000000000E-06
+FCG:                 10  1.114847686E-03  1.000000000E-06
+FCG:                 11  5.821694416E-04  1.000000000E-06
+FCG:                 12  2.899635507E-04  1.000000000E-06
+FCG:                 13  1.273590912E-04  1.000000000E-06
+FCG:                 14  5.330251439E-05  1.000000000E-06
+FCG:                 15  2.639206900E-05  1.000000000E-06
+FCG:                 16  1.802282924E-05  1.000000000E-06
+FCG:                 17  1.274454455E-05  1.000000000E-06
+FCG:                 18  8.586161239E-06  1.000000000E-06
+FCG:                 19  5.378606814E-06  1.000000000E-06
+FCG:                 20  2.683345446E-06  1.000000000E-06
+FCG:                 21  1.257176222E-06  1.000000000E-06
+FCG:                 22  6.197363544E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Point Jacobi  
+        Local diagonal:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:            8   post:            8
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-8L1JAC-L1JAC30
+Iterations to convergence          :           22
+Relative error estimate on exit    :  6.19736E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.42991E+00
+Total time for preconditioner      :  1.77031E+01
+Time to solve system               :  7.47750E+00
+Time per iteration                 :  3.39886E-01
+Total time                         :  2.51805E+01
+Residual 2-norm                    :  3.39085E+01
+Residual inf-norm                  :  4.51069E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 899419434112
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-10L1JAC-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-10L1JAC-L1JAC30
+ 
+Smoothers  time:  2.43157E+00
+Total prec time:  1.77047E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  7.040639396E-02  1.000000000E-06
+FCG:                  2  2.253570818E-02  1.000000000E-06
+FCG:                  3  1.037049676E-02  1.000000000E-06
+FCG:                  4  5.961605248E-03  1.000000000E-06
+FCG:                  5  4.130417518E-03  1.000000000E-06
+FCG:                  6  3.004985003E-03  1.000000000E-06
+FCG:                  7  2.278556943E-03  1.000000000E-06
+FCG:                  8  1.921616402E-03  1.000000000E-06
+FCG:                  9  1.549813071E-03  1.000000000E-06
+FCG:                 10  9.838239530E-04  1.000000000E-06
+FCG:                 11  5.582405339E-04  1.000000000E-06
+FCG:                 12  2.807054427E-04  1.000000000E-06
+FCG:                 13  1.140095495E-04  1.000000000E-06
+FCG:                 14  4.454684324E-05  1.000000000E-06
+FCG:                 15  2.189392998E-05  1.000000000E-06
+FCG:                 16  1.364449663E-05  1.000000000E-06
+FCG:                 17  9.092773471E-06  1.000000000E-06
+FCG:                 18  6.478932483E-06  1.000000000E-06
+FCG:                 19  3.965472910E-06  1.000000000E-06
+FCG:                 20  2.057198253E-06  1.000000000E-06
+FCG:                 21  1.085582576E-06  1.000000000E-06
+FCG:                 22  5.173670309E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Point Jacobi  
+        Local diagonal:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:           10   post:           10
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-10L1JAC-L1JAC30
+Iterations to convergence          :           22
+Relative error estimate on exit    :  5.17367E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.43157E+00
+Total time for preconditioner      :  1.77047E+01
+Time to solve system               :  8.83380E+00
+Time per iteration                 :  4.01536E-01
+Total time                         :  2.65385E+01
+Residual 2-norm                    :  2.83074E+01
+Residual inf-norm                  :  3.13631E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 899419434112
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
+ 
+=================================
+Building new smoother: ML-VMATCH-12L1JAC-L1JAC30
+ 
+ 
+Preconditioner: ML-VMATCH-12L1JAC-L1JAC30
+ 
+Smoothers  time:  2.44112E+00
+Total prec time:  1.77143E+01
+ 
+FCG:               Iter   Error Estimate        Tolerance
+FCG:                  0  1.000000000E+00  1.000000000E-06
+FCG:                  1  6.600472445E-02  1.000000000E-06
+FCG:                  2  2.070301408E-02  1.000000000E-06
+FCG:                  3  9.512477315E-03  1.000000000E-06
+FCG:                  4  5.577568124E-03  1.000000000E-06
+FCG:                  5  3.887417712E-03  1.000000000E-06
+FCG:                  6  2.764013034E-03  1.000000000E-06
+FCG:                  7  2.074771574E-03  1.000000000E-06
+FCG:                  8  1.723344880E-03  1.000000000E-06
+FCG:                  9  1.326655931E-03  1.000000000E-06
+FCG:                 10  8.148211567E-04  1.000000000E-06
+FCG:                 11  4.584644158E-04  1.000000000E-06
+FCG:                 12  2.230721031E-04  1.000000000E-06
+FCG:                 13  9.095976346E-05  1.000000000E-06
+FCG:                 14  3.803205030E-05  1.000000000E-06
+FCG:                 15  2.009487077E-05  1.000000000E-06
+FCG:                 16  1.251794262E-05  1.000000000E-06
+FCG:                 17  8.581576757E-06  1.000000000E-06
+FCG:                 18  6.039707792E-06  1.000000000E-06
+FCG:                 19  3.406401566E-06  1.000000000E-06
+FCG:                 20  1.745911547E-06  1.000000000E-06
+FCG:                 21  8.639567694E-07  1.000000000E-06
+
+ Preconditioner description
+  Multilevel Preconditioner
+  Outer sweeps:           1
+ 
+  Smoother: 
+   Point Jacobi  
+        Local diagonal:
+   L1 Diagonal solver 
+ 
+  Multilevel hierarchy: 
+   Number of levels   :            5
+   Operator complexity:    1.5887995374639816     
+   Average coarsening :    23.186274381741153     
+ 
+   Multilevel cycle: VCycle         
+   Number of smoother sweeps/degree : pre:           12   post:           12
+  Decoupled Aggregator
+  Aggregator object type: Decoupled aggregation           
+   Parallel aggregation algorithm: decoupled aggr.   
+   Aggregation type: SOC measure 1     
+   Aggregation prolongator: smoothed       
+               with: filtering      
+   Damping omega computation: spectral radius estimate
+   Spectral radius estimate: infinity norm      
+ 
+  Level            2
+   Damping omega value  :  0.66666666666666674     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:             384640142
+                     Nonzeros:           12005242762
+      Local  matrix sizes: min:       718331         max:       756392
+                           avg:       751250.3
+           Aggregation   ratio:            8.01
+ 
+  Level            3
+   Damping omega value  :  0.63049095607235162     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:               9217896
+                     Nonzeros:             646217422
+      Local  matrix sizes: min:        17723         max:        18541
+                           avg:        18003.7
+           Aggregation   ratio:           41.73
+ 
+  Level            4
+   Damping omega value  :  0.62336198193672576     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                374027
+                     Nonzeros:              34423921
+      Local  matrix sizes: min:          718         max:          788
+                           avg:          730.5
+           Aggregation   ratio:           24.65
+ 
+  Level            5  (coarse)
+   Coarse matrix: distributed    
+   Coarse solver: L1-Jacobi
+   Number of sweeps :           30
+   Damping omega value  :  0.64420046781484264     
+   Aggregation threshold:   1.0000000000000000E-002
+   Coarse Matrix: Global size:                 20367
+                     Nonzeros:               2273401
+      Local  matrix sizes: min:           37         max:           48
+                           avg:           39.8
+           Aggregation   ratio:           18.36
+   L1 Diagonal solver 
+ 
+Computed solution on      512 process(es)
+Number of threads                  :            1
+Total number of tasks              :          512
+Linear system size                 :   3080271375
+PDE Coefficients                   : CONST
+Krylov method                      : FCG
+Preconditioner                     : ML-VMATCH-12L1JAC-L1JAC30
+Iterations to convergence          :           21
+Relative error estimate on exit    :  8.63957E-07
+Number of levels in hierarchy      :            5
+Time to build hierarchy            :  1.52731E+01
+Time to build smoothers            :  2.44112E+00
+Total time for preconditioner      :  1.77143E+01
+Time to solve system               :  9.79645E+00
+Time per iteration                 :  4.66498E-01
+Total time                         :  2.75107E+01
+Residual 2-norm                    :  4.72708E+01
+Residual inf-norm                  :  3.39634E-02
+Total memory occupation for A      : 283677210420
+Total memory occupation for DESC_A :  98035185568
+Total memory occupation for PREC   : 899419434112
+Storage format for A               : HLG  
+Storage format for DESC_A          : HASH 
